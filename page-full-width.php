@@ -35,7 +35,20 @@
 
 				<h1 class="page-title"><?php the_title(); ?></h1>
 
-				<?php the_content(); ?>
+				<?php the_content();
+					$silverclean_link_pages_args = array(
+						'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean'),
+						'after'            => '</div>',
+						'link_before'      => '<span>',
+						'link_after'       => '</span>',
+						'next_or_number'   => 'number',
+						'nextpagelink'     => __('Next page', 'silverclean'),
+						'previouspagelink' => __('Previous page', 'silverclean'),
+						'pagelink'         => '%',
+						'echo'             => 1
+					);
+					wp_link_pages( $silverclean_link_pages_args );
+				?>
 				<br class="clear" />
 				<p class="editlink">
 				<?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?>
