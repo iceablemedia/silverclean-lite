@@ -174,11 +174,12 @@
 		background: url('img/black_linen.png') #333;
 	}
 	
-		#icefit-admin-panel-footer-submit #submit-button {
+		#icefit-admin-panel-footer-submit #submit-button,
+		#icefit-admin-panel-footer-submit #submit-button-no-js {
 			float: right;
 			margin-right: 10px;
 		}
-		
+
 		#icefit-admin-panel .button-primary {
 			border-radius: 2px;
 			font-weight: normal;
@@ -199,13 +200,14 @@
 		#icefit-admin-panel .ajaxresult.success { color: limegreen; }
 		#icefit-admin-panel .ajaxresult.failure { color: crimson; }
 
-		#icefit-admin-panel-footer-submit #icefit-reset-button {
+		#icefit-admin-panel-footer-submit #icefit-reset-button,
+		#icefit-admin-panel-footer-submit #icefit-reset-button-no-js {
 			border-radius: 2px;
 			font-weight: normal;
 			padding: 0px 8px;
 			color: #FF6666;
 		}
-		
+
 		#icefit-admin-panel-footer-submit #ajax-result-wrap {
 			display: inline-block;
 			text-align: right;
@@ -227,4 +229,28 @@
 
 .clear {
 	clear: both;
+}
+
+/* No-JS Fallback */
+
+#icefit-admin-panel-footer-submit #submit-button-no-js,
+#icefit-admin-panel-footer-submit #icefit-reset-button-no-js,
+.no-js #icefit-admin-panel-footer-submit #submit-button,
+.no-js #icefit-admin-panel-footer-submit #icefit-reset-button,
+.no-js .icefit_upload_button,
+.no-js .icefit_remove_button {
+	display: none;
+}
+
+.no-js #icefit-admin-panel-footer-submit #submit-button-no-js,
+.no-js #icefit-admin-panel-footer-submit #icefit-reset-button-no-js {
+	display: inline-block;
+}
+
+.no-js #icefit-admin-panel-content .icefit-admin-panel-content-box {
+	display: block;
+}
+
+.no-js #icefit-admin-panel-menu ul li.icefit-admin-panel-menu-li.gopro_page {
+	margin-bottom: 496px;
 }

@@ -12,6 +12,8 @@ var icefit_admin_panel;
 	init:function(){
 		//admin panel
 		var icf_title;
+		jQuery('#icefit-admin-panel').removeClass('no-js');
+		jQuery('#no-js-warning').hide();
 		jQuery('#icefit-admin-panel .icefit-admin-panel-menu-link:first').addClass('visible');
 		jQuery('#icefit-admin-panel .icefit-admin-panel-content-box:first').addClass('visible');
 		jQuery('.icefit-admin-panel-menu-link').click(function(event) {

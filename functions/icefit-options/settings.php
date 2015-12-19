@@ -32,7 +32,7 @@ function icefit_settings_template() {
 		$settings_options[] = array(
 			'name'          => 'Upgrade to Silverclean Pro!',
 			'desc'          => '',
-			'id'            => 'text',
+			'id'            => 'gopro',
 			'type'          => 'gopro',
 			'default'       => '',
 		);

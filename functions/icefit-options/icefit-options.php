@@ -44,13 +44,13 @@ function icefit_settings_machine_menu($options) {
 	$output = "";
 	foreach ($options as $arg) {
 	
-		$ids = array ('custom_css', 'footer_note', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
+		$ids = array ('custom_css', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
 		if (isset($arg['id'])) {
 			if (in_array($arg['id'], $ids)) continue;
 		}
 		if ( $arg['type'] == "start_menu" )
 		{
-			$output .= '<li class="icefit-admin-panel-menu-li"><a class="icefit-admin-panel-menu-link '.$arg['icon'].'" href="#'.$arg['name'].'" id="icefit-admin-panel-menu-'.$arg['id'].'"><span></span>'.$arg['name'].'</a></li>'."\n";
+			$output .= '<li class="icefit-admin-panel-menu-li '.$arg['id'].'"><a class="icefit-admin-panel-menu-link '.$arg['icon'].'" href="#'.$arg['name'].'" id="icefit-admin-panel-menu-'.$arg['id'].'"><span></span>'.$arg['name'].'</a></li>'."\n";
 		} 
 	}
 	return $output;
@@ -63,7 +63,7 @@ function icefit_settings_machine($options) {
 	$output = "";
 	foreach ($options as $arg) {
 
-		$ids = array ('custom_css', 'footer_note', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
+		$ids = array ('custom_css', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
 		if (isset($arg['id'])) {
 			if (in_array($arg['id'], $ids)) continue;
 		}
@@ -184,7 +184,7 @@ function icefit_settings_machine($options) {
 	return $output;
 }
 
-// Ajax callback function for the "reset" button (resets settings to default)
+// AJAX callback function for the "reset" button (resets settings to default)
 function icefit_settings_reset_ajax_callback() {
 	global $icefit_settings_slug;
 	// Get settings from the database
@@ -217,7 +217,7 @@ function icefit_settings_ajax_callback() {
 	// Updates all settings according to POST data
 	foreach($options as $option_array){
 	
-		$ids = array ('custom_css', 'footer_note', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
+		$ids = array ('gopro', 'custom_css', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
 		if (in_array($option_array['id'], $ids)) {
 			if ($option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu') {
 				$id = $option_array['id'];
@@ -242,6 +242,43 @@ function icefit_settings_ajax_callback() {
 	update_option($icefit_settings_slug,$icefit_settings);	
 }
 add_action('wp_ajax_icefit_settings_ajax_post_action', 'icefit_settings_ajax_callback');
+
+// NOJS fallback for the "Save changes" button
+function icefit_settings_save_nojs() {
+	global $icefit_settings_slug;
+	// Get POST data
+	//	parse_str($_POST,$output);
+	// Get current settings from the database
+	$icefit_settings = get_option($icefit_settings_slug);
+	// Get the settings template
+	$options = icefit_settings_template();
+	// Updates all settings according to POST data
+	foreach($options as $option_array){
+	
+		$ids = array ('gopro', 'custom_css', 'page2', 'unlimited_sidebar', 'endpage2', 'styles', 'layout', 'background_color', 'background_image', 'headings_font', 'headings_color', 'endpage3' );
+		if (isset($option_array['id']) && in_array($option_array['id'], $ids)) {
+			if ($option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu') {
+				$id = $option_array['id'];
+				$new_value = $option_array['default'];
+				$icefit_settings[$id] = stripslashes($new_value);
+			}
+		} else {
+			if ( isset($option_array['id']) && $option_array['type'] != 'start_menu' && $option_array['type'] != 'end_menu' ) {
+				$id = $option_array['id'];
+				if ($option_array['type'] == "text") {
+					$new_value = esc_textarea($_POST[$option_array['id']]);
+				} else {
+					$new_value = $_POST[$option_array['id']];
+				}
+				$icefit_settings[$id] = stripslashes($new_value);
+			}
+		}
+
+	}
+
+	// Updates settings in the database
+	update_option($icefit_settings_slug,$icefit_settings);	
+}
 
 // Update settings template in the database upon theme activation
 function icefit_settings_theme_activation() {
@@ -272,10 +309,26 @@ function icefit_settings_page(){
 	wp_enqueue_style('thickbox');
 	global $icefit_settings_slug;
 	global $icefit_settings_name;
+	
+	if (isset( $_POST['reset-no-js'] ) && $_POST['reset-no-js']) {
+		icefit_settings_reset_ajax_callback();
+		echo '<div class="updated fade"><p>Settings were reset to default.</p></div>';
+	}
+	
+	if (isset( $_POST['save-no-js'] ) && $_POST['save-no-js']) {
+		icefit_settings_save_nojs();
+		echo '<div class="updated fade"><p>Settings updated.</p></div>';
+	}
 
 	?>
-	<div id="icefit-admin-panel">
-		<form enctype="multipart/form-data" id="icefitform">
+
+	<div id="no-js-warning" class="updated fade"><p><b>Warning:</b> Javascript is either disabled in your browser or broken in your WP installation.<br />
+	This is ok, but it is highly recommended to activate javascript for a better experience.<br />
+	If javascript is not blocked in your browser then this may be caused by a third party plugin.<br />
+	Make sure everything is up to date or try to deactivate some plugins.</p></div>
+	
+	<div id="icefit-admin-panel" class="no-js">
+		<form enctype="multipart/form-data" id="icefitform" method="POST">
 			<div id="icefit-admin-panel-header">
 				<div id="icon-options-general" class="icon32"><br></div>
 				<h3><?php echo $icefit_settings_name; ?></h3>
@@ -283,11 +336,11 @@ function icefit_settings_page(){
 			<div id="icefit-admin-panel-main">
 				<div id="icefit-admin-panel-menu">
 					<ul>
-						<?php echo icefit_settings_machine_menu(icefit_settings_template()); ?>
+						<?php echo icefit_settings_machine_menu( icefit_settings_template() ); ?>
 					</ul>
 				</div>
 				<div id="icefit-admin-panel-content">
-					<?php echo icefit_settings_machine(icefit_settings_template()); ?>
+					<?php echo icefit_settings_machine( icefit_settings_template() ); ?>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -295,6 +348,10 @@ function icefit_settings_page(){
 				<div id="icefit-admin-panel-footer-submit">
 					<input type="button" class="button" id="icefit-reset-button" name="reset" value="Reset Options" />
 					<input type="submit" value="Save all Changes" class="button-primary" id="submit-button" />
+					<!-- No-JS Fallback buttons -->
+					<input type="submit" class="button" id="icefit-reset-button-no-js" name="reset-no-js" value="Reset Options" />
+					<input type="submit" class="button-primary" id="submit-button-no-js" name="save-no-js" value="Save all Changes" />
+					<!-- End No-JS Fallback buttons -->
 					<div id="ajax-result-wrap"><div id="ajax-result"></div></div>
 					<?php wp_nonce_field('icefit_settings_ajax_post_action','icefit_settings_nonce'); ?>
 				</div>
