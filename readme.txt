@@ -3,8 +3,8 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 1.1.12
+Tested up to: 3.9.2
+Stable tag: 1.1.13
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -47,6 +47,15 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.13 =
+September 1st, 2014
+* Added ellipsis (...) to the end of truncated excerpts when displaying the "read more" button (based on user feedback).
+* Fixed W3C validator error caused by the "X-UA-Compatible" meta tag. The theme now fully validates as HTML5.
+* Replaced (has_post_thumbnail()) with ('' != get_the_post_thumbnail()) in single.php (as per codex recommendation - fixes an occasional issue)
+* Removed some unused CSS code
+* Fixed an odd glitch with footer widgets columns
+* Fixed CSS glitch in Firefox with large logo and featured images
 
 = 1.1.12 =
 June 16th, 2014

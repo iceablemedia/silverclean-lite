@@ -37,7 +37,7 @@
 		
 			<div class="post-content">
 			<div class="postmetadata">
-				<?php if (has_post_thumbnail()) : ?>
+				<?php if ( '' != get_the_post_thumbnail() ):	// As recommended from the WP codex, to avoid potential failure of has_post_thumbnail() ?>
 				<div class="thumbnail">
 					<?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?>
 				</div>

@@ -444,37 +444,20 @@ abbr {
 	margin-top: 0px;
 }
 
-.full-width,
-.one-half,
-.one-third,
-.two-thirds,
-.one-fourth,
-.three-fourths {
-	display: inline-block;
-	vertical-align: top;
-	float: none;
-}
-
-/* No sidebar: Container= 960 */
-#page-container > .full-width    { width: 920px; }
-#page-container > .one-half	     { width: 440px; }
-#page-container > .one-third     { width: 280px; }
-#page-container > .two-thirds    { width: 600px; }
-#page-container > .one-fourth,
-#footer div ul > .one-fourth     { width: 200px; }
-#page-container > .three-fourths { width: 680px; }
-
-/* With Sidebar: Container= 720 */
 #page-container.with-sidebar { width: 738px; }
 
-#page-container.with-sidebar > .full-width    { width: 698px; }
-#page-container.with-sidebar > .one-half      { width: 329px; }
-#page-container.with-sidebar > .one-third     { width: 205px; }
-#page-container.with-sidebar > .two-thirds    { width: 453px; }
-#page-container.with-sidebar > .one-fourth    { width: 144px; }
-#page-container.with-sidebar > .three-fourths { width: 514px; }
-
 #sidebar-container { width: 200px; }
+
+#footer .container > ul > li {
+	display: inline-block;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+	margin-bottom: 40px;
+	vertical-align: top;
+	float: none;
+	width: 200px;
+}
+
 
 /* #Tablet (Portrait)
 ================================================== */
@@ -512,24 +495,9 @@ abbr {
 	.container      { width: 768px; }
 	#page-container { width: 766px; }
 
-	/* No sidebar: Container= 766 */
-	#page-container > .full-width    { width: 736px; }
-	#page-container > .one-half      { width: 353px; }
-	#page-container > .one-third     { width: 225px; }
-	#page-container > .two-thirds    { width: 480px; }
-	#page-container > .one-fourth,
-	#footer div ul > .one-fourth     { width: 161px; }
-	#page-container > .three-fourths { width: 544px; }
-	
-	/* With Sidebar: Container= 576 */
+	#footer .container > ul > li	{ width: 161px; }
+
 	#page-container.with-sidebar { width: 576px; }
-	
-	#page-container.with-sidebar > .full-width    { width: 546px; }
-	#page-container.with-sidebar > .one-half      { width: 258px; }
-	#page-container.with-sidebar > .one-third     { width: 162px; }
-	#page-container.with-sidebar > .two-thirds    { width: 354px; }
-	#page-container.with-sidebar > .one-fourth    { width: 114px; }
-	#page-container.with-sidebar > .three-fourths { width: 402px; }
 	#sidebar-container { width: 172px; }
 }
 
@@ -569,17 +537,9 @@ abbr {
 	.container      { width: 300px; }
 	#page-container { width: 298px; }
 
-	/* No sidebar: Container= 300 */
-	#page-container > .full-width,
-	#page-container > .one-half,
-	#page-container > .one-third,
-	#page-container > .two-thirds,
-	#page-container > .one-fourth,
-	#footer div ul > .one-fourth,
-	#page-container > .three-fourths { width: 280px; }
-
-	/* With Sidebar: Container= 300 */
 	#page-container.with-sidebar { width: 298px; }
+
+	#footer .container > ul > li { width: 280px; }
 
 	#sidebar-container {
 		width: 300px;
@@ -587,13 +547,6 @@ abbr {
 	}
 
 	#sidebar { width: 300px; }
-
-	#page-container.with-sidebar > .full-width,
-	#page-container.with-sidebar > .one-half,
-	#page-container.with-sidebar > .one-third,
-	#page-container.with-sidebar > .two-thirds,
-	#page-container.with-sidebar > .one-fourth,
-	#page-container.with-sidebar > .three-fourths { width: 280px; }
 
 }
 
@@ -628,17 +581,9 @@ abbr {
 	.container      { width: 420px; }
 	#page-container { width: 418px; }
 
-	/* No sidebar: Container= 420 */
-	#page-container > .full-width,
-	#page-container > .one-half,
-	#page-container > .one-third,
-	#page-container > .two-thirds,
-	#page-container > .one-fourth,
-	#footer div ul > .one-fourth,
-	#page-container > .three-fourths { width: 400px; }
-
-	/* With Sidebar: Container= 420 */
 	#page-container.with-sidebar { width: 418px; }
+
+	#footer .container > ul > li { width: 400px; }
 
 	#sidebar-container {
 		width: 420px;
@@ -646,13 +591,6 @@ abbr {
 	}
 
 	#sidebar { width: 420px; }
-
-	#page-container.with-sidebar > .full-width,
-	#page-container.with-sidebar > .one-half,
-	#page-container.with-sidebar > .one-third,
-	#page-container.with-sidebar > .two-thirds,
-	#page-container.with-sidebar > .one-fourth,
-	#page-container.with-sidebar > .three-fourths { width: 400px; }
 
 }
 

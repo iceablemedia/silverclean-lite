@@ -64,6 +64,8 @@
 /* Logo */
 #logo {
 	padding: 25px 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 #logo .site-title {
@@ -361,6 +363,7 @@
 
 .thumbnail {
 	margin-bottom: 10px;
+	max-width: 100%;
 }
 
 .read-more a,

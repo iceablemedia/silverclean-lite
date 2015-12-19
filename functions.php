@@ -113,7 +113,7 @@ function silverclean_widgets_init() {
 		'id'            => 'footer-sidebar',
 		'description'   => '',
 	    'class'         => '',
-		'before_widget' => '<li id="%1$s" class="one-fourth widget %2$s">',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
@@ -216,7 +216,7 @@ add_filter( 'the_content', 'silverclean_protect_pre' );
  */
 function silverclean_excerpt_more( $more ) {
 	global $post;
-	return '<div class="read-more"><a href="'. get_permalink( get_the_ID() ) . '">'. __("Read More", 'silverclean') .'</a></div>';
+	return '... <div class="read-more"><a href="'. get_permalink( get_the_ID() ) . '">'. __("Read More", 'silverclean') .'</a></div>';
 }
 add_filter( 'excerpt_more', 'silverclean_excerpt_more' );
 
