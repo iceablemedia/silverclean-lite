@@ -3,8 +3,8 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 1.1.1
+Tested up to: 3.5.2
+Stable tag: 1.1.2
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -39,6 +39,11 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
+
+= 1.1.2 =
+July 1st, 2013
+* Fixed: issues with alignments in single posts.
+* Tested with WP 3.5.2
 
 = 1.1.1 =
 May 31, 2013
