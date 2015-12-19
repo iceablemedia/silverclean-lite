@@ -315,6 +315,8 @@
 	margin-left: 20px;
 }
 
+.postmetadata .updated { display: none; }
+
 .postmetadata > span {
 	font-size: 11px;
 	line-height: 19px;

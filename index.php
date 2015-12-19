@@ -77,8 +77,15 @@
 						<?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a>
 						</div>
 					<?php endif; ?>
-					<span class="meta-date"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span>
-					<span class="meta-author"><?php _e('By ', 'silverclean'); the_author(); ?></span>
+					<span class="meta-date published"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span><?php
+
+					// Echo updated date for hatom-feed - not to be displayed on front end
+					?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
+
+					?><span class="meta-author vcard author"><?php
+						_e('By ', 'silverclean');
+						?><span class="fn"><?php the_author(); ?></span><?php
+					?></span>
 					<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
 					<span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean' ), __( '1 Comment', 'silverclean' ), __( '% Comments', 'silverclean' ) ); ?></span>
 					<?php if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>

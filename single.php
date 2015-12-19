@@ -42,8 +42,13 @@
 					<?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?>
 				</div>
 				<?php endif; ?>
-				<span class="meta-date"><?php the_time(get_option('date_format')); ?></span>
-				<span class="meta-author"><?php _e('By ', 'silverclean'); the_author(); ?></span>
+				<span class="meta-date published"><?php the_time(get_option('date_format')); ?></span><?php
+				// Echo updated date for hatom-feed - not to be displayed on front end
+				?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
+				?><span class="meta-author vcard author"><?php
+					_e('By ', 'silverclean');
+					?><span class="fn"><?php the_author(); ?></span><?php
+				?></span>
 				<?php if ( has_category() ): ?>
 				<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
 				<?php endif;

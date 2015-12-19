@@ -169,6 +169,17 @@ function silverclean_scripts() {
 add_action('wp_enqueue_scripts', 'silverclean_scripts');
 
 /*
+ * Remove hentry class from static pages
+ */
+function silverclean_remove_hentry( $classes ) {
+	if ( is_page() ):
+		$classes = array_diff($classes, array('hentry'));
+	endif;
+	return $classes;
+}
+add_filter('post_class','silverclean_remove_hentry');
+
+/*
  * Remove "rel" tags in category links (HTML5 invalid)
  */
 function silverclean_remove_rel_cat( $text ) {
