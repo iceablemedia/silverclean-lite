@@ -34,7 +34,7 @@ if ($favicon): ?><link rel="shortcut icon" href="<?php echo esc_url($favicon); ?
 	<div id="header">
 	<div class="container">
 		<div id="logo">
-		<a href="<?php echo home_url(); ?>">
+		<a href="<?php echo esc_url( home_url() ); ?>">
 		<img src="<?php echo esc_url( silverclean_get_option('logo') ); ?>" alt="<?php bloginfo('name') ?>">
 		</a>
 		</div>

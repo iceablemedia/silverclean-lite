@@ -61,9 +61,7 @@
 		<!-- End page container -->
 
 		<div id="sidebar-container" class="right">
-			<ul id="sidebar">
-			   <?php dynamic_sidebar( 'sidebar' ); ?>
-			</ul>
+			<?php get_sidebar(); ?>
 		</div><!-- End sidebar -->
 
 	</div>

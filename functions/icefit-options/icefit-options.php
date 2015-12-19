@@ -118,7 +118,7 @@ function silverclean_settings_machine($options) {
 						<li><strong>Cross-browsers support</strong>, optimized for IE8+, Firefox, Chrome, Safari and Opera</li>
 						<li>Lifetime&nbsp;<strong>free updates</strong>&nbsp;and continued support for the <strong>latest WordPress versions</strong></li>
 						</ul>';
-			$output .= '<a href="http://www.iceablethemes.com/shop/silverclean-pro/" class="button-primary" target="_blank">Learn More and Upgrade Now!</a>';
+			$output .= '<a href="http://www.iceablethemes.com/shop/silverclean-pro/?utm_source=lite_theme&utm_medium=go_pro&utm_campaign=silverclean_lite" class="button-primary" target="_blank">Learn More and Upgrade Now!</a>';
 		}
 		elseif ( $arg['type'] == "end_menu" )
 		{

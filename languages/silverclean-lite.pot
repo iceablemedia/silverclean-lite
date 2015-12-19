@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Silverclean Lite 1.0.4\n"
-"POT-Creation-Date: 2013-05-31 11:26+0100\n"
-"PO-Revision-Date: 2013-05-31 11:26+0100\n"
+"POT-Creation-Date: 2013-10-14 15:56+0100\n"
+"PO-Revision-Date: 2013-10-14 15:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -24,7 +24,7 @@ msgid "Page Not Found"
 msgstr ""
 
 #: ../404.php:31 ../index.php:104 ../page-full-width.php:57 ../page.php:57
-#: ../single.php:85
+#: ../single.php:87
 msgid "What you are looking for isn't here..."
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:198
+#: ../functions.php:200
 msgid "Read More"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr ""
 msgid "By "
 msgstr ""
 
-#: ../index.php:82 ../single.php:47
+#: ../index.php:82 ../single.php:48
 msgid "In "
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: ../index.php:85 ../page-full-width.php:41 ../page.php:41 ../single.php:49
+#: ../index.php:85 ../page-full-width.php:41 ../page.php:41 ../single.php:51
 msgid "Edit"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: ../index.php:103 ../page-full-width.php:56 ../page.php:56 ../single.php:84
+#: ../index.php:103 ../page-full-width.php:56 ../page.php:56 ../single.php:86
 msgid "Not Found"
 msgstr ""
 
@@ -138,22 +138,30 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: ../single.php:56
+#: ../single.php:58
 msgid "Pages:"
 msgstr ""
 
-#: ../single.php:61
+#: ../single.php:63
 msgid "Next page"
 msgstr ""
 
-#: ../single.php:62
+#: ../single.php:64
 msgid "Previous page"
 msgstr ""
 
-#: ../single.php:91
+#: ../single.php:97
+msgid "Previous Image"
+msgstr ""
+
+#: ../single.php:100
+msgid "Next Image"
+msgstr ""
+
+#: ../single.php:106
 msgid "Next Post"
 msgstr ""
 
-#: ../single.php:94
+#: ../single.php:109
 msgid "Previous Post"
 msgstr ""

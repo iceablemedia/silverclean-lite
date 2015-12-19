@@ -3,8 +3,8 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 3.5.2
-Stable tag: 1.1.2
+Tested up to: 3.6.1
+Stable tag: 1.1.3
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -40,16 +40,28 @@ All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
 
+= 1.1.3 =
+October 14th, 2013
+* Updated: sticky posts styling
+* Updated: minor enhancements to some HTML tags formattings
+* Updated: now enqueuing style.css, allowing users to easily add their own CSS rules
+* Fixed: default sidebar display (when no widgets are set) in page.php
+* Fixed: only display category icon in postmeta when a category is set (fix for attachment pages)
+* Added: image navigation links on attachment pages
+* Updated POT file
+* Added: esc_url() used with home_url() in header.php
+* Added: tracking tag on link to Silverclean Pro for statistics
+* Tested with WP 3.6.1
+
 = 1.1.2 =
 July 1st, 2013
-* Fixed: issues with alignments in single posts.
+* Fixed: issues with image alignments.
 * Tested with WP 3.5.2
 
 = 1.1.1 =
 May 31, 2013
 * Patched a little glitch in option framework (causing minor issues on new installations)
 * Patched an issue with custom header display setting on new installations and homepage
-* Updated POT file
 
 = 1.1 =
 May 24th, 2013

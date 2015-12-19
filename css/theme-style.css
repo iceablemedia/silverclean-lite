@@ -45,16 +45,13 @@
     max-width: 95%;
 }
 
-.sticky {
-    overflow: auto;
-    border: 2px dashed #eee;
-    padding-top: 15px;
-    background: #F9F9F9
-}
+.sticky {}
 
-.sticky .post-contents {
-    margin-left: 10px;
-    margin-right: -10px;
+.sticky .entry-title {
+	padding-left: 20px;
+	background-image: url('../img/pin-icon.png');
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 
 .gallery-caption {
@@ -1054,7 +1051,10 @@ pre {
 	display: block;
 	font-family: 'Courier New', Courier, Monospace;
 	padding: 15px;
-	word-wrap: break-word;
+	overflow: scroll;
+	border: 1px solid #EEE;
+	background: #F9F9F9;
+	margin-bottom: 20px;
 }
 
 ol {

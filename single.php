@@ -44,8 +44,10 @@
 				<?php endif; ?>
 				<span class="meta-date"><?php the_time(get_option('date_format')); ?></span>
 				<span class="meta-author"><?php _e('By ', 'silverclean'); the_author(); ?></span>
+				<?php if ( has_category() ): ?>
 				<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
-				<?php if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>
+				<?php endif;
+				if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>
 				<?php edit_post_link(__('Edit', 'silverclean'), '<span class="editlink">', '</span>'); ?>
 			</div>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -87,12 +89,28 @@
 			<?php endif; ?>
 
 			<div class="article_nav">
-				<?php if ("" != get_adjacent_post( false, "", false ) ): // Is there a next post? ?>
-				<div class="next"><?php next_post_link('%link', __("Next Post", 'silverclean') ); ?></div>
+
+				<?php if ( is_attachment() ):
+				// Use image navigation links on attachment pages, post navigation otherwise ?>
+
+					<?php if ( silverclean_adjacent_image_link(false) ): // Is there a previous image ? ?>
+					<div class="previous"><?php previous_image_link(0, __("Previous Image", 'silverclean') ); ?></div>
+					<?php endif; ?>
+					<?php if ( silverclean_adjacent_image_link(true) ): // Is there a next image ? ?>	
+					<div class="next"><?php next_image_link(0, __("Next Image",'silverclean') ); ?></div>
+					<?php endif; ?>
+
+				<?php else: ?>
+
+					<?php if ("" != get_adjacent_post( false, "", false ) ): // Is there a next post? ?>
+					<div class="next"><?php next_post_link('%link', __("Next Post", 'silverclean') ); ?></div>
+					<?php endif; ?>
+					<?php if ("" != get_adjacent_post( false, "", true ) ): // Is there a previous post? ?>
+					<div class="previous"><?php previous_post_link('%link', __("Previous Post", 'silverclean') ); ?></div>
+					<?php endif; ?>
+
 				<?php endif; ?>
-				<?php if ("" != get_adjacent_post( false, "", true ) ): // Is there a previous post? ?>
-				<div class="previous"><?php previous_post_link('%link', __("Previous Post", 'silverclean') ); ?></div>
-				<?php endif; ?>
+
 				<br class="clear" />
 			</div>
 

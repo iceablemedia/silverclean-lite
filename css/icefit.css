@@ -330,12 +330,14 @@ sub {
 sup {
 	font-size: xx-small;
 	vertical-align: super;
+	line-height: 100%;
 }
 
 code,
 kbd,
 var {
 	font-family: 'Courier new', Courier, Monospace;
+	vertical-align: baseline;
 }
 
 del,
