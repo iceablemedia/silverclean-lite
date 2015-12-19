@@ -1,10 +1,10 @@
 === SILVERCLEAN LITE ===
 
 Contributors: Iceable
-Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-menu, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
+Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -34,12 +34,17 @@ Please refer to license.txt for more information.
 
 This theme bundles some third party javascript and jQuery plugins, released under GPL or GPL compatible licenses:
 * hoverIntent: Copyright 2007, 2013 Brian Cherne. MIT License. http://cherne.net/brian/resources/jquery.hoverIntent.html
-* jQuery easing: Copyright 2008 George McGinley Smith. BSD License. http://gsgd.co.uk/sandbox/jquery/easing/
 * superfish: Copyright 2013 Joel Birch. Dual licensed under the MIT and GPL licenses. http://users.tpg.com.au/j_birch/plugins/superfish/
 
 All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
+
+= 1.1.1 =
+May 31, 2013
+* Patched a little glitch in option framework (causing minor issues on new installations)
+* Patched an issue with custom header display setting on new installations and homepage
+* Updated POT file
 
 = 1.1 =
 May 24th, 2013

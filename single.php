@@ -13,7 +13,7 @@
 <?php get_header(); 
 
 	if ( get_custom_header()->url ) :
-		if ( silverclean_get_option('single_header_image') == 'On' ):
+		if ( silverclean_get_option('single_header_image') != 'Off' ):
 ?>
 
 	<div id="header-image" class="container">

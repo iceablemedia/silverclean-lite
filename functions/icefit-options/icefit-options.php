@@ -76,7 +76,7 @@ function silverclean_settings_machine($options) {
 		elseif ( $arg['type'] == "radio" )
 		{
 			$output .= '<h3>'. $arg['name'] .'</h3>'."\n";
-			if ( $val == "" && $arg['default'] != "") $icefit_settings[$arg['id']] = $val = $arg['default'];
+			if ( $val == "" && $arg['default'] != "") $silverclean_settings[$arg['id']] = $val = $arg['default'];
 			$values = $arg['values'];
 			$output .= '<div class="radio-group">';
 			foreach ($values as $value) {

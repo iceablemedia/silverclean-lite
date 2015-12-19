@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Silverclean Lite 1.0.4\n"
-"POT-Creation-Date: 2013-04-18 11:38+0100\n"
-"PO-Revision-Date: 2013-04-18 11:38+0100\n"
+"POT-Creation-Date: 2013-05-31 11:26+0100\n"
+"PO-Revision-Date: 2013-05-31 11:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,17 +15,21 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:22
+#: ../404.php:28
 msgid "404"
 msgstr ""
 
-#: ../404.php:24 ../header.php:22 ../index.php:144 ../page.php:105
-#: ../single.php:83
-msgid "Not Found"
+#: ../404.php:30
+msgid "Page Not Found"
 msgstr ""
 
-#: ../404.php:25 ../index.php:145 ../page.php:106 ../single.php:84
+#: ../404.php:31 ../index.php:104 ../page-full-width.php:57 ../page.php:57
+#: ../single.php:85
 msgid "What you are looking for isn't here..."
+msgstr ""
+
+#: ../404.php:32 ../index.php:98
+msgid "Maybe a search will help ?"
 msgstr ""
 
 #: ../comments.php:17
@@ -37,71 +41,88 @@ msgstr ""
 msgid "One Response to %2$s"
 msgstr ""
 
-#: ../comments.php:28 ../comments.php:37
+#: ../comments.php:33
 msgid "Older comments"
 msgstr ""
 
-#: ../comments.php:29 ../comments.php:38
+#: ../comments.php:34
 msgid "Newer comments"
 msgstr ""
 
-#: ../comments.php:47
+#: ../comments.php:45
 msgid "Comments are closed."
 msgstr ""
 
-#: ../functions.php:150
-msgid "Read More"
+#: ../footer.php:27
+msgid "Proudly powered by"
 msgstr ""
 
-#: ../functions.php:358
+#: ../functions.php:78
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:100
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:370
+#: ../functions.php:112
 msgid "Footer"
 msgstr ""
 
-#: ../index.php:81
+#: ../functions.php:198
+msgid "Read More"
+msgstr ""
+
+#: ../index.php:35
 msgid "Search Results for "
 msgstr ""
 
-#: ../index.php:86
+#: ../index.php:40
 msgid "Tag: "
 msgstr ""
 
-#: ../index.php:91
+#: ../index.php:45
 msgid "Category: "
 msgstr ""
 
-#: ../index.php:130 ../single.php:45
+#: ../index.php:81 ../single.php:46
 msgid "By "
 msgstr ""
 
-#: ../index.php:131 ../single.php:46
+#: ../index.php:82 ../single.php:47
 msgid "In "
 msgstr ""
 
-#: ../index.php:132
+#: ../index.php:83
 msgid "No Comment"
 msgstr ""
 
-#: ../index.php:132
+#: ../index.php:83
 msgid "1 Comment"
 msgstr ""
 
-#: ../index.php:132
+#: ../index.php:83
 msgid "% Comments"
 msgstr ""
 
-#: ../index.php:134 ../page.php:90 ../single.php:48
+#: ../index.php:85 ../page-full-width.php:41 ../page.php:41 ../single.php:49
 msgid "Edit"
 msgstr ""
 
-#: ../index.php:150
+#: ../index.php:97
+msgid "Nothing Found"
+msgstr ""
+
+#: ../index.php:103 ../page-full-width.php:56 ../page.php:56 ../single.php:84
+msgid "Not Found"
+msgstr ""
+
+#: ../index.php:111
 msgid "Previous Posts"
 msgstr ""
 
-#: ../index.php:151
+#: ../index.php:112
 msgid "Next Posts"
 msgstr ""
 
@@ -117,116 +138,22 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: ../single.php:55
+#: ../single.php:56
 msgid "Pages:"
 msgstr ""
 
-#: ../single.php:60
+#: ../single.php:61
 msgid "Next page"
 msgstr ""
 
-#: ../single.php:61
+#: ../single.php:62
 msgid "Previous page"
 msgstr ""
 
-#: ../functions/icefit-slides/icefit-slides.php:17
-#: ../functions/icefit-slides/icefit-slides.php:19
-msgid "Slides"
+#: ../single.php:91
+msgid "Next Post"
 msgstr ""
 
-#: ../functions/icefit-slides/icefit-slides.php:18
-msgid "Slide"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:20
-msgid "All Slides"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:21
-msgid "Add New"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:22
-msgid "Add New Slide"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:23
-msgid "Edit Slide"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:24
-msgid "New Slide"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:25
-msgid "View Slide"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:26
-msgid "Slides Archive"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:27
-msgid "Search Slides"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:28
-msgid "No Slide Found"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:29
-msgid "No Slide found in Trash"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:47
-#: ../functions/icefit-slides/icefit-slides.php:57
-msgid "Slides Categories"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:48
-msgid "Slides Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:49
-msgid "Search Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:50
-msgid "All Categories"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:51
-msgid "Parent Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:52
-msgid "Parent Category:"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:53
-msgid "Edit Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:54
-msgid "Update Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:55
-msgid "Add New Category"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:56
-msgid "New Category Name"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:76
-msgid "Title"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:77
-msgid "Thumbnail"
-msgstr ""
-
-#: ../functions/icefit-slides/icefit-slides.php:79
-msgid "Category"
+#: ../single.php:94
+msgid "Previous Post"
 msgstr ""

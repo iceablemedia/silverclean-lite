@@ -13,8 +13,8 @@
 <?php get_header();
 
 	if ( get_custom_header()->url ) :
-		if (	( is_front_page() && silverclean_get_option('home_header_image') == 'On' ) ||
-				( silverclean_get_option('blog_header_image') == 'On' )	):
+		if (	( is_front_page() && silverclean_get_option('home_header_image') != 'Off' ) ||
+				( !is_front_page() && silverclean_get_option('blog_header_image') != 'Off' )	):
 ?>
 
 	<div id="header-image" class="container">
