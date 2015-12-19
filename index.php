@@ -17,17 +17,17 @@ get_header();
 
 		/* SEARCH CONDITIONAL TITLE */
 		if ( is_search() ):
-		?><h1 class="page-title"><?php _e('Search Results for ', 'silverclean'); ?>"<?php the_search_query() ?>"</h1><?php
+		?><h1 class="page-title"><?php _e('Search Results for ', 'silverclean-lite'); ?>"<?php the_search_query() ?>"</h1><?php
 		endif;
 
 		/* TAG CONDITIONAL TITLE */
 		if ( is_tag() ):
-		?><h1 class="page-title"><?php _e('Tag: ', 'silverclean'); single_tag_title(); ?></h1><?php
+		?><h1 class="page-title"><?php _e('Tag: ', 'silverclean-lite'); single_tag_title(); ?></h1><?php
 		endif;
 
 		/* CATEGORY CONDITIONAL TITLE */
 		if ( is_category() ):
-		?><h1 class="page-title"><?php _e('Category: ', 'silverclean'); single_cat_title(); ?></h1><?php
+		?><h1 class="page-title"><?php _e('Category: ', 'silverclean-lite'); single_cat_title(); ?></h1><?php
 		endif;
 
 		/* DEFAULT CONDITIONAL TITLE */
@@ -65,15 +65,15 @@ get_header();
 					?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
 
 					?><span class="meta-author vcard author"><?php
-						_e('By ', 'silverclean');
+						_e('By ', 'silverclean-lite');
 						?><span class="fn"><?php the_author(); ?></span><?php
 					?></span><?php
-					?><span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span><?php
-					?><span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean' ), __( '1 Comment', 'silverclean' ), __( '% Comments', 'silverclean' ) ); ?></span><?php
+					?><span class="meta-category"><?php _e('In ', 'silverclean-lite'); the_category(', ') ?></span><?php
+					?><span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean-lite' ), __( '1 Comment', 'silverclean-lite' ), __( '% Comments', 'silverclean-lite' ) ); ?></span><?php
 					if (has_tag()):
 						echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>');
 					endif;
-					?><span class="editlink"><?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?></span><?php
+					?><span class="editlink"><?php edit_post_link(__('Edit', 'silverclean-lite'), '', ''); ?></span><?php
 				?></div><?php
 
 			?></div><?php // end div post
@@ -85,22 +85,22 @@ get_header();
 
 			if (is_search() ):
 
-				?><h2><?php _e('Nothing Found', 'silverclean'); ?></h2><?php
-				?><p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p><?php
+				?><h2><?php _e('Nothing Found', 'silverclean-lite'); ?></h2><?php
+				?><p><?php _e('Maybe a search will help ?', 'silverclean-lite'); ?></p><?php
 				get_search_form();
 			
 			else:
 
-				?><h2><?php _e('Not Found', 'silverclean'); ?></h2><?php
-				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p><?php
+				?><h2><?php _e('Not Found', 'silverclean-lite'); ?></h2><?php
+				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean-lite'); ?></p><?php
 
 			endif;
 
 		endif;
 
 			?><div class="page_nav"><?php
-				?><div class="previous"><?php next_posts_link( __('Previous Posts', 'silverclean') ); ?></div><?php
-				?><div class="next"><?php previous_posts_link( __('Next Posts', 'silverclean') ); ?></div><?php
+				?><div class="previous"><?php next_posts_link( __('Previous Posts', 'silverclean-lite') ); ?></div><?php
+				?><div class="next"><?php previous_posts_link( __('Next Posts', 'silverclean-lite') ); ?></div><?php
 			?></div><?php
 
 		?></div><?php // End page container

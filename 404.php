@@ -16,10 +16,10 @@ get_header();
 		?><div id="page-container" class="left with-sidebar"><?php
 
 			?><div <?php post_class(); ?>><?php
-				?><h1 class="page-title"><?php _e('404', 'silverclean'); ?></h1><?php
-				?><h2><?php _e('Page Not Found', 'silverclean'); ?></h2><?php
-				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p><?php
-				?><p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p><?php
+				?><h1 class="page-title"><?php _e('404', 'silverclean-lite'); ?></h1><?php
+				?><h2><?php _e('Page Not Found', 'silverclean-lite'); ?></h2><?php
+				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean-lite'); ?></p><?php
+				?><p><?php _e('Maybe a search will help ?', 'silverclean-lite'); ?></p><?php
 				get_search_form();
 			?></div><?php
 		?></div><?php // End page container

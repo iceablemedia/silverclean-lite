@@ -19,17 +19,17 @@ endif;
 
 /* You are free to modify or replace this by anything you like as per the terms of the GPL license */
 
-printf( __('Copyright &copy; %s %s.', 'silverclean'), date('Y'), get_bloginfo('name') );
+printf( __('Copyright &copy; %s %s.', 'silverclean-lite'), date('Y'), get_bloginfo('name') );
 echo ' ';
-printf( __('Proudly powered by <a href="%s" title="%s">%s</a>.', 'silverclean'),
-	esc_url( __('http://wordpress.org/', 'silverclean') ),
-	esc_attr__( 'Semantic Personal Publishing Platform', 'silverclean' ),
-	__('WordPress', 'silverclean')
+printf( __('Proudly powered by <a href="%s" title="%s">%s</a>.', 'silverclean-lite'),
+	esc_url( __('http://wordpress.org/', 'silverclean-lite') ),
+	esc_attr__( 'Semantic Personal Publishing Platform', 'silverclean-lite' ),
+	__('WordPress', 'silverclean-lite')
 );
 echo ' ';
-printf( __('Silverclean design by <a href="%s" title="%s">Iceable Themes</a>.', 'silverclean'),
+printf( __('Silverclean design by <a href="%s" title="%s">Iceable Themes</a>.', 'silverclean-lite'),
 	esc_url( 'http://www.iceablethemes.com' ),
-	esc_attr( 'Iceablethemes', 'silverclean' )
+	esc_attr( 'Iceablethemes', 'silverclean-lite' )
 );
 
 /* Stop editing here */

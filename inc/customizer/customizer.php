@@ -15,26 +15,33 @@ class Silverclean_Customizer {
 		// Move default settings "background_color" in the same section as background image settings
 		// and rename the section just "Background"
 		$wp_customize->get_control( 'background_color' )->section = 'background_image';
-		$wp_customize->get_section( 'background_image' )->title = __('Background', 'silverclean');
+		$wp_customize->get_section( 'background_image' )->title = __('Background', 'silverclean-lite');
 
 		// Add new sections
+		if ( ! function_exists('wp_site_icon') ) :
 		$wp_customize->add_section( 'silverclean_logo_favicon' , array(
-			'title'      => __( 'Logo & Favicon', 'silverclean' ),
+			'title'      => __( 'Logo & Favicon', 'silverclean-lite' ),
 			'priority'   => 20,
 		) );
+		else:
+		$wp_customize->add_section( 'silverclean_logo_favicon' , array(
+			'title'      => __( 'Logo', 'silverclean-lite' ),
+			'priority'   => 20,
+		) );
+		endif;
 
 		$wp_customize->add_section( 'silverclean_blog_settings' , array(
-			'title'      => __( 'Blog Settings', 'silverclean' ),
+			'title'      => __( 'Blog Settings', 'silverclean-lite' ),
 			'priority'   => 80,
 		) );
 
 		$wp_customize->add_section( 'silverclean_misc_settings' , array(
-			'title'      => __( 'Misc', 'silverclean' ),
+			'title'      => __( 'Misc', 'silverclean-lite' ),
 			'priority'   => 100,
 		) );
 
 		$wp_customize->add_section( 'silverclean_more' , array(
-			'title'      => __( 'More', 'silverclean' ),
+			'title'      => __( 'More', 'silverclean-lite' ),
 			'priority'   => 130,
 		) );
 
@@ -46,8 +53,8 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Image_Control( $wp_customize, 'silverclean_logo',
 				array(
-					'label'      => __( 'Upload your logo', 'silverclean' ),
-					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'silverclean'),
+					'label'      => __( 'Upload your logo', 'silverclean-lite' ),
+					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'silverclean-lite'),
 					'section'    => 'silverclean_logo_favicon',
 					'settings'   => 'silverclean_logo',
 				)
@@ -55,20 +62,22 @@ class Silverclean_Customizer {
 		);
 
 		// Setting and control for favicon
-		$wp_customize->add_setting( 'silverclean_favicon' , array(
-			'default'     => '',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
-		$wp_customize->add_control(
-			new WP_Customize_Image_Control( $wp_customize, 'silverclean_favicon',
-				array(
-					'label'			=> __( 'Upload a custom favicon', 'silverclean' ),
-					'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'silverclean'),
-					'section'		=> 'silverclean_logo_favicon',
-					'settings'		=> 'silverclean_favicon',
+		if ( ! function_exists('wp_site_icon') ) :
+			$wp_customize->add_setting( 'silverclean_favicon' , array(
+				'default'     => '',
+				'sanitize_callback' => 'esc_url_raw',
+			) );
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control( $wp_customize, 'silverclean_favicon',
+					array(
+						'label'			=> __( 'Upload a custom favicon', 'silverclean-lite' ),
+						'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'silverclean-lite'),
+						'section'		=> 'silverclean_logo_favicon',
+						'settings'		=> 'silverclean_favicon',
+					)
 				)
-			)
-		);
+			);
+		endif;
 
 		// Setting and control for blog index content switch
 		$wp_customize->add_setting( 'silverclean_blog_index_content' , array(
@@ -78,13 +87,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'silverclean_blog_index_content',
 				array(
-					'label'		=> __( 'Blog Index Content', 'silverclean' ),
+					'label'		=> __( 'Blog Index Content', 'silverclean-lite' ),
 					'section'	=> 'silverclean_blog_settings',
 					'settings'	=> 'silverclean_blog_index_content',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'excerpt'	=> __( 'Excerpt', 'silverclean' ),
-						'content'	=> __( 'Full content', 'silverclean' )
+						'excerpt'	=> __( 'Excerpt', 'silverclean-lite' ),
+						'content'	=> __( 'Full content', 'silverclean-lite' )
 					)
 				)
 			)
@@ -98,13 +107,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'silverclean_responsive_mode',
 				array(
-					'label'		=> __( 'Responsive Mode', 'silverclean' ),
+					'label'		=> __( 'Responsive Mode', 'silverclean-lite' ),
 					'section'	=> 'silverclean_misc_settings',
 					'settings'	=> 'silverclean_responsive_mode',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'silverclean' ),
-						'off'	=> __( 'Off', 'silverclean' )
+						'on'	=> __( 'On', 'silverclean-lite' ),
+						'off'	=> __( 'Off', 'silverclean-lite' )
 					)
 				)
 			)
@@ -118,13 +127,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'home_header_image',
 				array(
-					'label'		=> __( 'Display header on Homepage', 'silverclean' ),
+					'label'		=> __( 'Display header on Homepage', 'silverclean-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'home_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'silverclean' ),
-						'off'	=> __( 'Off', 'silverclean' )
+						'on'	=> __( 'On', 'silverclean-lite' ),
+						'off'	=> __( 'Off', 'silverclean-lite' )
 					)
 				)
 			)
@@ -137,13 +146,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'blog_header_image',
 				array(
-					'label'		=> __( 'Display header on Blog Index', 'silverclean' ),
+					'label'		=> __( 'Display header on Blog Index', 'silverclean-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'blog_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'silverclean' ),
-						'off'	=> __( 'Off', 'silverclean' )
+						'on'	=> __( 'On', 'silverclean-lite' ),
+						'off'	=> __( 'Off', 'silverclean-lite' )
 					)
 				)
 			)
@@ -156,13 +165,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'single_header_image',
 				array(
-					'label'		=> __( 'Display header on Single Posts', 'silverclean' ),
+					'label'		=> __( 'Display header on Single Posts', 'silverclean-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'single_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'silverclean' ),
-						'off'	=> __( 'Off', 'silverclean' )
+						'on'	=> __( 'On', 'silverclean-lite' ),
+						'off'	=> __( 'Off', 'silverclean-lite' )
 					)
 				)
 			)
@@ -175,13 +184,13 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new WP_Customize_Control( $wp_customize, 'pages_header_image',
 				array(
-					'label'		=> __( 'Display header on Pages', 'silverclean' ),
+					'label'		=> __( 'Display header on Pages', 'silverclean-lite' ),
 					'section'	=> 'header_image',
 					'settings'	=> 'pages_header_image',
 					'type'		=> 'radio',
 					'choices'	=> array(
-						'on'	=> __( 'On', 'silverclean' ),
-						'off'	=> __( 'Off', 'silverclean' )
+						'on'	=> __( 'On', 'silverclean-lite' ),
+						'off'	=> __( 'Off', 'silverclean-lite' )
 					)
 				)
 			)
@@ -195,8 +204,8 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new Silverclean_Button_Customize_Control( $wp_customize, 'silverclean_upgrade',
 				array(
-					'label'			=> __( 'Get Silverclean Pro', 'silverclean' ),
-					'description'	=> __( 'Unleash the full potential of Silverclean with tons of additional settings, advanced features and premium support.', 'silverclean'),
+					'label'			=> __( 'Get Silverclean Pro', 'silverclean-lite' ),
+					'description'	=> __( 'Unleash the full potential of Silverclean with tons of additional settings, advanced features and premium support.', 'silverclean-lite'),
 					'section'		=> 'silverclean_more',
 					'settings'		=> 'silverclean_upgrade',
 					'type'			=> 'button',
@@ -212,8 +221,8 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new Silverclean_Button_Customize_Control( $wp_customize, 'silverclean_support',
 				array(
-					'label'			=> __( 'Silverclean Lite support forums', 'silverclean' ),
-					'description'	=> __( 'Have a question? Need help?', 'silverclean'),
+					'label'			=> __( 'Silverclean Lite support forums', 'silverclean-lite' ),
+					'description'	=> __( 'Have a question? Need help?', 'silverclean-lite'),
 					'section'		=> 'silverclean_more',
 					'settings'		=> 'silverclean_support',
 					'type'			=> 'button',
@@ -229,8 +238,8 @@ class Silverclean_Customizer {
 		$wp_customize->add_control(
 			new Silverclean_Button_Customize_Control( $wp_customize, 'silverclean_feedback',
 				array(
-					'label'			=> __( 'Rate Silverclean Lite', 'silverclean' ),
-					'description'	=> __( 'Like this theme? We\'d love to hear your feedback!', 'silverclean'),
+					'label'			=> __( 'Rate Silverclean Lite', 'silverclean-lite' ),
+					'description'	=> __( 'Like this theme? We\'d love to hear your feedback!', 'silverclean-lite'),
 					'section'		=> 'silverclean_more',
 					'settings'		=> 'silverclean_feedback',
 					'type'			=> 'button',
@@ -247,7 +256,7 @@ class Silverclean_Customizer {
 			array( 'customize-controls' )
 		);
 
-		wp_register_script( 
+		wp_register_script(
 			  'silverclean-customizer-section',
 			  get_template_directory_uri() . '/inc/customizer/js/silverclean-customizer-section.js',
 			  array( 'jquery','jquery-ui-core','jquery-ui-button','customize-controls' ),
@@ -255,7 +264,7 @@ class Silverclean_Customizer {
 			  true
 		);
 		$silverclean_customizer_section_l10n = array(
-			'upgrade_pro' => __( 'Upgrade to Silverclean Pro!', 'silverclean' ),
+			'upgrade_pro' => __( 'Upgrade to Silverclean Pro!', 'silverclean-lite' ),
 		);
 		wp_localize_script( 'silverclean-customizer-section', 'silverclean_customizer_section_l10n', $silverclean_customizer_section_l10n );
 		wp_enqueue_script( 'silverclean-customizer-section' );
@@ -299,7 +308,7 @@ function silverclean_sanitize_on_off( $input ){
 }
 
 function silverclean_sanitize_button( $input ){
-	return '';	
+	return '';
 }
 
 ?>

@@ -22,20 +22,20 @@ while(have_posts()) : the_post();
 
 		the_content();
 			$silverclean_link_pages_args = array(
-				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean'),
+				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean-lite'),
 				'after'            => '</div>',
 				'link_before'      => '<span>',
 				'link_after'       => '</span>',
 				'next_or_number'   => 'number',
-				'nextpagelink'     => __('Next page', 'silverclean'),
-				'previouspagelink' => __('Previous page', 'silverclean'),
+				'nextpagelink'     => __('Next page', 'silverclean-lite'),
+				'previouspagelink' => __('Previous page', 'silverclean-lite'),
 				'pagelink'         => '%',
 				'echo'             => 1
 			);
 			wp_link_pages( $silverclean_link_pages_args );
 
 		?><br class="clear" /><?php
-		?><p class="editlink"><?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?></p><?php
+		?><p class="editlink"><?php edit_post_link(__('Edit', 'silverclean-lite'), '', ''); ?></p><?php
 
 		// Display comments section only if comments are open or if there are comments already.
 		if ( comments_open() || get_comments_number()!=0 ):
@@ -48,8 +48,8 @@ while(have_posts()) : the_post();
 endwhile;
 
 else:
-	?><h2><?php _e('Not Found', 'silverclean'); ?></h2><?php
-	?><p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p><?php
+	?><h2><?php _e('Not Found', 'silverclean-lite'); ?></h2><?php
+	?><p><?php _e('What you are looking for isn\'t here...', 'silverclean-lite'); ?></p><?php
 
 endif;
 

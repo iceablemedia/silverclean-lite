@@ -31,16 +31,16 @@ get_header();
 				// Echo updated date for hatom-feed - not to be displayed on front end
 				?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
 				?><span class="meta-author vcard author"><?php
-					_e('By ', 'silverclean');
+					_e('By ', 'silverclean-lite');
 					?><span class="fn"><?php the_author(); ?></span><?php
 				?></span><?php
 				if ( has_category() ):
-				?><span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span><?php
+				?><span class="meta-category"><?php _e('In ', 'silverclean-lite'); the_category(', ') ?></span><?php
 				endif;
 				if (has_tag()):
 					echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>');
 				endif;
-				edit_post_link(__('Edit', 'silverclean'), '<span class="editlink">', '</span>');
+				edit_post_link(__('Edit', 'silverclean-lite'), '<span class="editlink">', '</span>');
 			?></div><?php
 			?><h1 class="entry-title"><?php the_title(); ?></h1><?php
 			the_content();
@@ -48,13 +48,13 @@ get_header();
 			?><div class="clear" /></div><?php
 
 			$args = array(
-				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean'),
+				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean-lite'),
 				'after'            => '</div>',
 				'link_before'      => '',
 				'link_after'       => '',
 				'next_or_number'   => 'number',
-				'nextpagelink'     => __('Next page', 'silverclean'),
-				'previouspagelink' => __('Previous page', 'silverclean'),
+				'nextpagelink'     => __('Next page', 'silverclean-lite'),
+				'previouspagelink' => __('Previous page', 'silverclean-lite'),
 				'pagelink'         => '%',
 				'echo'             => 1
 			);
@@ -74,8 +74,8 @@ get_header();
 
 			else:
 
-			?><h2><?php _e('Not Found', 'silverclean'); ?></h2><?php
-			?><p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p><?php
+			?><h2><?php _e('Not Found', 'silverclean-lite'); ?></h2><?php
+			?><p><?php _e('What you are looking for isn\'t here...', 'silverclean-lite'); ?></p><?php
 
 			endif;
 
@@ -85,19 +85,19 @@ get_header();
 				// Use image navigation links on attachment pages, post navigation otherwise
 
 					if ( silverclean_adjacent_image_link(false) ): // Is there a previous image ?
-					?><div class="previous"><?php previous_image_link(0, __("Previous Image", 'silverclean') ); ?></div><?php
+					?><div class="previous"><?php previous_image_link(0, __("Previous Image", 'silverclean-lite') ); ?></div><?php
 					endif;
 					if ( silverclean_adjacent_image_link(true) ): // Is there a next image ?
-					?><div class="next"><?php next_image_link(0, __("Next Image",'silverclean') ); ?></div><?php
+					?><div class="next"><?php next_image_link(0, __("Next Image",'silverclean-lite') ); ?></div><?php
 					endif;
 
 				else:
 
 					if ("" != get_adjacent_post( false, "", false ) ): // Is there a next post?
-					?><div class="next"><?php next_post_link('%link', __("Next Post", 'silverclean') ); ?></div><?php
+					?><div class="next"><?php next_post_link('%link', __("Next Post", 'silverclean-lite') ); ?></div><?php
 					endif;
 					if ("" != get_adjacent_post( false, "", true ) ): // Is there a previous post?
-					?><div class="previous"><?php previous_post_link('%link', __("Previous Post", 'silverclean') ); ?></div><?php
+					?><div class="previous"><?php previous_post_link('%link', __("Previous Post", 'silverclean-lite') ); ?></div><?php
 					endif;
 
 				endif;

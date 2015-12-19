@@ -498,7 +498,7 @@ or wrap each row of columns in a <div class="row"> */
 ================================================== */
 
 .alignnone {
-    
+
 }
 
 .aligncenter {
@@ -507,7 +507,7 @@ or wrap each row of columns in a <div class="row"> */
 }
 
 #page-container *.aligncenter {
-	margin: 0 auto 20px auto!important;    
+	margin: 0 auto 20px auto!important;
 }
 
 .alignright {
@@ -543,6 +543,24 @@ or wrap each row of columns in a <div class="row"> */
 
 .gallery-caption {
 	font-size: 80%;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 /* Logo */
@@ -751,7 +769,7 @@ or wrap each row of columns in a <div class="row"> */
 #nav-search #s {
 	display: block;
 	background-color: #8e8e8e; /* Old browsers */
-	background-image: url('../img/search-icon.png'); /* Fallback */    
+	background-image: url('../img/search-icon.png'); /* Fallback */
 	background:       url('../img/search-icon.png'),        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8e8e8e), color-stop(100%,#707070)); /* Chrome,Safari4+ */
 	background:       url('../img/search-icon.png'), -webkit-linear-gradient(top,  #8e8e8e 0%,#707070 100%); /* Chrome10+,Safari5.1+ */
 	background:       url('../img/search-icon.png'),    -moz-linear-gradient(top,  #8e8e8e 0%, #707070 100%); /* FF3.6+ */
@@ -785,7 +803,7 @@ or wrap each row of columns in a <div class="row"> */
 #page-container {
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	padding-top: 20px; 
+	padding-top: 20px;
 }
 
 /* #Index */
@@ -814,7 +832,7 @@ or wrap each row of columns in a <div class="row"> */
 	font-size: 11px;
 	line-height: 19px;
 	margin-right: 15px;
-	display: block;	
+	display: block;
 }
 
 .postmetadata > span {
@@ -902,7 +920,7 @@ or wrap each row of columns in a <div class="row"> */
 }
 
 .paged_nav {
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 }
 
 .paged_nav a {
@@ -986,7 +1004,7 @@ or wrap each row of columns in a <div class="row"> */
 }
 
 .commentlist .comment .comment-body .comment-author .fn {
-	font-weight: bold 
+	font-weight: bold
 }
 
 .commentlist .comment .comment-body .commentmetadata {
@@ -1022,7 +1040,7 @@ or wrap each row of columns in a <div class="row"> */
 /* Nested comments */
 .commentlist .comment ul.children {
 	margin-left: 20px;
-	margin-top: 20px 
+	margin-top: 20px
 }
 .commentlist .comment ul.children li {
 	border-top: 1px solid #ccc;
@@ -1096,7 +1114,7 @@ or wrap each row of columns in a <div class="row"> */
 /* #Comment form */
 
 p.form-allowed-tags {
-	display: none; 
+	display: none;
 }
 
 p.comment-form-author,
@@ -1107,7 +1125,7 @@ p.comment-form-url
 }
 
 #respond #commentform label .required {
-	color: red; 
+	color: red;
 }
 
 
@@ -1287,7 +1305,7 @@ body,
 	font-size: 12px;
 	line-height: 19px;
 	letter-spacing: normal;
-	word-spacing: normal;	
+	word-spacing: normal;
 }
 
 body {
@@ -1433,7 +1451,7 @@ blockquote, blockquote p {
 	font-style: italic;
 }
 
-blockquote {	
+blockquote {
 	margin: 0 40px 20px 40px;
 	padding: 10px 20px;
 	border-left: 3px solid #DDD;
@@ -1490,7 +1508,7 @@ th {
 }
 
 tr {
-	 
+
 }
 
 tr:nth-child(even) {

@@ -22,8 +22,8 @@ function silverclean_setup(){
 	 * Translations can be added to the /languages directory.
 	 * A .pot template file is included to get you started
 	 */
-	load_theme_textdomain('silverclean', get_template_directory() . '/languages');
-	
+	load_theme_textdomain('silverclean-lite', get_template_directory() . '/languages');
+
 	/* Feed links support */
 	add_theme_support( 'automatic-feed-links' );
 
@@ -82,9 +82,9 @@ add_filter( 'wp_page_menu_args', 'silverclean_page_menu_args' );
  * Register Sidebar and Footer widgetized areas
  */
 function silverclean_widgets_init() {
-	
+
 	register_sidebar( array(
-		'name'          => __( 'Default Sidebar', 'silverclean' ),
+		'name'          => __( 'Default Sidebar', 'silverclean-lite' ),
 		'id'            => 'sidebar',
 		'description'   => '',
 	    'class'         => '',
@@ -94,9 +94,9 @@ function silverclean_widgets_init() {
 		'after_title'   => '</h3>',
 		)
 	);
-	
+
 	register_sidebar( array(
-		'name'          => __( 'Footer', 'silverclean' ),
+		'name'          => __( 'Footer', 'silverclean-lite' ),
 		'id'            => 'footer-sidebar',
 		'description'   => '',
 	    'class'         => '',
@@ -180,14 +180,14 @@ add_filter('post_class','silverclean_remove_hentry');
 function silverclean_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category"', "", $text); return $text;
 }
-add_filter( 'the_category', 'silverclean_remove_rel_cat' ); 
+add_filter( 'the_category', 'silverclean_remove_rel_cat' );
 
 /*
  * Customize "read more" links on index view
  */
 function silverclean_excerpt_more( $more ) {
 	global $post;
-	return '... <div class="read-more"><a href="'. get_permalink( get_the_ID() ) . '">'. __("Read More", 'silverclean') .'</a></div>';
+	return '... <div class="read-more"><a href="'. get_permalink( get_the_ID() ) . '">'. __("Read More", 'silverclean-lite') .'</a></div>';
 }
 add_filter( 'excerpt_more', 'silverclean_excerpt_more' );
 
@@ -215,7 +215,7 @@ function silverclean_trim_excerpt($text = '') {
 		if ( ( preg_match('/<!--more(.*?)?-->/', $post->post_content ) || preg_match('/<!--nextpage-->/', $post->post_content ) ) && strpos($text,$excerpt_more) === false ) {
 		 $text .= $excerpt_more;
 		}
-		
+
 	}
 	return apply_filters('silverclean_trim_excerpt', $text, $raw_excerpt);
 }
@@ -241,9 +241,9 @@ function silverclean_dropdown_nav_menu () {
 		}
 		$menu_list .= '</select>';
    		// $menu_list now ready to output
-   		echo $menu_list;    
+   		echo $menu_list;
 		}
-    } 
+    }
 }
 
 /*
