@@ -3,7 +3,7 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
  *
  * Header Template
  *
@@ -25,33 +25,50 @@ if ($favicon): ?><link rel="shortcut icon" href="<?php echo esc_url($favicon); ?
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-	<div id="main-wrap">
+<![endif]--><?php
+wp_head();
+?></head><body <?php body_class(); ?>><?php
 
-	<div id="header">
-	<div class="container">
-		<div id="logo">
-		<a href="<?php echo esc_url( home_url() ); ?>">
-		<?php $logo_url = silverclean_get_option('logo');
-		if ( silverclean_get_option('header_title') == 'Display Title' || $logo_url == "" ): ?>
-			<span class="site-title"><?php bloginfo('name') ?></span>
-		<?php else: ?>
-			<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo('name') ?>">
-		<?php endif; ?>
-		</a>
-		</div>
-	</div>
-	</div><!-- End header -->
+?><div id="main-wrap"><?php
 
-	<div id="navbar" class="container">
-	<div class="menu-container">
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>' ) ); ?>
-	<?php silverclean_dropdown_nav_menu(); ?>
-	</div>
-	<div id="nav-search">
-		<?php get_search_form(); ?>
-	</div>
-	</div><!-- End navbar -->
+	?><div id="header"><?php
+	?><div class="container"><?php
+		?><div id="logo"><a href="<?php echo esc_url( home_url() ); ?>"><?php
+		$logo_url = silverclean_get_option('logo');
+		if ( silverclean_get_option('header_title') == 'Display Title' || $logo_url == "" ):
+			?><span class="site-title"><?php bloginfo('name') ?></span><?php
+		else:
+			?><img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo('name') ?>"><?php
+		endif;
+		?></a></div><?php
+
+		if ( "On" == silverclean_get_option('header_tagline') ):
+			?><div id="tagline"><?php bloginfo('description'); ?></div><?php
+		endif;
+
+	?></div><?php
+	?></div><?php // End header
+
+	?><div id="navbar" class="container"><?php
+	?><div class="menu-container"><?php
+	wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>' ) );
+	silverclean_dropdown_nav_menu();
+	?></div><?php
+	?><div id="nav-search"><?php
+		get_search_form();
+	?></div><?php
+	?></div><?php // End navbar
+
+	if ( get_custom_header()->url ) :
+		if ( ( is_front_page() && silverclean_get_option('home_header_image') != 'Off' )
+			|| ( is_page() && !is_front_page() && silverclean_get_option('pages_header_image') != 'Off' )
+			|| ( is_single() && silverclean_get_option('single_header_image') != 'Off' )
+			|| ( !is_front_page() && !is_singular() && silverclean_get_option('blog_header_image') != 'Off' )
+			|| ( is_404() ) ):
+	
+	?><div id="header-image" class="container"><?php
+	?><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /><?php
+	?></div><?php
+	
+		endif;
+	endif; ?>

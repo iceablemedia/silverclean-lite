@@ -3,34 +3,41 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
  *
  * Footer Template
  *
  */ 
-?>
 
-	<?php  if (is_active_sidebar( 'footer-sidebar' ) ): ?>
-		<div id="footer"><div class="container">
-			<ul>
-			<?php dynamic_sidebar( 'footer-sidebar' ); ?>
-			</ul>
-		</div></div>
-	<?php endif; ?>
+if (is_active_sidebar( 'footer-sidebar' ) ):
+	?><div id="footer"><div class="container"><ul><?php
+			dynamic_sidebar( 'footer-sidebar' );
+		?></ul></div></div><?php
+endif;
 
-	<div id="sub-footer"><div class="container">
-			<?php 
-			/* You are free to modify or replace this by anything you like as per the terms of the GPL license */ ?>
-			 Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. 
-			 <?php printf( __( 'Proudly powered by', 'silverclean' ) ); ?><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'silverclean' ); ?>"> WordPress</a>. Silverclean design by <a href="<?php echo esc_url( 'http://www.iceablethemes.com' ); ?>" title="<?php esc_attr_e( 'Iceablethemes', 'silverclean' ); ?>">Iceable Themes</a>.</div>
-	</div></div>
-	<!-- End Footer -->
+?><div id="sub-footer"><div class="container"><?php
 
-</div>
-<!-- End main wrap -->
+/* You are free to modify or replace this by anything you like as per the terms of the GPL license */
 
-<?php wp_footer(); ?> 
-<!-- End Document
-================================================== -->
-</body>
-</html>
+printf( __('Copyright &copy; %s %s.', 'silverclean'), date('Y'), get_bloginfo('name') );
+echo ' ';
+printf( __('Proudly powered by <a href="%s" title="%s">%s</a>.', 'silverclean'),
+	esc_url( __('http://wordpress.org/', 'silverclean') ),
+	esc_attr__( 'Semantic Personal Publishing Platform', 'silverclean' ),
+	__('WordPress', 'silverclean')
+);
+echo ' ';
+printf( __('Silverclean design by <a href="%s" title="%s">Iceable Themes</a>.', 'silverclean'),
+	esc_url( 'http://www.iceablethemes.com' ),
+	esc_attr( 'Iceablethemes', 'silverclean' )
+);
+
+/* Stop editing here */
+
+?></div></div><?php // End sub footer
+
+?></div><?php // End main wrap 
+
+wp_footer();
+
+?></body></html>

@@ -3,7 +3,7 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
  *
  * Theme's Function
  *
@@ -132,26 +132,27 @@ function silverclean_styles() {
 	$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
 	$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
 
+	$responsive_mode = silverclean_get_option('responsive_mode');
+	if ($responsive_mode != 'off'):
+		$stylesheet = '/css/silverclean.dev.css';
+	else:
+		$stylesheet = '/css/silverclean-unresponsive.min.css';
+	endif;
+
 	/* Child theme support:
 	 * Enqueue child-theme's versions of stylesheets in /css if they exist,
 	 * or the parent theme's version otherwise
 	 */
-	if ( @file_exists( $stylesheet_directory . '/css/icefit.css' ) )
-		wp_register_style( 'icefit', $stylesheet_directory_uri . '/css/icefit.css' );
+	if ( @file_exists( $stylesheet_directory . $stylesheet ) )
+		wp_register_style( 'silverclean', $stylesheet_directory_uri . $stylesheet );
 	else
-		wp_register_style( 'icefit', $template_directory_uri . '/css/icefit.css' );	
-
-	if ( @file_exists( $stylesheet_directory . '/css/theme-style.css' ) )
-		wp_register_style( 'theme-style', $stylesheet_directory_uri . '/css/theme-style.css' );
-	else
-		wp_register_style( 'theme-style', $template_directory_uri . '/css/theme-style.css' );
+		wp_register_style( 'silverclean', $template_directory_uri . $stylesheet );
 
 	// Always enqueue style.css from the current theme
-	wp_register_style( 'style', $stylesheet_directory_uri . '/style.css');
+	wp_register_style( 'silverclean-style', $stylesheet_directory_uri . '/style.css');
 
-	wp_enqueue_style( 'icefit' );
-	wp_enqueue_style( 'theme-style' );
-	wp_enqueue_style( 'style' );
+	wp_enqueue_style( 'silverclean' );
+	wp_enqueue_style( 'silverclean-style' );
 }
 add_action('wp_enqueue_scripts', 'silverclean_styles');
 
@@ -159,9 +160,7 @@ add_action('wp_enqueue_scripts', 'silverclean_styles');
  * Enqueue Javascripts
  */
 function silverclean_scripts() {
-	wp_enqueue_script('icefit-scripts', get_template_directory_uri() . '/js/icefit.js', array('jquery'));
-	wp_enqueue_script('hoverIntent', get_template_directory_uri() . '/js/hoverIntent.js', array('jquery'));	// Submenus
-	wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'));	// Submenus
+	wp_enqueue_script('silverclean', get_template_directory_uri() . '/js/silverclean.min.js', array('jquery','hoverIntent'));
     /* Threaded comments support */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
@@ -186,41 +185,6 @@ function silverclean_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category"', "", $text); return $text;
 }
 add_filter( 'the_category', 'silverclean_remove_rel_cat' ); 
-
-/*
- * Fix for a known issue with enclosing shortcodes and wpautop
- * (wpautop tends to add empty <p> or <br> tags before and/or after enclosing shortcodes)
- * Thanks to Johann Heyne
- */
-function silverclean_shortcode_empty_paragraph_fix($content) {
-	$array = array (
-		'<p>['    => '[', 
-		']</p>'   => ']', 
-		']<br />' => ']',
-	);
-	$content = strtr($content, $array);
-	return $content;
-}
-add_filter('the_content', 'silverclean_shortcode_empty_paragraph_fix');
-
-/*
- * Improved version of clean_pre
- * Based on a work by Emrah Gunduz
- */
-function silverclean_protect_pre($pee) {
-	$pee = preg_replace_callback('!(<pre[^>]*>)(.*?)</pre>!is', 'silverclean_eg_clean_pre', $pee );
-	return $pee;
-}
-
-function silverclean_eg_clean_pre($matches) {
-	if ( is_array($matches) )
-		$text = $matches[1] . $matches[2] . "</pre>";
-	else
-		$text = $matches;
-	$text = str_replace('<br />', '', $text);
-	return $text;
-}
-add_filter( 'the_content', 'silverclean_protect_pre' );
 
 /*
  * Customize "read more" links on index view

@@ -2,14 +2,501 @@
 *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
 *
-* Theme Style CSS
+* Silverclean Lite CSS (unresponsive)
 *
 */
 
-/* =WordPress Core
--------------------------------------------------------------- */
+/* Index
+==================================================
+* 1. IceFit Main CSS
+* 2. Theme Styles
+*/
+
+/* 1. IceFit Main CSS
+================================================== */
+
+/* #Reset & Basics (E. Meyers) */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+
+/* #Lists */
+ul,
+ol {
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style: none outside;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul.square {
+	list-style: square outside;
+}
+
+ul.circle {
+	list-style: circle outside;
+}
+
+ul.disc	 {
+	list-style: disc outside;
+}
+
+ul ul,
+ol ul {
+	margin: 4px 0 5px 15px;
+}
+
+ul ol,
+ol ol {
+	margin: 4px 0 5px 30px;
+}
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {
+	margin-bottom: 6px;
+}
+
+li {
+	line-height: 18px;
+	margin-bottom: 12px;
+}
+
+ul.large li {
+	line-height: 21px;
+}
+
+li p {
+	line-height: 21px;
+}
+
+/* #Images */
+
+img.scale-with-grid {
+	max-width: 100%;
+	height: auto;
+}
+
+/* #Buttons */
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* Clearfixing tabs for beautiful stacking */
+ul.tabs:before,
+ul.tabs:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+ul.tabs:after {
+	clear: both;
+}
+
+ul.tabs {
+	zoom: 1;
+}
+
+/* #Forms */
+
+form {
+	margin-bottom: 20px;
+}
+
+fieldset {
+	margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	border: 1px solid #ccc;
+	padding: 6px 4px;
+	outline: none;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	font: 13px 'Open Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #777;
+	margin: 0;
+	width: 190px;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 20px;
+	background: #fff;
+}
+
+select {
+	padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	border: 1px solid #aaa;
+	color: #444;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+	box-shadow:  0 0 3px rgba(0,0,0,.2);
+}
+
+textarea {
+	min-height: 60px;
+}
+
+label,
+legend {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+	 }
+
+select {
+	width: 220px;
+}
+
+input[type="checkbox"] {
+	display: inline;
+}
+
+label span,
+legend span {
+	font-weight: normal;
+	font-size: 13px;
+	color: #444;
+}
+
+/* #Misc */
+
+.remove-bottom {
+	margin-bottom: 0 !important;
+}
+
+.half-bottom {
+	margin-bottom: 10px !important;
+}
+
+.add-bottom {
+	margin-bottom: 20px !important;
+}
+
+sub {
+	font-size: xx-small;
+	vertical-align: sub;
+}
+
+sup {
+	font-size: xx-small;
+	vertical-align: super;
+	line-height: 100%;
+}
+
+code,
+kbd,
+var {
+	font-family: 'Courier new', Courier, Monospace;
+	vertical-align: baseline;
+}
+
+del,
+strike {
+	text-decoration: line-through;
+}
+
+ins {
+	text-decoration: underline;
+}
+
+big {
+    font-weight: bold;
+}
+
+acronym,
+abbr {
+    border-bottom: .1em dotted;
+    cursor: help;
+}
+
+/* #Responsive Menu */
+
+#navbar select {
+	display: none;
+	margin: auto;
+}
+
+/* #Base Grid */
+
+#main-wrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.container {
+	position: relative;
+	width: 962px;
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+}
+
+#page-container {
+	width: 960px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+#page-container,
+#footer .container ul {
+	font-size: 1px;
+	letter-spacing: -1px;
+	word-spacing: -1px;
+}
+
+#page-container.with-sidebar.right,
+#sidebar-container.right {
+	float: right;
+}
+
+#page-container.with-sidebar.left,
+#sidebar-container.left {
+	float: left;
+}
+
+#page-container > *,
+#footer .container > ul > li {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+	margin-bottom: 20px;
+}
+
+#sidebar-container.left {
+	margin-left: 0px !important;
+	margin-right: 10px !important;
+}
+
+#sidebar-container.right {
+	margin-left: 10px !important;
+	margin-right: 0px !important;
+}
+
+#page-container div h1,
+#page-container div h2,
+#page-container div h3,
+#page-container div h4,
+#page-container div h5,
+#page-container div h6,
+#page-container .page-title {
+	margin-top: 0px;
+}
+
+#page-container.with-sidebar { width: 738px; }
+
+#sidebar-container { width: 200px; }
+
+#footer .container > ul > li {
+	display: inline-block;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+	margin-bottom: 40px;
+	vertical-align: top;
+	float: none;
+	width: 200px;
+}
+
+/* #Clearing */
+
+/* Self Clearing Goodness */
+.container:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.row:after,
+.clearfix:after {
+	clear: both;
+}
+
+.row,
+.clearfix {
+	zoom: 1;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* 2. Theme Styles
+================================================== */
+
 .alignnone {
     
 }
@@ -58,11 +545,9 @@
 	font-size: 80%;
 }
 
-/* #Header
-================================================== */
-
 /* Logo */
 #logo {
+	float: left;
 	padding: 25px 0;
     max-width: 100%;
     box-sizing: border-box;
@@ -78,6 +563,17 @@
 
 #logo a:hover { text-decoration: none; }
 
+#tagline {
+	float: right;
+	text-align: right;
+	padding: 25px 10px;
+	font-style: italic;
+	color: #707070;
+	font-size: 16px;
+	line-height: 160%;
+	max-width: 50%;
+}
+
 /* Main Wrapper */
 #main-wrap {
 	background: white;
@@ -86,9 +582,6 @@
 #header-image {
     margin-bottom: 20px;
 }
-
-/* #Menu
-================================================== */
 
 /* Menu */
 #navbar {
@@ -120,7 +613,6 @@
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
-	padding: 0 25px;
 	position: relative;
 	margin: 0;
 	background: url('../img/nav-separator.png');
@@ -149,6 +641,7 @@
 	color: #eee;
 	width: 100%;
 	height: 100%;
+	padding: 0 25px;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -285,8 +778,7 @@
 	display: none;
 }
 
-/* #Page
-================================================== */
+/* #Page */
 
 #page-container {
 	border: 1px solid #ccc;
@@ -294,8 +786,7 @@
 	padding-top: 20px; 
 }
 
-/* #Index
-================================================== */
+/* #Index */
 
 .post-content {
 	margin-bottom: 20px;
@@ -398,8 +889,7 @@
 	padding-right: 10px;
 }
 
-/* #Single Post
-================================================== */
+/* #Single Post */
 
 .single-post .post-content {
 	clear: both;
@@ -457,8 +947,7 @@
 	border-bottom: 1px solid #08C;
 }
 
-/* #Comments
-================================================== */
+/* #Comments */
 
 #page-container .comments li {
 	background-image: none;
@@ -602,8 +1091,7 @@
 	padding-right: 10px;
 }
 
-/* #Comment form
-================================================== */
+/* #Comment form */
 
 p.form-allowed-tags {
 	display: none; 
@@ -621,8 +1109,7 @@ p.comment-form-url
 }
 
 
-/* #Sidebar & Widgets
-================================================== */
+/* #Sidebar & Widgets */
 #sidebar {
 	font-size: 13px;
 }
@@ -736,8 +1223,7 @@ p.comment-form-url
 	background-position: 0px 4px;
 }
 
-/* #Footer
-================================================== */
+/* #Footer */
 
 #footer {
 	font-size: 13px;
@@ -781,11 +1267,7 @@ p.comment-form-url
 	margin-bottom: 0;
 }
 
-/* #Styling
-================================================== */
-
 /* Basic Styles */
-
 body,
 #page-container > div,
 #page-container > p,
@@ -890,7 +1372,6 @@ h2.entry-title {
 	line-height: 26px;
 }
 
-
 p {
 	margin: 0 0 20px 0;
 }
@@ -935,7 +1416,6 @@ q q::after, cite cite::after {
 }
 
 /* Images */
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -1152,8 +1632,7 @@ input[type="button"]:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#484848',GradientType=0 ); /* IE6-9 */
 }
 
-/* #Links
-================================================== */
+/* #Links */
 a, a:visited {
 	color: #08C;
 	text-decoration: none;
@@ -1200,73 +1679,4 @@ h6 a:hover {
 
 .wp-caption-text {
 	padding-left: 0;
-}
-
-/* @media queries
-================================================== */
-
-
-/* #Tablet (Portrait) */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	#navbar > .menu-container {
-		width: 587px;
-	}
-	#nav-search {
-		width: 167px;
-	}
-	#nav-search #s {
-		width: 135px;
-	}
-	#sidebar #searchform #s {
-		width: 117px;
-	}
-	#calendar_wrap td {
-		padding: 1px 3px;
-	}
-}
-
-
-/* #Mobile (Portrait) */
-
-@media only screen and (max-width: 767px) {
-	#logo {
-		text-align: center 
-	}
-	#navbar > .menu-container {
-		width: 300px;
-	}
-	#nav-search {
-		display: none;
-	}
-	.post-contents {
-		float: none;
-		width: 100%;
-		margin-right: 0;
-	}
-	.postmetadata {
-		float: none;
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	#sidebar #searchform #s {
-		width: 245px;
-	}
-	#calendar_wrap td {
-		padding: 3px 12px;
-	}
-}
-
-/* #Mobile (Landscape) */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	#navbar > .menu-container {
-		width: 420px;
-	}
-	#sidebar #searchform #s {
-		width: 365px;
-	}
-	#calendar_wrap td {
-		padding: 5px 20px;
-	}
 }

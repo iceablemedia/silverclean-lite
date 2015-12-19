@@ -3,81 +3,63 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
  *
  * Main Index
  *
  */
-?>
 
-<?php get_header();
+get_header();
 
-	if ( get_custom_header()->url ) :
-		if (	( is_front_page() && silverclean_get_option('home_header_image') != 'Off' ) ||
-				( !is_front_page() && silverclean_get_option('blog_header_image') != 'Off' )	):
-?>
+?><div id="main-content" class="container"><?php
 
-	<div id="header-image" class="container">
-		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-	</div>
-	
-<?php
+		?><div id="page-container" class="left with-sidebar"><?php
+
+		/* SEARCH CONDITIONAL TITLE */
+		if ( is_search() ):
+		?><h1 class="page-title"><?php _e('Search Results for ', 'silverclean'); ?>"<?php the_search_query() ?>"</h1><?php
 		endif;
-	endif;
-?>
 
-	<div id="main-content" class="container">
+		/* TAG CONDITIONAL TITLE */
+		if ( is_tag() ):
+		?><h1 class="page-title"><?php _e('Tag: ', 'silverclean'); single_tag_title(); ?></h1><?php
+		endif;
 
-		<div id="page-container" class="left with-sidebar">
+		/* CATEGORY CONDITIONAL TITLE */
+		if ( is_category() ):
+		?><h1 class="page-title"><?php _e('Category: ', 'silverclean'); single_cat_title(); ?></h1><?php
+		endif;
 
-		<?php /* SEARCH CONDITIONAL TITLE */ ?>
-		<?php if ( is_search() ) :	?>
-		<h1 class="page-title"><?php _e('Search Results for ', 'silverclean'); ?>"<?php the_search_query() ?>"</h1>
-		<?php endif; ?>
+		/* DEFAULT CONDITIONAL TITLE */
+		if (!is_front_page() && !is_search() && !is_tag() && !is_category()):
+		?><h1 class="page-title"><?php echo get_the_title(get_option('page_for_posts')); ?></h1><?php
+		endif;
+
+		if(have_posts()):
+		while(have_posts()) : the_post();
+
+			?><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><?php
+
+				?><div class="post-contents"><?php
+
+					?><h3 class="entry-title"><?php
+					?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a><?php
+					?></h3><?php
+
+					?><div class="post-content"><?php
+				if ( get_post_format() || post_password_required() || "Full content" == silverclean_get_option('blog_index_shows') )
+						the_content();
+					else the_excerpt();
+					?></div><?php
 		
-		<?php /* TAG CONDITIONAL TITLE */ ?>
-		<?php if ( is_tag() ) :	?>			
-		<h1 class="page-title"><?php _e('Tag: ', 'silverclean'); single_tag_title(); ?></h1>
-		<?php endif; ?>
-					
-		<?php /* CATEGORY CONDITIONAL TITLE */ ?>
-		<?php if ( is_category() ) : ?>			
-		<h1 class="page-title"><?php _e('Category: ', 'silverclean'); single_cat_title(); ?></h1>
-		<?php endif; ?>	
+				?></div><?php
 
-		<?php /* DEFAULT CONDITIONAL TITLE */ ?>
-		<?php if (!is_front_page() && !is_search() && !is_tag() && !is_category()) { ?>
-		<h1 class="page-title"><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
-		<?php }	/* is_front_page endif */ ?>
-
-		<?php if(have_posts()) : ?>
-		<?php while(have_posts()) : the_post(); ?>
-
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<div class="post-contents">
-
-					<h3 class="entry-title">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</h3>
-
-					<div class="post-content">
-					<?php if ( get_post_format() || post_password_required() ) the_content();
-						else the_excerpt();
-					?>
-					</div>
-		
-				</div>
-
-				<div class="postmetadata">
-					<?php if ( '' != get_the_post_thumbnail() ):	// As recommended from the WP codex, to avoid potential failure of has_post_thumbnail() ?>
-						<div class="thumbnail">
-						<?php
-						echo '<a href="' . get_permalink() . '" title="' . get_the_title() . '">'; ?>
-						<?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a>
-						</div>
-					<?php endif; ?>
-					<span class="meta-date published"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span><?php
+				?><div class="postmetadata"><?php
+					if ( '' != get_the_post_thumbnail() ):	// As recommended from the WP codex, to avoid potential failure of has_post_thumbnail()
+						?><div class="thumbnail"><?php
+				?><a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a></div><?php
+					endif;
+					?><span class="meta-date published"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span><?php
 
 					// Echo updated date for hatom-feed - not to be displayed on front end
 					?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
@@ -85,49 +67,48 @@
 					?><span class="meta-author vcard author"><?php
 						_e('By ', 'silverclean');
 						?><span class="fn"><?php the_author(); ?></span><?php
-					?></span>
-					<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
-					<span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean' ), __( '1 Comment', 'silverclean' ), __( '% Comments', 'silverclean' ) ); ?></span>
-					<?php if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>
-					<span class="editlink"><?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?></span>
-				</div>
+					?></span><?php
+					?><span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span><?php
+					?><span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean' ), __( '1 Comment', 'silverclean' ), __( '% Comments', 'silverclean' ) ); ?></span><?php
+					if (has_tag()):
+						echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>');
+					endif;
+					?><span class="editlink"><?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?></span><?php
+				?></div><?php
 
-			</div><!-- end div post -->
+			?></div><?php // end div post
 
-			<hr />
+			?><hr /><?php
 
-		<?php endwhile; ?>
-		<?php else : ?>
+			endwhile;
+			else:
 
-			<?php if (is_search() ): ?>
+			if (is_search() ):
 
-				<h2><?php _e('Nothing Found', 'silverclean'); ?></h2>
-				<p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p>
-				<?php get_search_form(); ?>
+				?><h2><?php _e('Nothing Found', 'silverclean'); ?></h2><?php
+				?><p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p><?php
+				get_search_form();
 			
-			<?php else : ?>
+			else:
 
-				<h2><?php _e('Not Found', 'silverclean'); ?></h2>
-				<p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p>
+				?><h2><?php _e('Not Found', 'silverclean'); ?></h2><?php
+				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p><?php
 
-			<?php endif; ?>
+			endif;
 
-		<?php endif; ?>
+		endif;
 
-			<div class="page_nav">
-				<div class="previous"><?php next_posts_link( __('Previous Posts', 'silverclean') ); ?></div>
-				<div class="next"><?php previous_posts_link( __('Next Posts', 'silverclean') ); ?></div>
-			</div>
+			?><div class="page_nav"><?php
+				?><div class="previous"><?php next_posts_link( __('Previous Posts', 'silverclean') ); ?></div><?php
+				?><div class="next"><?php previous_posts_link( __('Next Posts', 'silverclean') ); ?></div><?php
+			?></div><?php
 
-		</div>
-		<!-- End page container -->
+		?></div><?php // End page container
 
-		<div id="sidebar-container" class="right">
-			<?php get_sidebar(); ?>
-		</div>		
-		<!-- End sidebar -->
+		?><div id="sidebar-container" class="right"><?php
+			get_sidebar();
+		?></div><?php // End sidebar
 
-	</div>
-	<!-- End main content -->
+	?></div><?php // End main content
 
-<?php get_footer(); ?>
+get_footer(); ?>

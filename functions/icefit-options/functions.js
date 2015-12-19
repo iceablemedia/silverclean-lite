@@ -2,7 +2,7 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
  *
- * Copyright 2013-2014 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2015 Mathieu Sarrasin - Iceable Media
  *
  * Admin Settings Panel JS
  *
@@ -48,13 +48,13 @@ var silverclean_admin_panel;
 				silverclean_settings_nonce: jQuery('#silverclean_settings_nonce').val()
 			};
 			jQuery.post(ajaxurl, data);
-			jQuery('#ajax-result').html('Settings saved.').fadeIn("normal").delay('1000').fadeOut("normal");
+			jQuery('#ajax-result').html(silverclean_js_strings.settings_saved).fadeIn("normal").delay('1000').fadeOut("normal");
 			return false; 
 		});
 		
 		//reset
 		jQuery('#icefit-reset-button').click(function() {
-			var answer = confirm("Are you sure you want to reset ALL settings for this theme to default values ?");
+			var answer = confirm(silverclean_js_strings.reset_confirm);
 			if (answer) {
 				var data = { action: 'silverclean_settings_reset_ajax_post_action' };
 				jQuery.post(ajaxurl, data);

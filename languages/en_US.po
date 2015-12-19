@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Silverclean Lite 1.0.4\n"
-"POT-Creation-Date: 2013-10-14 15:56+0100\n"
-"PO-Revision-Date: 2013-10-14 15:56+0100\n"
+"Project-Id-Version: Silverclean Lite 1.1.15\n"
+"POT-Creation-Date: 2015-05-08 16:25+0100\n"
+"PO-Revision-Date: 2015-05-08 16:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,46 +15,65 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../404.php:28
+#: ../404.php:19
 msgid "404"
 msgstr ""
 
-#: ../404.php:30
+#: ../404.php:20
 msgid "Page Not Found"
 msgstr ""
 
-#: ../404.php:31 ../index.php:104 ../page-full-width.php:57 ../page.php:57
-#: ../single.php:87
+#: ../404.php:21 ../index.php:95 ../page-full-width.php:52 ../page.php:54
+#: ../single.php:78
 msgid "What you are looking for isn't here..."
 msgstr ""
 
-#: ../404.php:32 ../index.php:98
+#: ../404.php:22 ../index.php:89
 msgid "Maybe a search will help ?"
 msgstr ""
 
-#: ../comments.php:17
+#: ../comments.php:14
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: ../comments.php:24
+#: ../comments.php:20
 #, php-format
 msgid "One Response to %2$s"
 msgstr ""
 
-#: ../comments.php:33
+#: ../comments.php:29
 msgid "Older comments"
 msgstr ""
 
-#: ../comments.php:34
+#: ../comments.php:30
 msgid "Newer comments"
 msgstr ""
 
-#: ../comments.php:45
+#: ../comments.php:38
 msgid "Comments are closed."
 msgstr ""
 
+#: ../footer.php:22
+#, php-format
+msgid "Copyright &copy; %s %s."
+msgstr ""
+
+#: ../footer.php:24
+#, php-format
+msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr ""
+
+#: ../footer.php:25
+msgid "http://wordpress.org/"
+msgstr ""
+
 #: ../footer.php:27
-msgid "Proudly powered by"
+msgid "WordPress"
+msgstr ""
+
+#: ../footer.php:30
+#, php-format
+msgid "Silverclean design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 msgstr ""
 
 #: ../functions.php:78
@@ -70,98 +89,373 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:200
+#: ../functions.php:194
 msgid "Read More"
 msgstr ""
 
-#: ../index.php:35
+#: ../index.php:20
 msgid "Search Results for "
 msgstr ""
 
-#: ../index.php:40
+#: ../index.php:25
 msgid "Tag: "
 msgstr ""
 
-#: ../index.php:45
+#: ../index.php:30
 msgid "Category: "
 msgstr ""
 
-#: ../index.php:81 ../single.php:46
+#: ../index.php:68 ../single.php:34
 msgid "By "
 msgstr ""
 
-#: ../index.php:82 ../single.php:48
+#: ../index.php:71 ../single.php:38
 msgid "In "
 msgstr ""
 
-#: ../index.php:83
+#: ../index.php:72
 msgid "No Comment"
 msgstr ""
 
-#: ../index.php:83
+#: ../index.php:72
 msgid "1 Comment"
 msgstr ""
 
-#: ../index.php:83
+#: ../index.php:72
 msgid "% Comments"
 msgstr ""
 
-#: ../index.php:85 ../page-full-width.php:41 ../page.php:41 ../single.php:51
+#: ../index.php:76 ../page-full-width.php:38 ../page.php:39 ../single.php:43
 msgid "Edit"
 msgstr ""
 
-#: ../index.php:97
+#: ../index.php:88
 msgid "Nothing Found"
 msgstr ""
 
-#: ../index.php:103 ../page-full-width.php:56 ../page.php:56 ../single.php:86
+#: ../index.php:94 ../page-full-width.php:51 ../page.php:53 ../single.php:77
 msgid "Not Found"
 msgstr ""
 
-#: ../index.php:111
+#: ../index.php:102
 msgid "Previous Posts"
 msgstr ""
 
-#: ../index.php:112
+#: ../index.php:103
 msgid "Next Posts"
 msgstr ""
 
-#: ../sidebar.php:16
-msgid "Recent Posts"
-msgstr ""
-
-#: ../sidebar.php:22
-msgid "Archives"
-msgstr ""
-
-#: ../sidebar.php:28
-msgid "Meta"
-msgstr ""
-
-#: ../single.php:58
+#: ../page-full-width.php:25 ../page.php:25 ../single.php:51
 msgid "Pages:"
 msgstr ""
 
-#: ../single.php:63
+#: ../page-full-width.php:30 ../page.php:30 ../single.php:56
 msgid "Next page"
 msgstr ""
 
-#: ../single.php:64
+#: ../page-full-width.php:31 ../page.php:31 ../single.php:57
 msgid "Previous page"
 msgstr ""
 
-#: ../single.php:97
+#: ../sidebar.php:15
+msgid "Recent Posts"
+msgstr ""
+
+#: ../sidebar.php:19
+msgid "Archives"
+msgstr ""
+
+#: ../sidebar.php:23
+msgid "Meta"
+msgstr ""
+
+#: ../single.php:88
 msgid "Previous Image"
 msgstr ""
 
-#: ../single.php:100
+#: ../single.php:91
 msgid "Next Image"
 msgstr ""
 
-#: ../single.php:106
+#: ../single.php:97
 msgid "Next Post"
 msgstr ""
 
-#: ../single.php:109
+#: ../single.php:100
 msgid "Previous Post"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:26
+msgid "Theme Options"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:40
+msgid "Settings saved."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:41
+msgid ""
+"Are you sure you want to reset ALL settings for this theme to default values?"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:97
+msgid "Upload Image"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:98
+msgid "Remove"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:104
+#, php-format
+msgid ""
+"<p>Unleash the full potential of Silverclean by upgrading to Silverclean Pro!"
+"</p>\n"
+"<p>The Pro version comes with a great set of awesome features:</p>\n"
+"<ul>\n"
+"\t\t\t<li>Fully <strong>Responsive Design</strong></li>\n"
+"\t\t\t<li>Quick Setup&nbsp;<strong>Page Templates</strong></li>\n"
+"\t\t\t<li>(Pro Only)<strong>Unlimited Slideshows</strong></li>\n"
+"\t\t\t<li>(Pro Only) Revolutionary <strong>WYSIWYG Layout Builder</strong></"
+"li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;<strong>Visual Shortcodes</strong>, fully "
+"integrated in WordPress Visual editor (no coding skills needed!)</li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;Powerful <strong>shortcodes</strong> and "
+"<strong>custom widgets</strong></li>\n"
+"\t\t\t<li>(Pro Only)<strong>&nbsp;Portfolio</strong> section</li>\n"
+"\t\t\t<li>(Pro Only)<strong>&nbsp;Partners and/or Clients logos</strong> "
+"carousel</li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;<strong>Clients testimonials</strong> carousel</"
+"li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;<strong>Unlimited sidebars</strong> and sliders</"
+"li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;One click setup <strong>AJAX contact form</"
+"strong></li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;<strong>Google Maps</strong> API v3 integration</"
+"li>\n"
+"\t\t\t<li>(Pro Only)&nbsp;<strong>Pro dedicated support forum</strong> "
+"access</li>\n"
+"\t\t\t<li>GPL License:&nbsp;Buy once, use as many times as you wish!</li>\n"
+"\t\t\t<li><strong>Cross-browsers support</strong>, optimized for IE8+, "
+"Firefox, Chrome, Safari and Opera</li>\n"
+"\t\t\t<li>Lifetime&nbsp;<strong>free updates</strong>&nbsp;and continued "
+"support for the <strong>latest WordPress versions</strong></li>\n"
+"\t\t\t</ul>\n"
+"<a href=\"%s\" class=\"button-primary\" target=\"_blank\">Learn More and "
+"Upgrade Now!</a>"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:129
+msgid "Get Support"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:130
+msgid "Have a question? Need help?"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:131
+msgid "Visit the free Silverclean Lite support forums"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:133
+msgid "Give Feedback"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:134
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:135
+msgid "Rate and review Silverclean Lite at WordPress.org"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:137
+msgid "Get social!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:138
+msgid "Follow and like IceableThemes!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:153
+#: ../functions/icefit-options/icefit-options.php:173
+#: ../functions/icefit-options/icefit-options.php:217
+msgid "You do not have permission to edit theme options."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:256
+msgid "Settings were reset to default."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:261
+msgid "Settings updated."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:266
+msgid ""
+"<b>Warning:</b> Javascript is either disabled in your browser or broken in "
+"your WP installation.<br />\n"
+"\tThis is ok, but it is highly recommended to activate javascript for a "
+"better experience.<br />\n"
+"\tIf javascript is not blocked in your browser then this may be caused by a "
+"third party plugin.<br />\n"
+"\tMake sure everything is up to date or try to deactivate some plugins."
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:274
+#, php-format
+msgid ""
+"<strong>Silverclean Lite Notice:</strong> you have not set your primary menu "
+"yet, and your site is currently using a fallback menu which is not "
+"responsive. Please take a minute to <a href=\"%s\">set your menu now</a>!"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:296
+#: ../functions/icefit-options/icefit-options.php:300
+msgid "Reset Options"
+msgstr ""
+
+#: ../functions/icefit-options/icefit-options.php:297
+#: ../functions/icefit-options/icefit-options.php:301
+msgid "Save all Changes"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:27
+msgid "Go Pro"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:34
+msgid "Upgrade to Silverclean Pro!"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:45
+msgid "Main settings"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:52
+msgid "Logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:53
+msgid "Upload your own logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:60
+msgid "Site Title"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:61
+msgid ""
+"Choose \"display title\" if you want to use a text-based title instead of an "
+"uploaded logo."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:66
+msgid "Use Logo"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:67
+msgid "Display Title"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:72
+msgid "Favicon"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:73
+msgid ""
+"Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG "
+"(W3C standard), GIF, or ICO."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:80
+msgid "Display Tagline"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:81
+msgid ""
+"Display your site description (tagline) on the right side of the header."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:86
+#: ../functions/icefit-options/settings.php:113
+#: ../functions/icefit-options/settings.php:135
+#: ../functions/icefit-options/settings.php:147
+#: ../functions/icefit-options/settings.php:159
+#: ../functions/icefit-options/settings.php:171
+msgid "Off"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:87
+#: ../functions/icefit-options/settings.php:112
+#: ../functions/icefit-options/settings.php:134
+#: ../functions/icefit-options/settings.php:146
+#: ../functions/icefit-options/settings.php:158
+#: ../functions/icefit-options/settings.php:170
+msgid "On"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:93
+msgid "Blog Index Shows"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:94
+msgid "Choose what content to display on Main Blog page and archives"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:99
+msgid "Excerpt"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:100
+msgid "Full content"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:106
+msgid "Responsive mode"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:107
+msgid "Turn this setting off if you want your site to be unresponsive."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:121
+msgid "Custom Header"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:128
+msgid "Display custom header on Homepage"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:129
+msgid "Enable or disable display of custom header image on the front page."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:140
+msgid "Display custom header on Blog Index"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:141
+msgid "Enable or disable display of custom header image on blog index pages."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:152
+msgid "Display custom header on Blog Posts"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:153
+msgid "Enable or disable display of custom header image on single blog posts"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:164
+msgid "Display custom header on Pages"
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:165
+msgid "Enable or disable display of custom header image on individual pages."
+msgstr ""
+
+#: ../functions/icefit-options/settings.php:180
+#: ../functions/icefit-options/settings.php:187
+msgid "Support and Feedback"
 msgstr ""

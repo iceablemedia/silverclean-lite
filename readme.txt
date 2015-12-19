@@ -3,8 +3,8 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.1.14
+Tested up to: 4.2.1
+Stable tag: 1.1.15
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -33,12 +33,15 @@ Please refer to license.txt for more information.
 == CREDITS ==
 
 This theme bundles some third party javascript and jQuery plugins, released under GPL or GPL compatible licenses:
-* hoverIntent: Copyright 2007, 2013 Brian Cherne. MIT License. http://cherne.net/brian/resources/jquery.hoverIntent.html
 * superfish: Copyright 2013 Joel Birch. Dual licensed under the MIT and GPL licenses. http://users.tpg.com.au/j_birch/plugins/superfish/
 
-All other files are copyright 2013 Iceable Media.
+All other files are copyright 2013-2015 Iceable Media.
 
 == TRANSLATIONS ==
+
+Currently available translation (GNU GPLv2 Licensed):
+
+* French (fr_FR) translation: by Iceable Media
 
 Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 40 strings only.
 If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
@@ -47,6 +50,32 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.15 =
+May 8th, 2015
+* Tested with WP 4.2.1
+* Enhanced menu items: the whole "button area" is now clickable, not just the text
+* Added option to display tagline
+* Added option to chose between "excerpt" or "full content" for the blog index page
+* Added option to switch off responsiveness
+* Made all strings translatable, including the backend
+* Updated POT file
+* Added french (fr_FR) translation
+* Added admin notice when menu is not set (on theme option page only)
+* Merged header image code conditionals and moved to header.php
+* Various PHP/HTML optimizations
+* Removed obsolete code from comments.php
+* Added extra user permission check in icefit-options
+* Enhanced validation and sanitation in icefit-options
+* Prefixed hook (silverclean-style) to enqueue style.css
+* Now using core version of hoverintent
+* Merged all front-end javascripts in silverclean.dev.js and minified in silverclean.min.js
+* Merged all front-end css in silverclean.dev.css and minified in silverclean.min.css
+* Removed content filters
+* Appropriately use the_title_attribute() to escape title attributes in index.php
+* Updated copyright date
+* Updated description
+* Updated credits
 
 = 1.1.14 =
 September 24th, 2014
