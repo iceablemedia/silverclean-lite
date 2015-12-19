@@ -30,6 +30,9 @@ function silverclean_setup(){
 	/* Register Primary menu */
 	register_nav_menu( 'primary', 'Navigation menu' );
 
+	/* Title tag support */
+	add_theme_support( 'title-tag' );
+
 	/* Post Thumbnails Support */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 200, 9999 ); // Unlimited height, soft crop
@@ -55,31 +58,15 @@ function silverclean_content_width() {
 }
 add_action( 'template_redirect', 'silverclean_content_width' );
 
-
 /*
- * Page title
+ * Page title (for WordPress < 4.1 )
  */
-function silverclean_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() )
-		return $title;
-
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'silverclean' ), max( $paged, $page ) );
-
-	return $title;
-}
-add_filter( 'wp_title', 'silverclean_wp_title', 10, 2 );
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	function silverclean_render_title() {
+		?><title><?php wp_title( '|', true, 'right' ); ?></title><?php
+	}
+	add_action( 'wp_head', 'silverclean_render_title' );
+endif;
 
 /*
  * Add a home link to wp_page_menu() ( wp_nav_menu() fallback )
@@ -132,7 +119,8 @@ function silverclean_styles() {
 	$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
 	$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
 
-	$responsive_mode = silverclean_get_option('responsive_mode');
+	$responsive_mode = get_theme_mod('silverclean_responsive_mode');
+
 	if ($responsive_mode != 'off'):
 		$stylesheet = '/css/silverclean.dev.css';
 	else:
@@ -155,6 +143,14 @@ function silverclean_styles() {
 	wp_enqueue_style( 'silverclean-style' );
 }
 add_action('wp_enqueue_scripts', 'silverclean_styles');
+
+/*
+ * Register editor style
+ */
+function silverclean_editor_styles() {
+	add_editor_style('css/editor-style.css');
+}
+add_action( 'init', 'silverclean_editor_styles' );
 
 /*
  * Enqueue Javascripts
@@ -278,10 +274,10 @@ function silverclean_adjacent_image_link($prev = true) {
 		return false;
 }
 
-
 /*
- * Framework Elements
+ * Customizer
  */
-include_once('functions/icefit-options/settings.php'); // Admin Settings Panel
+
+require_once 'inc/customizer/customizer.php';
 
 ?>

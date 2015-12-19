@@ -553,12 +553,14 @@ or wrap each row of columns in a <div class="row"> */
     box-sizing: border-box;
 }
 
-#logo .site-title {
+#logo h1.site-title {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	color: #444;
 	font-size: 23px;
 	text-transform: uppercase;
 	line-height: 130%;
+	font-weight: 400;
+	margin: 0;
 }
 
 #logo a:hover { text-decoration: none; }

@@ -17,10 +17,9 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-<title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php $favicon = silverclean_get_option('favicon');
+<?php $favicon = get_theme_mod( 'silverclean_favicon' );
 if ($favicon): ?><link rel="shortcut icon" href="<?php echo esc_url($favicon); ?>" /><?php endif; ?>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
@@ -33,16 +32,16 @@ wp_head();
 
 	?><div id="header"><?php
 	?><div class="container"><?php
-		?><div id="logo"><a href="<?php echo esc_url( home_url() ); ?>"><?php
-		$logo_url = silverclean_get_option('logo');
-		if ( silverclean_get_option('header_title') == 'Display Title' || $logo_url == "" ):
-			?><span class="site-title"><?php bloginfo('name') ?></span><?php
-		else:
-			?><img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo('name') ?>"><?php
-		endif;
+			?><div id="logo"><a href="<?php echo esc_url( home_url() ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php
+			if ( get_theme_mod( 'silverclean_logo' ) ) :
+				?><h1 class="site-title" style="display:none;"><?php bloginfo('name') ?></h1><?php
+				?><img src="<?php echo esc_url( get_theme_mod( 'silverclean_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php
+			else:
+			?><h1 class="site-title"><?php bloginfo('name') ?></h1><?php			
+			endif;
 		?></a></div><?php
 
-		if ( "On" == silverclean_get_option('header_tagline') ):
+		if ( get_bloginfo ( 'description' ) ):
 			?><div id="tagline"><?php bloginfo('description'); ?></div><?php
 		endif;
 
@@ -60,10 +59,10 @@ wp_head();
 	?></div><?php // End navbar
 
 	if ( get_custom_header()->url ) :
-		if ( ( is_front_page() && silverclean_get_option('home_header_image') != 'Off' )
-			|| ( is_page() && !is_front_page() && silverclean_get_option('pages_header_image') != 'Off' )
-			|| ( is_single() && silverclean_get_option('single_header_image') != 'Off' )
-			|| ( !is_front_page() && !is_singular() && silverclean_get_option('blog_header_image') != 'Off' )
+		if ( ( is_front_page() && get_theme_mod('home_header_image') != 'off' )
+			|| ( is_page() && !is_front_page() && get_theme_mod('pages_header_image') != 'off' )
+			|| ( is_single() && get_theme_mod('single_header_image') != 'off' )
+			|| ( !is_front_page() && !is_singular() && get_theme_mod('blog_header_image') != 'off' )
 			|| ( is_404() ) ):
 	
 	?><div id="header-image" class="container"><?php

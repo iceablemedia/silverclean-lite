@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Silverclean Lite 1.1.15\n"
-"POT-Creation-Date: 2015-05-08 16:26+0100\n"
-"PO-Revision-Date: 2015-05-08 16:28+0100\n"
+"Project-Id-Version: Silverclean Lite 1.2\n"
+"POT-Creation-Date: 2015-07-21 16:44+0100\n"
+"PO-Revision-Date: 2015-07-21 16:46+0100\n"
 "Last-Translator: \n"
-"Language-Team: Iceable Themes <contact@iceablethemes.com>\n"
+"Language-Team: Iceable Themes\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,20 +78,15 @@ msgstr "WordPress"
 msgid "Silverclean design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 msgstr "Silverclean design par <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 
-#: ../functions.php:78
-#, php-format
-msgid "Page %s"
-msgstr "Page %s"
-
-#: ../functions.php:100
+#: ../functions.php:87
 msgid "Default Sidebar"
 msgstr "Sidebar par défaut"
 
-#: ../functions.php:112
+#: ../functions.php:99
 msgid "Footer"
 msgstr "Pied de page"
 
-#: ../functions.php:194
+#: ../functions.php:190
 msgid "Read More"
 msgstr "Lire la suite"
 
@@ -109,15 +104,15 @@ msgstr "Catégorie : "
 
 #: ../index.php:68 ../single.php:34
 msgid "By "
-msgstr "Par "
+msgstr "par "
 
 #: ../index.php:71 ../single.php:38
 msgid "In "
-msgstr "Dans "
+msgstr "dans"
 
 #: ../index.php:72
 msgid "No Comment"
-msgstr "Pas de commentaire"
+msgstr "Pas de Commentaire"
 
 #: ../index.php:72
 msgid "1 Comment"
@@ -133,7 +128,7 @@ msgstr "Éditer"
 
 #: ../index.php:88
 msgid "Nothing Found"
-msgstr "Rien n'a été trouvé"
+msgstr "Introuvable"
 
 #: ../index.php:94 ../page-full-width.php:51 ../page.php:53 ../single.php:77
 msgid "Not Found"
@@ -187,469 +182,120 @@ msgstr "Article suivant"
 msgid "Previous Post"
 msgstr "Article précédent"
 
-#: ../functions/icefit-options/icefit-options.php:26
-msgid "Theme Options"
-msgstr "Options du thème"
+#: ../inc/customizer/customizer.php:18
+msgid "Background"
+msgstr "Image de fond"
 
-#: ../functions/icefit-options/icefit-options.php:40
-msgid "Settings saved."
-msgstr "Paramètres mis à jour."
+#: ../inc/customizer/customizer.php:22
+msgid "Logo & Favicon"
+msgstr "Logo & Favicon"
 
-#: ../functions/icefit-options/icefit-options.php:41
+#: ../inc/customizer/customizer.php:27
+msgid "Blog Settings"
+msgstr "Paramètres du blog"
+
+#: ../inc/customizer/customizer.php:32
+msgid "Misc"
+msgstr "Divers"
+
+#: ../inc/customizer/customizer.php:37
+msgid "More"
+msgstr "Plus"
+
+#: ../inc/customizer/customizer.php:49
+msgid "Upload your logo"
+msgstr "Transférez votre logo"
+
+#: ../inc/customizer/customizer.php:50
+msgid "If no logo is uploaded, the site title will be displayed instead."
+msgstr "Si aucun logo n'est défini, le nom de site sera affiché à la place."
+
+#: ../inc/customizer/customizer.php:65
+msgid "Upload a custom favicon"
+msgstr "Transférez un favicon personnalisé."
+
+#: ../inc/customizer/customizer.php:66
 msgid ""
-"Are you sure you want to reset ALL settings for this theme to default values?"
+"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
+"GIF, or ICO."
 msgstr ""
-"Êtes-vous sûr de vouloir remettre à zéro TOUS les paramètres du thème ?"
+"Définissez votre favicon. 16x16 ou 32x32 pixels. PNG (recommandé), GIF ou "
+"ICO."
 
-#: ../functions/icefit-options/icefit-options.php:97
-msgid "Upload Image"
-msgstr "Transférer une image"
+#: ../inc/customizer/customizer.php:81
+msgid "Blog Index Content"
+msgstr "Contenu de la page principale du blog"
 
-#: ../functions/icefit-options/icefit-options.php:98
-msgid "Remove"
-msgstr "Enlever"
-
-#: ../functions/icefit-options/icefit-options.php:104
-#, php-format
-msgid ""
-"<p>Unleash the full potential of Silverclean by upgrading to Silverclean Pro!"
-"</p>\n"
-"<p>The Pro version comes with a great set of awesome features:</p>\n"
-"<ul>\n"
-"\t\t\t<li>Fully <strong>Responsive Design</strong></li>\n"
-"\t\t\t<li>Quick Setup&nbsp;<strong>Page Templates</strong></li>\n"
-"\t\t\t<li>(Pro Only)<strong>Unlimited Slideshows</strong></li>\n"
-"\t\t\t<li>(Pro Only) Revolutionary <strong>WYSIWYG Layout Builder</strong></"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Visual Shortcodes</strong>, fully "
-"integrated in WordPress Visual editor (no coding skills needed!)</li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;Powerful <strong>shortcodes</strong> and "
-"<strong>custom widgets</strong></li>\n"
-"\t\t\t<li>(Pro Only)<strong>&nbsp;Portfolio</strong> section</li>\n"
-"\t\t\t<li>(Pro Only)<strong>&nbsp;Partners and/or Clients logos</strong> "
-"carousel</li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Clients testimonials</strong> carousel</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Unlimited sidebars</strong> and sliders</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;One click setup <strong>AJAX contact form</"
-"strong></li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Google Maps</strong> API v3 integration</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Pro dedicated support forum</strong> "
-"access</li>\n"
-"\t\t\t<li>GPL License:&nbsp;Buy once, use as many times as you wish!</li>\n"
-"\t\t\t<li><strong>Cross-browsers support</strong>, optimized for IE8+, "
-"Firefox, Chrome, Safari and Opera</li>\n"
-"\t\t\t<li>Lifetime&nbsp;<strong>free updates</strong>&nbsp;and continued "
-"support for the <strong>latest WordPress versions</strong></li>\n"
-"\t\t\t</ul>\n"
-"<a href=\"%s\" class=\"button-primary\" target=\"_blank\">Learn More and "
-"Upgrade Now!</a>"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:129
-msgid "Get Support"
-msgstr "Trouvez de l'aide"
-
-#: ../functions/icefit-options/icefit-options.php:130
-msgid "Have a question? Need help?"
-msgstr "Une question ? Besoin d'aide ?"
-
-#: ../functions/icefit-options/icefit-options.php:131
-msgid "Visit the free Silverclean Lite support forums"
-msgstr ""
-"Visitez le forum d'aide gratuit de Silverclean Lite (en anglais uniquement)"
-
-#: ../functions/icefit-options/icefit-options.php:133
-msgid "Give Feedback"
-msgstr "Donnez votre avis"
-
-#: ../functions/icefit-options/icefit-options.php:134
-msgid "Like this theme? We'd love to hear your feedback!"
-msgstr "Vous aimez ce thème ? Nous serions ravi d'entendre vos avis !"
-
-#: ../functions/icefit-options/icefit-options.php:135
-msgid "Rate and review Silverclean Lite at WordPress.org"
-msgstr "Noter et commenter Silverclean Lite sur WordPress.org"
-
-#: ../functions/icefit-options/icefit-options.php:137
-msgid "Get social!"
-msgstr "Réseaux sociaux"
-
-#: ../functions/icefit-options/icefit-options.php:138
-msgid "Follow and like IceableThemes!"
-msgstr "Suivez et \"likez\" IceableThemes !"
-
-#: ../functions/icefit-options/icefit-options.php:153
-#: ../functions/icefit-options/icefit-options.php:173
-#: ../functions/icefit-options/icefit-options.php:217
-msgid "You do not have permission to edit theme options."
-msgstr "Vous n'êtes pas autorisez à modifier les options du thème."
-
-#: ../functions/icefit-options/icefit-options.php:256
-msgid "Settings were reset to default."
-msgstr "Et paramètres ont été remis à zéro."
-
-#: ../functions/icefit-options/icefit-options.php:261
-msgid "Settings updated."
-msgstr "Paramètres mis à jour."
-
-#: ../functions/icefit-options/icefit-options.php:266
-msgid ""
-"<b>Warning:</b> Javascript is either disabled in your browser or broken in "
-"your WP installation.<br />\n"
-"\tThis is ok, but it is highly recommended to activate javascript for a "
-"better experience.<br />\n"
-"\tIf javascript is not blocked in your browser then this may be caused by a "
-"third party plugin.<br />\n"
-"\tMake sure everything is up to date or try to deactivate some plugins."
-msgstr ""
-"<b>Attention:</b> Javascript est soit désactivé dans votre navigateur, soit "
-"cassé dans votre installation n de WordPress.<br />\n"
-"C'est n'est pas la fin du monde, mais il est vivement recommandé d'activer "
-"javascript pour une meilleur experience.<br />\n"
-"Si javascript n'est pas désactivé dans votre navigateur, il s'agit peut-être "
-"d'un problème avec un plugin tiers.<br />\n"
-"Assurez vous que tout est à jour ou essayez de désactiver des plugins."
-
-#: ../functions/icefit-options/icefit-options.php:274
-#, php-format
-msgid ""
-"<strong>Silverclean Lite Notice:</strong> you have not set your primary menu "
-"yet, and your site is currently using a fallback menu which is not "
-"responsive. Please take a minute to <a href=\"%s\">set your menu now</a>!"
-msgstr ""
-"<strong>Note de Silverclean Lite:</strong> vous n'avez pas défini votre menu "
-"principal, et votre site utilise un menu automatique par défaut qui n'est "
-"pas \"responsive\". Prenez une minute pour <a href=\"%s\">paramétrer</a> "
-"votre menu maintenant !"
-
-#: ../functions/icefit-options/icefit-options.php:296
-#: ../functions/icefit-options/icefit-options.php:300
-msgid "Reset Options"
-msgstr "Réinitialiser les options"
-
-#: ../functions/icefit-options/icefit-options.php:297
-#: ../functions/icefit-options/icefit-options.php:301
-msgid "Save all Changes"
-msgstr "Enregistrer les changements"
-
-#: ../functions/icefit-options/settings.php:27
-msgid "Go Pro"
-msgstr "Passez Pro"
-
-#: ../functions/icefit-options/settings.php:34
-msgid "Upgrade to Silverclean Pro!"
-msgstr "Mettez à jour vers Silverclean Pro !"
-
-#: ../functions/icefit-options/settings.php:45
-msgid "Main settings"
-msgstr "Paramètres principaux"
-
-#: ../functions/icefit-options/settings.php:52
-msgid "Logo"
-msgstr "Logo"
-
-#: ../functions/icefit-options/settings.php:53
-msgid "Upload your own logo"
-msgstr "Transférez votre propre logo"
-
-#: ../functions/icefit-options/settings.php:60
-msgid "Site Title"
-msgstr "Titre du site"
-
-#: ../functions/icefit-options/settings.php:61
-msgid ""
-"Choose \"display title\" if you want to use a text-based title instead of an "
-"uploaded logo."
-msgstr ""
-"Choisissez \"Afficher le titre\" pour utiliser une version texte de votre "
-"titre au lieu d'un logo."
-
-#: ../functions/icefit-options/settings.php:66
-msgid "Use Logo"
-msgstr "Utiliser le logo"
-
-#: ../functions/icefit-options/settings.php:67
-msgid "Display Title"
-msgstr "Afficher le titre"
-
-#: ../functions/icefit-options/settings.php:72
-msgid "Favicon"
-msgstr "Favicon"
-
-#: ../functions/icefit-options/settings.php:73
-msgid ""
-"Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG "
-"(W3C standard), GIF, or ICO."
-msgstr ""
-"Définissez votre favicon. 16x16 ou 32x32 pixels, en couleur 8 ou 24 bits. "
-"Format PNG (standard W3C), GIF ou ICO."
-
-#: ../functions/icefit-options/settings.php:80
-msgid "Display Tagline"
-msgstr "Afficher le slogan"
-
-#: ../functions/icefit-options/settings.php:81
-msgid ""
-"Display your site description (tagline) on the right side of the header."
-msgstr "Afficher la description du site (slogan) du côté droit de l'en-tête."
-
-#: ../functions/icefit-options/settings.php:86
-#: ../functions/icefit-options/settings.php:113
-#: ../functions/icefit-options/settings.php:135
-#: ../functions/icefit-options/settings.php:147
-#: ../functions/icefit-options/settings.php:159
-#: ../functions/icefit-options/settings.php:171
-msgid "Off"
-msgstr "Off"
-
-#: ../functions/icefit-options/settings.php:87
-#: ../functions/icefit-options/settings.php:112
-#: ../functions/icefit-options/settings.php:134
-#: ../functions/icefit-options/settings.php:146
-#: ../functions/icefit-options/settings.php:158
-#: ../functions/icefit-options/settings.php:170
-msgid "On"
-msgstr "On"
-
-#: ../functions/icefit-options/settings.php:93
-msgid "Blog Index Shows"
-msgstr "La page principale du blog affiche"
-
-#: ../functions/icefit-options/settings.php:94
-msgid "Choose what content to display on Main Blog page and archives"
-msgstr ""
-"Choisissez quel contenu afficher sur la page principale du blog et les pages "
-"d'archives"
-
-#: ../functions/icefit-options/settings.php:99
+#: ../inc/customizer/customizer.php:86
 msgid "Excerpt"
 msgstr "Extrait"
 
-#: ../functions/icefit-options/settings.php:100
+#: ../inc/customizer/customizer.php:87
 msgid "Full content"
 msgstr "Contenu complet"
 
-#: ../functions/icefit-options/settings.php:106
-msgid "Responsive mode"
-msgstr "Mode \"responsive\""
+#: ../inc/customizer/customizer.php:101
+msgid "Responsive Mode"
+msgstr "Mode \"Responsive\""
 
-#: ../functions/icefit-options/settings.php:107
-msgid "Turn this setting off if you want your site to be unresponsive."
-msgstr "Désactivez cette option pour que le site ne soit plus \"responsive\"."
+#: ../inc/customizer/customizer.php:106 ../inc/customizer/customizer.php:126
+#: ../inc/customizer/customizer.php:145 ../inc/customizer/customizer.php:164
+#: ../inc/customizer/customizer.php:183
+msgid "On"
+msgstr "On"
 
-#: ../functions/icefit-options/settings.php:121
-msgid "Custom Header"
-msgstr "En-tête personnalisée"
+#: ../inc/customizer/customizer.php:107 ../inc/customizer/customizer.php:127
+#: ../inc/customizer/customizer.php:146 ../inc/customizer/customizer.php:165
+#: ../inc/customizer/customizer.php:184
+msgid "Off"
+msgstr "Off"
 
-#: ../functions/icefit-options/settings.php:128
-msgid "Display custom header on Homepage"
-msgstr "Afficher l'en-tête personnalisée sur la page d'accueil"
+#: ../inc/customizer/customizer.php:121
+msgid "Display header on Homepage"
+msgstr "Afficher l'image d'en-tête personnalisée sur la page d'accueil"
 
-#: ../functions/icefit-options/settings.php:129
-msgid "Enable or disable display of custom header image on the front page."
-msgstr "Affiche ou non l'image d'en-tête personnalisée sur la page d'accueil."
-
-#: ../functions/icefit-options/settings.php:140
-msgid "Display custom header on Blog Index"
-msgstr "Afficher l'en-tête personnalisée sur la page principale du blog"
-
-#: ../functions/icefit-options/settings.php:141
-msgid "Enable or disable display of custom header image on blog index pages."
+#: ../inc/customizer/customizer.php:140
+msgid "Display header on Blog Index"
 msgstr ""
-"Affiche ou non l'image d'en-tête personnalisée sur la page principale du "
-"blog."
+"Afficher l'image d'en-tête personnalisée sur la page principale du blog"
 
-#: ../functions/icefit-options/settings.php:152
-msgid "Display custom header on Blog Posts"
-msgstr "Afficher l'en-tête personnalisée sur les pages d'articles"
+#: ../inc/customizer/customizer.php:159
+msgid "Display header on Single Posts"
+msgstr "Afficher l'image d'en-tête personnalisée sur les pages d'articles"
 
-#: ../functions/icefit-options/settings.php:153
-msgid "Enable or disable display of custom header image on single blog posts"
+#: ../inc/customizer/customizer.php:178
+msgid "Display header on Pages"
+msgstr "Afficher l'image d'en-tête personnalisée sur les pages"
+
+#: ../inc/customizer/customizer.php:198
+msgid "Get Silverclean Pro"
+msgstr "Obtenir Silverclean Pro"
+
+#: ../inc/customizer/customizer.php:199
+msgid ""
+"Unleash the full potential of Silverclean with tons of additional settings, "
+"advanced features and premium support."
 msgstr ""
-"Affiche ou non l'image d'en-tête personnalisée sur les pages d'articles du "
-"blog."
+"Profitez de tout le potentiel de Silverclean avec de nombreux paramètres de "
+"configuration, des fonctionnalités avancées et l'accès au forum de support "
+"premium (en anglais uniquement)."
 
-#: ../functions/icefit-options/settings.php:164
-msgid "Display custom header on Pages"
-msgstr "Afficher l'en-tête personnalisée sur les pages"
+#: ../inc/customizer/customizer.php:215
+msgid "Silverclean Lite support forums"
+msgstr "Forum d'aide de Silverclean Lite (en anglais uniquement)"
 
-#: ../functions/icefit-options/settings.php:165
-msgid "Enable or disable display of custom header image on individual pages."
-msgstr ""
-"Affiche ou non l'image d'en-tête personnalisée sur les pages individuelles."
+#: ../inc/customizer/customizer.php:216
+msgid "Have a question? Need help?"
+msgstr "Une question ? Besoin d'aide ?"
 
-#: ../functions/icefit-options/settings.php:180
-#: ../functions/icefit-options/settings.php:187
-msgid "Support and Feedback"
-msgstr "Aide et avis"
+#: ../inc/customizer/customizer.php:232
+msgid "Rate Silverclean Lite"
+msgstr "Notez Silverclean Lite"
 
-#~ msgid "Please do not load this page directly. Thanks!"
-#~ msgstr "Veuillez ne pas accéder à cette page directement. Merci !"
+#: ../inc/customizer/customizer.php:233
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr "Vous aimez ce thème ? Nous serions ravi d'entendre vos avis !"
 
-#~ msgid "Reply"
-#~ msgstr "Répondre"
-
-#~ msgid "Daily archives: "
-#~ msgstr "Archives journalières : "
-
-#~ msgid "Monthly archives: "
-#~ msgstr "Archives mensuelles : "
-
-#~ msgid "Yearly archives: "
-#~ msgstr "Archives annuelles : "
-
-#~ msgid "No"
-#~ msgstr "Pas de "
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "%"
-#~ msgstr "%"
-
-#~ msgid "Comments Off"
-#~ msgstr "Commentaires Off"
-
-#~ msgid "Posted in"
-#~ msgstr "Publié dans"
-
-#~ msgid "Tags"
-#~ msgstr "Tags"
-
-#~ msgid "Your search for \"%s\" did not return any result."
-#~ msgstr "Votre recherche de \"%s\" n'a retourné aucun résultat."
-
-#~ msgid "Would you like to try another search ?"
-#~ msgstr "Voulez-vous essayer une nouvelle recherche ?"
-
-#~ msgid ""
-#~ "<p>Unleash the full potential of BoldR by upgrading to BoldR Pro!</p>\n"
-#~ "<p>The Pro version comes with a great set of awesome features:</p>\n"
-#~ "<ul>\n"
-#~ "<li>(Lite & Pro) Fully <strong>Responsive Design</strong></li>\n"
-#~ "<li>(Lite & Pro) <strong>Translation Ready</strong> (.POT file included)</"
-#~ "li>\n"
-#~ "<li>(Lite & Pro) <strong>Child Theme</strong> support</li>\n"
-#~ "<li>(Lite & Pro) 2 <strong>Widgetized areas</strong> (Sidebar and Footer)"
-#~ "</li>\n"
-#~ "<li>(Lite & Pro) <strong>Custom background</strong></li>\n"
-#~ "<li>(Pro Only) <strong>Unlimited sidebars and footers</strong> with "
-#~ "different widgets for different pages</li>\n"
-#~ "<li>(Pro Only) Quick Setup <strong>Page Templates</strong></li>\n"
-#~ "<li>(Pro Only) <strong>Right, Left or Dual Sidebar or Full Width</strong> "
-#~ "templates for pages and blog.</li>\n"
-#~ "<li>(Pro Only) <strong>Built-in Slider</strong> for <strong>Unlimited "
-#~ "Slideshows</strong></li>\n"
-#~ "<li>(Pro Only) <strong>Wide</strong> or <strong>Boxed</strong> layout</"
-#~ "li>\n"
-#~ "<li>(Pro Only) <strong>Portfolio</strong> section</li>\n"
-#~ "<li>(Pro Only) <strong>Unlimited colors</strong></li>\n"
-#~ "<li>(Pro Only) <strong>650 Webfonts</strong> to choose from</li>\n"
-#~ "<li>(Pro Only) <strong>Comprehensive settings panel</strong> with dozens "
-#~ "of options</li>\n"
-#~ "<li>(Pro Only) <strong>Sticky (fixed) Navbar or Header</strong> for "
-#~ "enhanced navigation</li>\n"
-#~ "<li>(Pro Only) jQuery <strong>\"Slide-in\" mobile menu</strong> in "
-#~ "responsive mode</li>\n"
-#~ "<li>(Pro Only) Enhanced <strong>WYSIWYG Layout Builder</strong> in WP "
-#~ "Visual Editor</li>\n"
-#~ "<li>(Pro Only) <strong>Visual Shortcodes</strong>, fully integrated in "
-#~ "WordPress' Visual editor (no coding!)</li>\n"
-#~ "<li>(Pro Only) Powerful <strong>shortcodes</strong> and <strong>custom "
-#~ "widgets</strong></li>\n"
-#~ "<li>(Pro Only)<strong> Partners and/or Clients' logos</strong> carousel</"
-#~ "li>\n"
-#~ "<li>(Pro Only) <strong>Clients' testimonials</strong> carousel</li>\n"
-#~ "<li>(Pro Only) One click setup <strong>AJAX contact form</strong></li>\n"
-#~ "<li>(Pro Only) <strong>Google Maps</strong> API v3 integration</li>\n"
-#~ "<li>(Pro Only) <strong>Custom CSS</strong> support for even more advanced "
-#~ "layout customizations</li>\n"
-#~ "<li>(Pro Only) <strong>Pro dedicated support forum</strong> access</li>\n"
-#~ "<li><a href=\"http://www.gnu.org/licenses/\" target=\"_blank\">GPL "
-#~ "License</a> : Buy once, use as many times as you wish!</li>\n"
-#~ "<li><strong>Cross-browsers support</strong>, optimized for IE8+, Firefox, "
-#~ "Chrome, Safari and Opera (note: IE7 and older are no longer supported.)</"
-#~ "li>\n"
-#~ "<li>Lifetime <strong>free updates</strong> and continued support for the "
-#~ "<strong>latest WordPress versions</strong></li>\n"
-#~ "<li>Currently supports <strong>WordPress from 3.5 up to 4.1</strong></"
-#~ "strong></li>\n"
-#~ "</ul>\n"
-#~ "<a href=\"%s\" class=\"button-primary\" target=\"_blank\">Learn More and "
-#~ "Upgrade Now!</a>"
-#~ msgstr ""
-#~ "<p>Libérez tout le potentiel de BoldR en mettant à jour vers BoldR Pro !</"
-#~ "p>\n"
-#~ "<p>La version Pro offre toute une gamme de fonctionnalités géniales :</"
-#~ "p>\n"
-#~ "<ul>\n"
-#~ "<li>(Lite & Pro) Design totalement <strong>\"Responsive\"</strong></li>\n"
-#~ "<li>(Lite & Pro) <strong>Prêt pour la traduction</strong> (fichier .POT "
-#~ "inclus)</li>\n"
-#~ "<li>(Lite & Pro) Support pour les <strong>thèmes enfants</strong> "
-#~ "(\"child themes\")</li>\n"
-#~ "<li>(Lite & Pro) 2 <strong>zones widgetizables</strong> (Sidebar et "
-#~ "Footer)</li>\n"
-#~ "<li>(Lite & Pro) <strong>Fond personnalisable</strong>(\"background\")</"
-#~ "li>\n"
-#~ "<li>(Pro Uniquement) <strong>Sidebars et footers illimités</strong> avec "
-#~ "des widgets différents pour différentes pages</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Modèles de pages</strong> faciles à "
-#~ "configurer</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Sidebar à gauche, à droite, double sidebar "
-#~ "ou page en pleine largeur</strong> pour les pages et le blog.</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Slider intégré</strong> pour des "
-#~ "<strong>Slideshows illimités</strong></li>\n"
-#~ "<li>(Pro Uniquement) Mise en page <strong>pleine largeur ou encadrée</"
-#~ "strong><li>(Pro Uniquement) Section <strong>Portfolio</strong></li>\n"
-#~ "<li>(Pro Uniquement) <strong>Couleurs illimitées</strong></li>\n"
-#~ "<li>(Pro Uniquement) Choix parmi <strong>650 Webfonts</strong> (polices "
-#~ "de caractères)</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Panneau de configuration complet</strong> "
-#~ "avec plusieurs dizaines d'options</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Menu ou Header fixe</strong> pour améliorer "
-#~ "la navigation</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Menu mobile glissant (\"Slide-in\")</strong> "
-#~ "en mode responsive</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Constructeur de page WYSIWYG</strong> "
-#~ "amélioré dans l'éditeur visuel de WordPress</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Shortcodes visuels</strong>, intégrés dans "
-#~ "l'éditeur visuel de WordPress (pas de code compliqué!)</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Shortcodes</strong> puissants et "
-#~ "<strong>widgets additionnels</strong></li>\n"
-#~ "<li>(Pro Uniquement) Carousel avec les logos des <strong>Partenaires et/"
-#~ "ou Clients</strong></li>\n"
-#~ "<li>(Pro Uniquement) Carousel avec les <strong>témoignages de clients</"
-#~ "strong></li>\n"
-#~ "<li>(Pro Uniquement) <strong>Formulaire de contact AJAX</strong> "
-#~ "configuré en un seul clic</li>\n"
-#~ "<li>(Pro Uniquement) Intégration de <strong>Google Maps</strong> avec "
-#~ "l'API v3</li>\n"
-#~ "<li>(Pro Uniquement) Support de <strong>CSS personnalisé</strong> pour "
-#~ "encore plus de personnalisation avancée</li>\n"
-#~ "<li>(Pro Uniquement) <strong>Forum d'aide Pro dédié</strong> (en anglais "
-#~ "uniquement)</li>\n"
-#~ "<li><a href=\"http://www.gnu.org/licenses/\" target=\"_blank\">License "
-#~ "GPL</a> : Achetez une fois, utilisez autant que vous voulez!</li>\n"
-#~ "<li><strong>Support multi-navigateurs</strong>, optimisé pour IE8+, "
-#~ "Firefox, Chrome, Safari et Opera (note: IE7 et plus anciens ne sont plus "
-#~ "supportés.)</li>\n"
-#~ "<li><strong>Mises à jour gratuites</strong> à vie et support permenant "
-#~ "des <strong>dernières versions de WordPress.</strong></li>\n"
-#~ "<li>Supporte actuellement <strong>WordPress de 3.5 à 4.1</strong></"
-#~ "strong></li>\n"
-#~ "</ul>\n"
-#~ "<a href=\"%s\" class=\"button-primary\" target=\"_blank\">En savoir plus "
-#~ "et mettre à jour maintenant!</a>"
-
-#~ msgid "BoldR Lite Settings"
-#~ msgstr "Configuration de BoldR Lite"
-
-#~ msgid "Proudly powered by"
-#~ msgstr "Fièrement propulsé par"
-
-#~ msgid "<a href=\"%1$s\" style=\"float:right\">Dismiss</a>"
-#~ msgstr "<a href=\"%1$s\" style=\"float:right\">Masquer</a>"
+#: ../inc/customizer/customizer.php:258
+msgid "Upgrade to Silverclean Pro!"
+msgstr "Mettez à jour vers Silverclean Pro !"

@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Silverclean Lite 1.1.15\n"
-"POT-Creation-Date: 2015-05-08 16:25+0100\n"
-"PO-Revision-Date: 2015-05-08 16:25+0100\n"
+"Project-Id-Version: Silverclean Lite 1.2\n"
+"POT-Creation-Date: 2015-07-21 16:44+0100\n"
+"PO-Revision-Date: 2015-07-21 16:44+0100\n"
 "Last-Translator: \n"
-"Language-Team: \n"
+"Language-Team: Iceable Themes\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,20 +76,15 @@ msgstr ""
 msgid "Silverclean design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 msgstr ""
 
-#: ../functions.php:78
-#, php-format
-msgid "Page %s"
-msgstr ""
-
-#: ../functions.php:100
+#: ../functions.php:87
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:112
+#: ../functions.php:99
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:194
+#: ../functions.php:190
 msgid "Read More"
 msgstr ""
 
@@ -185,277 +180,114 @@ msgstr ""
 msgid "Previous Post"
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:26
-msgid "Theme Options"
+#: ../inc/customizer/customizer.php:18
+msgid "Background"
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:40
-msgid "Settings saved."
+#: ../inc/customizer/customizer.php:22
+msgid "Logo & Favicon"
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:41
+#: ../inc/customizer/customizer.php:27
+msgid "Blog Settings"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:32
+msgid "Misc"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:37
+msgid "More"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:49
+msgid "Upload your logo"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:50
+msgid "If no logo is uploaded, the site title will be displayed instead."
+msgstr ""
+
+#: ../inc/customizer/customizer.php:65
+msgid "Upload a custom favicon"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:66
 msgid ""
-"Are you sure you want to reset ALL settings for this theme to default values?"
+"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
+"GIF, or ICO."
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:97
-msgid "Upload Image"
+#: ../inc/customizer/customizer.php:81
+msgid "Blog Index Content"
 msgstr ""
 
-#: ../functions/icefit-options/icefit-options.php:98
-msgid "Remove"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:104
-#, php-format
-msgid ""
-"<p>Unleash the full potential of Silverclean by upgrading to Silverclean Pro!"
-"</p>\n"
-"<p>The Pro version comes with a great set of awesome features:</p>\n"
-"<ul>\n"
-"\t\t\t<li>Fully <strong>Responsive Design</strong></li>\n"
-"\t\t\t<li>Quick Setup&nbsp;<strong>Page Templates</strong></li>\n"
-"\t\t\t<li>(Pro Only)<strong>Unlimited Slideshows</strong></li>\n"
-"\t\t\t<li>(Pro Only) Revolutionary <strong>WYSIWYG Layout Builder</strong></"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Visual Shortcodes</strong>, fully "
-"integrated in WordPress Visual editor (no coding skills needed!)</li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;Powerful <strong>shortcodes</strong> and "
-"<strong>custom widgets</strong></li>\n"
-"\t\t\t<li>(Pro Only)<strong>&nbsp;Portfolio</strong> section</li>\n"
-"\t\t\t<li>(Pro Only)<strong>&nbsp;Partners and/or Clients logos</strong> "
-"carousel</li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Clients testimonials</strong> carousel</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Unlimited sidebars</strong> and sliders</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;One click setup <strong>AJAX contact form</"
-"strong></li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Google Maps</strong> API v3 integration</"
-"li>\n"
-"\t\t\t<li>(Pro Only)&nbsp;<strong>Pro dedicated support forum</strong> "
-"access</li>\n"
-"\t\t\t<li>GPL License:&nbsp;Buy once, use as many times as you wish!</li>\n"
-"\t\t\t<li><strong>Cross-browsers support</strong>, optimized for IE8+, "
-"Firefox, Chrome, Safari and Opera</li>\n"
-"\t\t\t<li>Lifetime&nbsp;<strong>free updates</strong>&nbsp;and continued "
-"support for the <strong>latest WordPress versions</strong></li>\n"
-"\t\t\t</ul>\n"
-"<a href=\"%s\" class=\"button-primary\" target=\"_blank\">Learn More and "
-"Upgrade Now!</a>"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:129
-msgid "Get Support"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:130
-msgid "Have a question? Need help?"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:131
-msgid "Visit the free Silverclean Lite support forums"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:133
-msgid "Give Feedback"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:134
-msgid "Like this theme? We'd love to hear your feedback!"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:135
-msgid "Rate and review Silverclean Lite at WordPress.org"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:137
-msgid "Get social!"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:138
-msgid "Follow and like IceableThemes!"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:153
-#: ../functions/icefit-options/icefit-options.php:173
-#: ../functions/icefit-options/icefit-options.php:217
-msgid "You do not have permission to edit theme options."
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:256
-msgid "Settings were reset to default."
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:261
-msgid "Settings updated."
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:266
-msgid ""
-"<b>Warning:</b> Javascript is either disabled in your browser or broken in "
-"your WP installation.<br />\n"
-"\tThis is ok, but it is highly recommended to activate javascript for a "
-"better experience.<br />\n"
-"\tIf javascript is not blocked in your browser then this may be caused by a "
-"third party plugin.<br />\n"
-"\tMake sure everything is up to date or try to deactivate some plugins."
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:274
-#, php-format
-msgid ""
-"<strong>Silverclean Lite Notice:</strong> you have not set your primary menu "
-"yet, and your site is currently using a fallback menu which is not "
-"responsive. Please take a minute to <a href=\"%s\">set your menu now</a>!"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:296
-#: ../functions/icefit-options/icefit-options.php:300
-msgid "Reset Options"
-msgstr ""
-
-#: ../functions/icefit-options/icefit-options.php:297
-#: ../functions/icefit-options/icefit-options.php:301
-msgid "Save all Changes"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:27
-msgid "Go Pro"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:34
-msgid "Upgrade to Silverclean Pro!"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:45
-msgid "Main settings"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:52
-msgid "Logo"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:53
-msgid "Upload your own logo"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:60
-msgid "Site Title"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:61
-msgid ""
-"Choose \"display title\" if you want to use a text-based title instead of an "
-"uploaded logo."
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:66
-msgid "Use Logo"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:67
-msgid "Display Title"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:72
-msgid "Favicon"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:73
-msgid ""
-"Set your favicon. 16x16 or 32x32 pixels, either 8-bit or 24-bit colors. PNG "
-"(W3C standard), GIF, or ICO."
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:80
-msgid "Display Tagline"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:81
-msgid ""
-"Display your site description (tagline) on the right side of the header."
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:86
-#: ../functions/icefit-options/settings.php:113
-#: ../functions/icefit-options/settings.php:135
-#: ../functions/icefit-options/settings.php:147
-#: ../functions/icefit-options/settings.php:159
-#: ../functions/icefit-options/settings.php:171
-msgid "Off"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:87
-#: ../functions/icefit-options/settings.php:112
-#: ../functions/icefit-options/settings.php:134
-#: ../functions/icefit-options/settings.php:146
-#: ../functions/icefit-options/settings.php:158
-#: ../functions/icefit-options/settings.php:170
-msgid "On"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:93
-msgid "Blog Index Shows"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:94
-msgid "Choose what content to display on Main Blog page and archives"
-msgstr ""
-
-#: ../functions/icefit-options/settings.php:99
+#: ../inc/customizer/customizer.php:86
 msgid "Excerpt"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:100
+#: ../inc/customizer/customizer.php:87
 msgid "Full content"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:106
-msgid "Responsive mode"
+#: ../inc/customizer/customizer.php:101
+msgid "Responsive Mode"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:107
-msgid "Turn this setting off if you want your site to be unresponsive."
+#: ../inc/customizer/customizer.php:106 ../inc/customizer/customizer.php:126
+#: ../inc/customizer/customizer.php:145 ../inc/customizer/customizer.php:164
+#: ../inc/customizer/customizer.php:183
+msgid "On"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:121
-msgid "Custom Header"
+#: ../inc/customizer/customizer.php:107 ../inc/customizer/customizer.php:127
+#: ../inc/customizer/customizer.php:146 ../inc/customizer/customizer.php:165
+#: ../inc/customizer/customizer.php:184
+msgid "Off"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:128
-msgid "Display custom header on Homepage"
+#: ../inc/customizer/customizer.php:121
+msgid "Display header on Homepage"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:129
-msgid "Enable or disable display of custom header image on the front page."
+#: ../inc/customizer/customizer.php:140
+msgid "Display header on Blog Index"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:140
-msgid "Display custom header on Blog Index"
+#: ../inc/customizer/customizer.php:159
+msgid "Display header on Single Posts"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:141
-msgid "Enable or disable display of custom header image on blog index pages."
+#: ../inc/customizer/customizer.php:178
+msgid "Display header on Pages"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:152
-msgid "Display custom header on Blog Posts"
+#: ../inc/customizer/customizer.php:198
+msgid "Get Silverclean Pro"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:153
-msgid "Enable or disable display of custom header image on single blog posts"
+#: ../inc/customizer/customizer.php:199
+msgid ""
+"Unleash the full potential of Silverclean with tons of additional settings, "
+"advanced features and premium support."
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:164
-msgid "Display custom header on Pages"
+#: ../inc/customizer/customizer.php:215
+msgid "Silverclean Lite support forums"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:165
-msgid "Enable or disable display of custom header image on individual pages."
+#: ../inc/customizer/customizer.php:216
+msgid "Have a question? Need help?"
 msgstr ""
 
-#: ../functions/icefit-options/settings.php:180
-#: ../functions/icefit-options/settings.php:187
-msgid "Support and Feedback"
+#: ../inc/customizer/customizer.php:232
+msgid "Rate Silverclean Lite"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:233
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr ""
+
+#: ../inc/customizer/customizer.php:258
+msgid "Upgrade to Silverclean Pro!"
 msgstr ""
