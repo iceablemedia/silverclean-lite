@@ -90,7 +90,17 @@ a img.aligncenter {
 	margin: 0;
 	padding: 0 4px 5px;
 }
+
 .sticky {
+    overflow: auto;
+    border: 2px dashed #eee;
+    padding-top: 15px;
+    background: #F9F9F9
+}
+
+.sticky .post-contents {
+    margin-left: 10px;
+    margin-right: -10px;
 }
 
 .gallery-caption {
@@ -108,6 +118,10 @@ a img.aligncenter {
 /* Main Wrapper */
 #main-wrap {
 	background: white;
+}
+
+#header-image {
+    margin-bottom: 20px;
 }
 
 /* #Menu
@@ -202,8 +216,8 @@ a img.aligncenter {
 	display: none;
 	position: absolute;
 	width: 200px;
-	top: 40px;
-	left: -2px;
+	top: 41px;
+	left: -1px;
 	padding: 0;
 	margin: 0;
 	border-color: #ddd;
@@ -304,19 +318,6 @@ a img.aligncenter {
 }
 
 #nav-search #searchsubmit {
-/*	margin: 0;
-	padding: 0;
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	top: 7px;
-	left: 10px;
-	border: none;
-	background: transparent;
-	color: transparent;
-	box-shadow: none;
-	text-shadow: none;
-*/
 	display: none;
 }
 
@@ -464,23 +465,23 @@ a img.aligncenter {
 }
 
 .article_nav .previous {
-	float: right;
-	max-width: 45%;
-}
-
-.article_nav .next {
 	float: left;
 	max-width: 45%;
 }
 
-.article_nav .previous a,
-.article_nav .previous a:visited {
-	background: url('../img/arrow-right.png') 100% center no-repeat;
-	padding-right: 10px;
+.article_nav .next {
+	float: right;
+	max-width: 45%;
 }
 
 .article_nav .next a,
 .article_nav .next a:visited {
+	background: url('../img/arrow-right.png') 100% center no-repeat;
+	padding-right: 10px;
+}
+
+.article_nav .previous a,
+.article_nav .previous a:visited {
 	background: url('../img/arrow-left.png') 0 center no-repeat;
 	padding-left: 10px;
 }
@@ -835,16 +836,19 @@ body,
 	word-spacing: normal;
 }
 
-/* Reset font and white space sizes (Part of the CSS Hack that removes inconsistent white-spaces) */
-#page-container > *, #footer .container ul > * {
+#page-container > * {
+	font-size: 12px;
+	line-height: 19px;
 	letter-spacing: normal;
-	word-spacing: normal;
+	word-spacing: normal;	
 }
 
 body {
 	background: #fff;
 	color: #444;
 	-webkit-text-size-adjust: 100%;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 /* Typography */
@@ -853,7 +857,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#page-container > h1,
+#page-container > h2,
+#page-container > h3,
+#page-container > h4,
+#page-container > h5,
+#page-container > h6 {
 	color: #333;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	font-weight: bold;
@@ -877,27 +887,33 @@ h6 a:visited {
 	font-weight: inherit;
 }
 
-h1 {
+h1,
+#page-container > h1 {
 	font-size: 21px;
 	line-height: 31px;
 }
-h2 {
+h2,
+#page-container > h2 {
 	font-size: 18px;
 	line-height: 28px;
 }
-h3 {
+h3,
+#page-container > h3 {
 	font-size: 16px;
 	line-height: 29px;
 }
-h4 {
+h4,
+#page-container > h4 {
 	font-size: 14px;
 	line-height: 25px;
 }
-h5 {
+h5,
+#page-container > h5 {
 	font-size: 13px;
 	line-height: 24px;
 }
-h6 {
+h6,
+#page-container > h6 {
 	font-size: 12px;
 	line-height: 22px;
 }
@@ -1053,7 +1069,7 @@ th {
 }
 
 /* Lists */
-#page-container ul li {
+#page-container ul > li {
 	padding-left: 15px;
 	background-image: url('../img/arrow-right.png');
 	background-repeat: no-repeat;
@@ -1089,6 +1105,14 @@ pre {
 	font-family: 'Courier New', Courier, Monospace;
 	padding: 15px;
 	word-wrap: break-word;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol ol {
+    padding-left: 0;
 }
 
 /* Forms */
@@ -1212,192 +1236,71 @@ h6 a:hover {
 	padding-left: 0;
 }
 
-/* #Flexslider
+/* @media queries
 ================================================== */
 
-/* Browser Resets */
-.flex-container a: active,
-.flexslider a: active,
-.flex-container a:focus,
-.flexslider a:focus {
-	outline: none;
-}
 
-.slides,
-.flex-control-nav,
-.flex-direction-nav {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+/* #Tablet (Portrait) */
 
-/* FlexSlider Necessary Styles
-*********************************/
-.flexslider {
-	margin: 0;
-	padding: 0;
-}
-
-.flexslider .slides > li {
-	display: none;
-	-webkit-backface-visibility: hidden;
-}
- /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {
-	max-width: 100%;
-	display: block;
-}
-
-.flex-pauseplay span {
-	text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-.slides: after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-html[xmlns] .slides {
-	display: block;
-}
-
-* html .slides {
-	height: 1%;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
-* include js that eliminates this class on page load */
-.no-js .slides > li:first-child {
-	display: block;
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	#navbar > .menu-container {
+		width: 587px;
+	}
+	#nav-search {
+		width: 167px;
+	}
+	#nav-search #s {
+		width: 135px;
+	}
+	#sidebar #searchform #s {
+		width: 117px;
+	}
+	#calendar_wrap td {
+		padding: 1px 3px;
+	}
 }
 
 
-/* FlexSlider Default Theme
-*********************************/
-.flexslider {
-	position: relative;
-	background: #fff;
-	border: none;
-	margin-bottom: 70px;
-	position: relative;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px;
-	border-radius: 5px;
-	zoom: 1;
+/* #Mobile (Portrait) */
+
+@media only screen and (max-width: 767px) {
+	#logo {
+		text-align: center 
+	}
+	#navbar > .menu-container {
+		width: 300px;
+	}
+	#nav-search {
+		display: none;
+	}
+	.post-contents {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	.postmetadata {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#sidebar #searchform #s {
+		width: 245px;
+	}
+	#calendar_wrap td {
+		padding: 3px 12px;
+	}
 }
 
-.flexslider .slides {
-	zoom: 1;
-}
+/* #Mobile (Landscape) */
 
-.flexslider .slides > li {
-	position: relative;
-}
-
-/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
-.flex-container {
-	zoom: 1;
-	position: relative;
-}
-
-/* Caption style */
-/* IE rgba() hack */
-.flex-caption {
-	background: none;
-	-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
-	zoom: 1;
-}
-
-.flex-caption {
-	width: 96%;
-	padding: 2%;
-	margin: 0;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.3);
-	color: #fff;
-	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-	font-size: 14px;
-	line-height: 18px;
-}
-
-/* Direction Nav */
-.flex-direction-nav {
-	height: 0;
-}
-
-.flex-direction-nav li a {
-	width: 52px;
-	height: 52px;
-	margin: -13px 0 0;
-	display: block;
-	background: url(../img/flexslider/bg_direction_nav.png) no-repeat;
-	position: absolute;
-	top: 50%;
-	cursor: pointer;
-	text-indent: -999em;
-}
-
-.flex-direction-nav li .next {
-	background-position: -52px 0;
-	right: -21px;
-}
-
-.flex-direction-nav li .prev {
-	left: -20px;
-}
-
-.flex-direction-nav li .disabled {
-	opacity: .3;
-	filter: alpha(opacity=30);
-	cursor: default;
-}
-
-/* Control Nav */
-.flex-control-nav {
-	width: 100%;
-	height: 20px;
-	position: absolute;
-	bottom: -40px;
-	text-align: center;
-}
-
-.flex-control-nav li {
-	margin: 0 0 0 5px;
-	display: inline-block;
-	zoom: 1;
-	width: 17px;
-	height: 17px;
-	/* display: inline; */
-}
-
-.flex-control-nav li:first-child {
-	margin: 0;
-}
-
-.flex-control-nav li a {
-	width: 13px;
-	height: 13px;
-	display: block;
-	background: url(../img/flexslider/bg_control_nav.png) no-repeat;
-	cursor: pointer;
-	text-indent: -999em;
-}
-
-.flex-control-nav li a:hover {
-	background-position: 0 -13px;
-}
-
-.flex-control-nav li a.active {
-	background-position: 0 -26px;
-	cursor: default;
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#navbar > .menu-container {
+		width: 420px;
+	}
+	#sidebar #searchform #s {
+		width: 365px;
+	}
+	#calendar_wrap td {
+		padding: 5px 20px;
+	}
 }

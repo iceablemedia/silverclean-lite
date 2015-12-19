@@ -10,24 +10,39 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
 
-	<!-- BEGIN MAIN CONTENT -->
+	if ( get_custom_header()->url ) :
+?>
+	<div id="header-image" class="container">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+	</div>
+	
+<?php endif; ?>
+
 	<div class="container" id="main-content">
 
+		<div id="page-container" class="left with-sidebar">
 
-	<!-- BEGIN CONTENT COLUMN -->
-	<div class="sixteen columns">
-		<div <?php post_class(); ?>>
-			<h1 class="page-title"><?php _e('404', 'icefit'); ?></h1>
+			<div <?php post_class(); ?>>
+				<h1 class="page-title"><?php _e('404', 'silverclean'); ?></h1>
 
-			<h2><?php _e('Not Found', 'icefit'); ?></h2>
-			<p><?php _e('What you are looking for isn\'t here...', 'icefit'); ?></p>
+				<h2><?php _e('Page Not Found', 'silverclean'); ?></h2>
+				<p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p>
+				<p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p>
+				<?php get_search_form(); ?>
+				
+			</div>
 
 		</div>
-	</div>
-	<!-- END CONTENT COLUMN -->
-	</div>
-	<!-- END MAIN CONTENT -->
+		<!-- End page container -->
 
+		<div id="sidebar-container" class="right">
+			<ul id="sidebar">
+			   <?php dynamic_sidebar( 'sidebar' ); ?>
+			</ul>
+		</div><!-- End sidebar -->
+
+	</div>
+	<!-- End main content -->
 <?php get_footer(); ?>

@@ -10,20 +10,25 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header(); 
+
+	if ( get_custom_header()->url ) :
+		if ( silverclean_get_option('single_header_image') == 'On' ):
+?>
+
+	<div id="header-image" class="container">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+	</div>
+	
+<?php
+		endif;
+	endif;
+?>
+
 
 	<div class="container" id="main-content">
 
-		<?php $blog_sidebar_side = strtolower( icefit_get_option('blog_sidebar_side') );
-		if ($blog_sidebar_side == 'right' || $blog_sidebar_side == '') {
-			$blog_sidebar_side = 'right';
-			$page_container_side = 'left';
-		} else {
-			$page_container_side = 'right';
-		}
-		?>
-
-		<div id="page-container" class="<?php echo $page_container_side; ?> with-sidebar">
+		<div id="page-container" class="left with-sidebar">
 
 			<?php if(have_posts()) : ?>
 			<?php while(have_posts()) : the_post(); ?>
@@ -34,31 +39,27 @@
 			<div class="postmetadata">
 				<?php if (has_post_thumbnail()) : ?>
 				<div class="thumbnail">
-					<a data-rel="prettyPhoto" href="<?php	$image_id = get_post_thumbnail_id();
-									$image_url = wp_get_attachment_image_src($image_id,'large', true);
-									echo $image_url[0];  ?>">
 					<?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?>
-					</a>
 				</div>
 				<?php endif; ?>
 				<span class="meta-date"><?php the_time(get_option('date_format')); ?></span>
-				<span class="meta-author"><?php _e('By ', 'icefit'); the_author(); ?></span>
-				<span class="meta-category"><?php _e('In ', 'icefit'); the_category(', ') ?></span>
+				<span class="meta-author"><?php _e('By ', 'silverclean'); the_author(); ?></span>
+				<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
 				<?php if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>
-				<span class="editlink"><?php edit_post_link(__('Edit', 'icefit'), '', ''); ?></span>
+				<?php edit_post_link(__('Edit', 'silverclean'), '<span class="editlink">', '</span>'); ?>
 			</div>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php the_content() ?>
+			<?php the_content(); ?>
 			</div><!-- end post content -->
 			<div class="clear" /></div>
 			<?php $args = array(
-				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'icefit'),
+				'before'           => '<br class="clear" /><div class="paged_nav">' . __('Pages:', 'silverclean'),
 				'after'            => '</div>',
 				'link_before'      => '',
 				'link_after'       => '',
 				'next_or_number'   => 'number',
-				'nextpagelink'     => __('Next page', 'icefit'),
-				'previouspagelink' => __('Previous page', 'icefit'),
+				'nextpagelink'     => __('Next page', 'silverclean'),
+				'previouspagelink' => __('Previous page', 'silverclean'),
 				'pagelink'         => '%',
 				'echo'             => 1
 			);
@@ -80,21 +81,25 @@
 
 			<?php else : ?>
 		
-			<h2><?php _e('Not Found', 'icefit'); ?></h2>
-			<p><?php _e('What you are looking for isn\'t here...', 'icefit'); ?></p>
+			<h2><?php _e('Not Found', 'silverclean'); ?></h2>
+			<p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p>
 
 			<?php endif; ?>
 
 			<div class="article_nav">
-				<div class="next"><?php previous_post_link('%link'); ?></div>
-				<div class="previous"><?php next_post_link('%link'); ?></div>
+				<?php if ("" != get_adjacent_post( false, "", false ) ): // Is there a next post? ?>
+				<div class="next"><?php next_post_link('%link', __("Next Post", 'silverclean') ); ?></div>
+				<?php endif; ?>
+				<?php if ("" != get_adjacent_post( false, "", true ) ): // Is there a previous post? ?>
+				<div class="previous"><?php previous_post_link('%link', __("Previous Post", 'silverclean') ); ?></div>
+				<?php endif; ?>
 				<br class="clear" />
 			</div>
 
 		</div>
 		<!-- End page container -->
 		
-		<div id="sidebar-container" class="<?php echo $blog_sidebar_side; ?>">
+		<div id="sidebar-container" class="right">
 			<?php get_sidebar(); ?>
 		</div>		
 		<!-- End sidebar column -->

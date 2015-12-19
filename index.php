@@ -10,85 +10,39 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header();
 
-<?php 	// Check if slider is activated for blog index
-	if ( icefit_get_option('blog_slider') == "On" ):
-		// Prepare arguments for WP_query: query slides
-		$args = array( 'post_type' => 'icf_slides' );
-		// Check slides category selection
-		$slides_cat = icefit_get_option('blog_slides_cat');
-		// If a category is selected, filter the slides 
-		if ($slides_cat != 'All Slides') $args['icf-slides-category'] = $slides_cat;		
-		// Begin slider loop
-		$loop = new WP_Query( $args );
-		if($loop->have_posts()):
-		?>
-	<div id="slider-wrap" class="flexslider-container container">
-		<div class="flexslider">
-			<ul class="slides">
-		
-			<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
-			<?php if ( has_post_thumbnail() ): ?>
-		
-				<li>
-				<?php
-					$slide = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-					$caption = get_post_meta($post->ID, 'icf_slides_caption', true);
-					$link = get_post_meta($post->ID, 'icf_slides_link', true);
-					if ($link) {
-						?><a href="<?php echo $link; ?>">
-						<img class="scale-with-grid" src="<?php echo $slide; ?>" alt="" /></a><?php				
-					} else {
-						?><img class="scale-with-grid" src="<?php echo $slide; ?>" alt="" /><?php
-					}
-				?>
-				<?php if($caption): ?>
-				<div class="flex-caption"><?php echo $caption; ?></div>
-				<?php endif; ?>
-				</li>
-
-			<?php endif; ?>
-			<?php endwhile; ?>
-
-			</ul>
-		</div>
-	</div>
-	<!-- End Slider -->
-	
-<?php
-	endif; // End slider loop
-	wp_reset_postdata(); 
-	endif; // End slider code
+	if ( get_custom_header()->url ) :
+		if (	( is_front_page() && silverclean_get_option('home_header_image') == 'On' ) ||
+				( silverclean_get_option('blog_header_image') == 'On' )	):
 ?>
 
+	<div id="header-image" class="container">
+		<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+	</div>
+	
+<?php
+		endif;
+	endif;
+?>
 
 	<div id="main-content" class="container">
 
-		<?php $blog_sidebar_side = strtolower( icefit_get_option('blog_sidebar_side') );
-		if ($blog_sidebar_side == 'right' || $blog_sidebar_side == '') {
-			$blog_sidebar_side = 'right';
-			$page_container_side = 'left';
-		} else {
-			$page_container_side = 'right';
-		}
-		?>
-
-		<div id="page-container" class="<?php echo $page_container_side; ?> with-sidebar">
+		<div id="page-container" class="left with-sidebar">
 
 		<?php /* SEARCH CONDITIONAL TITLE */ ?>
 		<?php if ( is_search() ) :	?>
-		<h1 class="page-title"><?php _e('Search Results for ', 'icefit'); ?>"<?php the_search_query() ?>"</h1>
+		<h1 class="page-title"><?php _e('Search Results for ', 'silverclean'); ?>"<?php the_search_query() ?>"</h1>
 		<?php endif; ?>
 		
 		<?php /* TAG CONDITIONAL TITLE */ ?>
 		<?php if ( is_tag() ) :	?>			
-		<h1 class="page-title"><?php _e('Tag: ', 'icefit'); single_tag_title(); ?></h1>
+		<h1 class="page-title"><?php _e('Tag: ', 'silverclean'); single_tag_title(); ?></h1>
 		<?php endif; ?>
 					
 		<?php /* CATEGORY CONDITIONAL TITLE */ ?>
 		<?php if ( is_category() ) : ?>			
-		<h1 class="page-title"><?php _e('Category: ', 'icefit'); single_cat_title(); ?></h1>
+		<h1 class="page-title"><?php _e('Category: ', 'silverclean'); single_cat_title(); ?></h1>
 		<?php endif; ?>	
 
 		<?php /* DEFAULT CONDITIONAL TITLE */ ?>
@@ -108,12 +62,9 @@
 					</h3>
 
 					<div class="post-content">
-					<?php $blog_index_content = icefit_get_option('blog_index_content');
-					if ($blog_index_content == "Default Excerpt" || $blog_index_content == "Icefit Improved Excerpt") {
-						the_excerpt();
-						} else {
-						the_content();
-						} ?>
+					<?php if ( get_post_format() || post_password_required() ) the_content();
+						else the_excerpt();
+					?>
 					</div>
 		
 				</div>
@@ -127,11 +78,11 @@
 						</div>
 					<?php endif; ?>
 					<span class="meta-date"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span>
-					<span class="meta-author"><?php _e('By ', 'icefit'); the_author(); ?></span>
-					<span class="meta-category"><?php _e('In ', 'icefit'); the_category(', ') ?></span>
-					<span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'icefit' ), __( '1 Comment', 'icefit' ), __( '% Comments', 'icefit' ) ); ?></span>
+					<span class="meta-author"><?php _e('By ', 'silverclean'); the_author(); ?></span>
+					<span class="meta-category"><?php _e('In ', 'silverclean'); the_category(', ') ?></span>
+					<span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean' ), __( '1 Comment', 'silverclean' ), __( '% Comments', 'silverclean' ) ); ?></span>
 					<?php if (has_tag()) { echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>'); } ?>
-					<span class="editlink"><?php edit_post_link(__('Edit', 'icefit'), '', ''); ?></span>
+					<span class="editlink"><?php edit_post_link(__('Edit', 'silverclean'), '', ''); ?></span>
 				</div>
 
 			</div><!-- end div post -->
@@ -141,20 +92,30 @@
 		<?php endwhile; ?>
 		<?php else : ?>
 
-			<h2><?php _e('Not Found', 'icefit'); ?></h2>
-			<p><?php _e('What you are looking for isn\'t here...', 'icefit'); ?></p>
+			<?php if (is_search() ): ?>
+
+				<h2><?php _e('Nothing Found', 'silverclean'); ?></h2>
+				<p><?php _e('Maybe a search will help ?', 'silverclean'); ?></p>
+				<?php get_search_form(); ?>
+			
+			<?php else : ?>
+
+				<h2><?php _e('Not Found', 'silverclean'); ?></h2>
+				<p><?php _e('What you are looking for isn\'t here...', 'silverclean'); ?></p>
+
+			<?php endif; ?>
 
 		<?php endif; ?>
 
 			<div class="page_nav">
-				<div class="previous"><?php next_posts_link( __('Previous Posts', 'icefit') ); ?></div>
-				<div class="next"><?php previous_posts_link( __('Next Posts', 'icefit') ); ?></div>
+				<div class="previous"><?php next_posts_link( __('Previous Posts', 'silverclean') ); ?></div>
+				<div class="next"><?php previous_posts_link( __('Next Posts', 'silverclean') ); ?></div>
 			</div>
 
 		</div>
 		<!-- End page container -->
 
-		<div id="sidebar-container" class="<?php echo $blog_sidebar_side; ?>">
+		<div id="sidebar-container" class="right">
 			<?php get_sidebar(); ?>
 		</div>		
 		<!-- End sidebar -->
