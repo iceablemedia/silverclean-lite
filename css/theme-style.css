@@ -63,8 +63,18 @@
 
 /* Logo */
 #logo {
-	padding: 25px 0 25px 10px;
+	padding: 25px 0;
 }
+
+#logo .site-title {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	color: #444;
+	font-size: 23px;
+	text-transform: uppercase;
+	line-height: 130%;
+}
+
+#logo a:hover { text-decoration: none; }
 
 /* Main Wrapper */
 #main-wrap {

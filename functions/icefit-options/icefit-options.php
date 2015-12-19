@@ -114,7 +114,7 @@ function silverclean_settings_machine($options) {
 						<li>(Pro Only)&nbsp;One click setup <strong>AJAX contact form</strong></li>
 						<li>(Pro Only)&nbsp;<strong>Google Maps</strong> API v3 integration</li>
 						<li>(Pro Only)&nbsp;<strong>Pro dedicated support forum</strong> access</li>
-						<li>GPL License:&nbsp;Buy once, use as many time as you wish!</li>
+						<li>GPL License:&nbsp;Buy once, use as many times as you wish!</li>
 						<li><strong>Cross-browsers support</strong>, optimized for IE8+, Firefox, Chrome, Safari and Opera</li>
 						<li>Lifetime&nbsp;<strong>free updates</strong>&nbsp;and continued support for the <strong>latest WordPress versions</strong></li>
 						</ul>';
