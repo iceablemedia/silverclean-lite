@@ -20,9 +20,7 @@
 
 	<div id="sub-footer"><div class="container">
 			<?php 
-			/* You are free to modify or replace this by anything you like,
-			 * Though it would be really nice if you decide to keep the tiny link to the theme author :)
-			 */ ?>
+			/* You are free to modify or replace this by anything you like as per the terms of the GPL license */ ?>
 			 Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. 
 			 <?php printf( __( 'Proudly powered by', 'silverclean' ) ); ?><a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'silverclean' ); ?>"> WordPress</a>. Silverclean design by <a href="<?php echo esc_url( 'http://www.iceablethemes.com' ); ?>" title="<?php esc_attr_e( 'Iceablethemes', 'silverclean' ); ?>">Iceable Themes</a>.</div>
 	</div></div>

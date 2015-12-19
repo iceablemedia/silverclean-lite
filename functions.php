@@ -153,7 +153,7 @@ function silverclean_styles() {
 	wp_enqueue_style( 'theme-style' );
 	wp_enqueue_style( 'style' );
 }
-add_action('wp_print_styles', 'silverclean_styles');
+add_action('wp_enqueue_scripts', 'silverclean_styles');
 
 /*
  * Enqueue Javascripts
