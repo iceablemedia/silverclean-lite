@@ -111,7 +111,7 @@
 
 #navbar ul {
 	margin-bottom: 0;
-	min-height: 40px;
+	min-height: 30px;
 }
 
 #navbar ul li {
@@ -235,8 +235,9 @@
 }
 
 #navbar ul li ul li ul {
-	left: 100%;
-	top: -1px;
+	left: 20px;
+	top: 30px;
+	border-top: 1px solid #CCC;
 }
 
 /* Navbar search */
