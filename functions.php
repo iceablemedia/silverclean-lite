@@ -121,6 +121,7 @@ function eg_clean_pre($matches) {
 
 /*------------ Improved excerpt ------------*/
 
+
 function icefit_improved_trim_excerpt($text) {
 	global $post;
 	if ( '' == $text ) {
@@ -137,7 +138,15 @@ function icefit_improved_trim_excerpt($text) {
 			array_pop($words);
 			$text = implode(' ', $words)."...";
 		}
-    	$text = strip_tags($text, '<p><i><em><b><a><strong><img>');
+    	$text = strip_tags($text, '<br><p><i><em><b><a><strong>');
+
+    	if ( extension_loaded('tidy') ) {
+	    	$tidy = new tidy();
+	    	$tidy->parseString($text,array('show-body-only'=>true,'wrap'=>'0'),'utf8');
+	    	$tidy->cleanRepair();
+	    	$text = $tidy;
+    	}
+    	
 		$text .= '<div class="read-more"><a href="'.get_permalink($post->ID).'">'.__('Read More', 'icefit').'</a></div>';
 	}
 	return $text;

@@ -4,7 +4,7 @@ Contributors: Iceable
 Tags: gray, silver, white, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -49,6 +49,11 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
+
+= 1.0.3 =
+April 18th, 2013
+* Fixed: PHP notice upon activation when upgrading from 1.0.1
+* Fixed: Further enhancement to Icefit Improved Excerpt to preserve styling tag without breaking the markup
 
 = 1.0.2 =
 April 16th, 2013
