@@ -20,13 +20,6 @@ function silverclean_get_option($option) {
 	return $value;
 }
 
-// Custom function to get all settings (returns an array of all settings)
-function silverclean_get_settings() {
-	global $silverclean_settings_slug;
-	$silverclean_settings = get_option($silverclean_settings_slug);
-	return $silverclean_settings;
-}
-
 // Adds "Theme option" link under "Appearance" in WP admin panel
 function silverclean_settings_add_admin() {
 	global $menu;
@@ -140,7 +133,6 @@ function silverclean_settings_machine($options) {
 			$output .= '</div>';
 		} 
 	}
-	update_option($silverclean_settings_slug,$silverclean_settings);	
 	return $output;
 }
 

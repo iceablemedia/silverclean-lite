@@ -4,7 +4,7 @@ Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.1.11
+Stable tag: 1.1.12
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -47,6 +47,11 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.1.12 =
+June 16th, 2014
+* Removed unused function silverclean_get_settings()
+* Fixed: Using sane defaults (No setting is saved in the database without explicit user action) 
 
 = 1.1.11 =
 May 19th, 2014
