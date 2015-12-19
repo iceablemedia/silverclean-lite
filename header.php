@@ -35,7 +35,7 @@
 if ($favicon): ?>
 	<!-- Favicon
 	================================================== -->
-	<link rel="shortcut icon" href="<?php echo $favicon; ?>" />
+	<link rel="shortcut icon" href="<?php echo esc_url($favicon); ?>" />
 <?php endif; ?>
 
 	<!-- Misc
@@ -62,7 +62,7 @@ if ($favicon): ?>
 	<div class="container">
 		<div class="sixteen columns" id="logo">
 		<a href="<?php echo home_url(); ?>">
-		<img src="<?php echo icefit_get_option('logo'); ?>" alt="<?php bloginfo('name') ?>">
+		<img src="<?php echo esc_url( icefit_get_option('logo') ); ?>" alt="<?php bloginfo('name') ?>">
 		</a>
 		</div>
 	</div>
@@ -71,7 +71,7 @@ if ($favicon): ?>
 	<div id="navbar" class="container">
 	<div class="menu-container">
 	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>', ) ); ?>
-	<?php dropdown_nav_menu(); ?>
+	<?php icefit_dropdown_nav_menu(); ?>
 	</div>
 	<div id="nav-search">
 		<?php get_search_form(); ?>

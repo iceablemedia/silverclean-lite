@@ -64,7 +64,6 @@ add_editor_style();
 /*-------------------- Enqueue javascripts --------------------*/
 
 function icefit_scripts() {
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script('icefit-scripts', get_template_directory_uri() . '/js/icefit.js', array('jquery'));
 	wp_enqueue_script('hoverIntent', get_template_directory_uri() . '/js/hoverIntent.js', array('jquery'));	// Submenus
 	wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.js', array('jquery'));	// Submenus
@@ -78,20 +77,20 @@ add_action('wp_enqueue_scripts', 'icefit_scripts');
 add_theme_support( 'automatic-feed-links' );
 
 /*-------------------- Add Post Thumbnails Support -------------------*/
-if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
 
 /*-------------------- WP unwanted behaviors fix --------------------*/
 
 /* Remove rel tags in category links (HTML5 invalid) */
-add_filter( 'the_category', 'remove_rel_cat' ); 
-function remove_rel_cat( $text ) {
+add_filter( 'the_category', 'icefit_remove_rel_cat' ); 
+function icefit_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category"', "", $text); return $text;
 }
 
 /* Fix for a known issue with enclosing shortcodes and wpauto */
 /* Credits : Johann Heyne */
-add_filter('the_content', 'shortcode_empty_paragraph_fix');
-function shortcode_empty_paragraph_fix($content) {
+add_filter('the_content', 'icefit_shortcode_empty_paragraph_fix');
+function icefit_shortcode_empty_paragraph_fix($content) {
 	$array = array (
 		'<p>['    => '[', 
 		']</p>'   => ']', 
@@ -103,14 +102,14 @@ function shortcode_empty_paragraph_fix($content) {
 
 /* Improved version of clean_pre */
 /* Based on a work by Emrah Gunduz */
-add_filter( 'the_content', 'protect_pre' );
+add_filter( 'the_content', 'icefit_protect_pre' );
 
-function protect_pre($pee) {
-	$pee = preg_replace_callback('!(<pre[^>]*>)(.*?)</pre>!is', 'eg_clean_pre', $pee );
+function icefit_protect_pre($pee) {
+	$pee = preg_replace_callback('!(<pre[^>]*>)(.*?)</pre>!is', 'icefit_eg_clean_pre', $pee );
 	return $pee;
 }
 
-function eg_clean_pre($matches) {
+function icefit_eg_clean_pre($matches) {
 	if ( is_array($matches) )
 		$text = $matches[1] . $matches[2] . "</pre>";
 	else
@@ -300,8 +299,8 @@ add_shortcode('gallery', 'icefit_gallery_shortcode');
 
 /*-------------------- Add prettyPhoto tag to the gallery --------------------*/
 
-add_filter( 'wp_get_attachment_link', 'sant_prettyadd');
-function sant_prettyadd ($content) {
+add_filter( 'wp_get_attachment_link', 'icefit_sant_prettyadd');
+function icefit_sant_prettyadd ($content) {
 	$content = preg_replace("/<a/","<a data-rel=\"prettyPhoto[gal]\"",$content,1);
 	return $content;
 }
@@ -312,8 +311,8 @@ register_nav_menu( 'primary', 'Navigation menu' );
 
 /* --------------- Add parent Class to parent menu items ----------------- */
 
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
-function add_menu_parent_class( $items ) {
+add_filter( 'wp_nav_menu_objects', 'icefit_add_menu_parent_class' );
+function icefit_add_menu_parent_class( $items ) {
 	$parents = array();
 	foreach ( $items as $item ) {
 		if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
@@ -331,7 +330,7 @@ function add_menu_parent_class( $items ) {
 
 /* -------------- Create dropdown menu (used in responsive mode) ----------- */
 
-function dropdown_nav_menu () {
+function icefit_dropdown_nav_menu () {
 	$menu_name = 'primary';
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
 		if ($menu = wp_get_nav_menu_object( $locations[ $menu_name ] ) ) {
@@ -407,37 +406,9 @@ add_action('parse_request', 'icefit_dynamiccss_parse_request');
 
 // Generate dynamic CSS
 function icefit_dynamiccss_output() {
-	$custom_css = "";
-	$custom_css .= "#main-wrap { background: white; }";
-
-	// Boxed layout
-	if ('Boxed' == icefit_get_option('layout') ) {
-		$background_color = icefit_get_option('background_color');
-		$background_image = icefit_get_option('background_image');
-		$custom_css .= "#main-wrap {
-			border-left: 1px solid #DDD;
-			border-right: 1px solid #DDD;
-			}
-
-			body {
-				background-image: url('".$background_image."');
-				background-color: ".$background_color.";
-			}";
-	}
-
-	// Headings font
-	$custom_css .= "#page-container h1, #page-container h2, #page-container h3, #page-container h4, #page-container h5, #page-container h6 { font-family: ".icefit_get_option('headings_font').', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; }';
-	// Headings color
-	$custom_css .= "#page-container h1, #page-container h2, #page-container h3,
-	#page-container h4, #page-container h5, #page-container h6,
-	#page-container h1 a, #page-container h2 a, #page-container h3 a,
-	#page-container h4 a, #page-container h5 a, #page-container h6 a,
-	#page-container h1 a:visited, #page-container h2 a:visited, #page-container h3 a:visited,
-	#page-container h4 a:visited, #page-container h5 a:visited, #page-container h6 a:visited
-	 { color: ".icefit_get_option('headings_color')."; }";
 
 	// User defined additional custom CSS
-	$custom_css .= icefit_get_option('custom_css');
+	$custom_css = icefit_get_option('custom_css');
 
 	header('Content-type: text/css');
 	echo $custom_css;

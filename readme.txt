@@ -4,12 +4,12 @@ Contributors: Iceable
 Tags: gray, silver, white, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 
 == ABOUT SILVERCLEAN LITE ==
 
 Silverclean Lite is a clean, elegant and responsive theme for WordPress. Perfect for various uses from personal blogging to small business website.
-It features two widgetizable areas (sidebar and optional footer) and unlimited image slideshow.
+It features two widgetizable areas (sidebar and optional footer) and unlimited image slideshows.
 
 Silverclean Lite is the lite version of Silverclean Pro, which comes with many additional features and access to premium class pro support forum and can be found at http://www.iceablethemes.com
 
@@ -34,7 +34,7 @@ Additional documentation and free support forums can be found at http://www.icea
 
 == LICENSE ==
 
-This theme is released under the terms of the GNU GPLv3 License.
+This theme is released under the terms of the GNU GPLv2 License.
 Please refer to license.txt for more information.
 
 == CREDITS ==
@@ -49,6 +49,17 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
+
+= 1.0.5 =
+May 2nd, 2013
+* Fixed: Changed license to GPLv2 for improved compatibility
+* Fixed: Escaping user-entered data before printing
+* Fixed: Appropriately prefixed all custom functions
+* Removed: Unnecessary enqueuing of jQuery
+* Removed: Unnecessary use of function_exist() conditional
+* Removed: Unnecessary use of dynamic css
+* Removed: Unused images files from the option framework
+* Updated: Author URI
 
 = 1.0.4 =
 April 18th, 2013
