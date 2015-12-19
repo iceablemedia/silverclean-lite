@@ -125,40 +125,27 @@ function icefit_improved_trim_excerpt($text) {
 	global $post;
 	if ( '' == $text ) {
 		$text = get_the_content('');
+		$text = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', $text); // Remove shortcodes
     	$text = apply_filters('the_content', $text);
 		$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
 		$text = preg_replace('@<style[^>]*?>.*?</style>@si', '', $text);
-		$text = preg_replace('@<p class="wp-caption-text"[^>]*?>.*?</p>@si', '', $text);	
+		$text = preg_replace('@<p class="wp-caption-text"[^>]*?>.*?</p>@si', '', $text);
     	$text = str_replace('\]\]\>', ']]&gt;', $text);
-    	$text = strip_tags($text, '<p><i><em><b><a><strong>');
     	$excerpt_length = 50;
     	$words = explode(' ', $text, $excerpt_length + 1);
     	if (count($words)> $excerpt_length) {
 			array_pop($words);
-			array_push($words, '... <span class="read-more"><a href="'.get_permalink($post->ID).'">'.'Read More'.'</a></span>');
-			$text = implode(' ', $words);
+			$text = implode(' ', $words)."...";
 		}
+    	$text = strip_tags($text, '<p><i><em><b><a><strong><img>');
+		$text .= '<div class="read-more"><a href="'.get_permalink($post->ID).'">'.__('Read More', 'icefit').'</a></div>';
 	}
 	return $text;
 }
 
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'icefit_improved_trim_excerpt');
-
-function icefit_short_excerpt($content) {
-		$content = preg_replace('@<script[^>]*?>.*?</script>@si', '', $content);
-		$content = preg_replace('@<style[^>]*?>.*?</style>@si', '', $content);
-		$content = preg_replace('@<p class="wp-caption-text"[^>]*?>.*?</p>@si', '', $content);	
-    	$content = str_replace('\]\]\>', ']]&gt;', $content);
-    	$content = strip_tags($content, '<p><i><em><b><a><strong>');
-    	$excerpt_length = 15;
-    	$words = explode(' ', $content, $excerpt_length + 1);
-    	if (count($words)> $excerpt_length) {
-			array_pop($words);
-			array_push($words, '...');
-			$content = implode(' ', $words);
-		}
-	return $content;
+if ( icefit_get_option('blog_index_content') == "Icefit Improved Excerpt" ) {
+	remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+	add_filter('get_the_excerpt', 'icefit_improved_trim_excerpt');
 }
 
 /*--------------------- Rewrite Gallery Shortcode ---------------------*/
@@ -272,7 +259,6 @@ function icefit_gallery_shortcode($attr) {
 
 	$i = 0;
 	foreach ( $attachments as $id => $attachment ) {
-//		$link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
 		// Force linking to image file 
 		$link = wp_get_attachment_link($id, $size, false, false);
 

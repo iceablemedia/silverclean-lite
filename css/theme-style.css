@@ -327,6 +327,10 @@ a img.aligncenter {
 /* #Index
 ================================================== */
 
+.post-content {
+	margin-bottom: 20px;
+}
+
 .post-contents {
 	float: left;
 	width: 450px;
@@ -1188,6 +1192,10 @@ h6 a:hover {
 }
 
 /* Gallery */
+.gallery {
+	clear: both;
+}
+
 .wp-caption-text {
 	padding-left: 0;
 }

@@ -12,6 +12,57 @@
 
 <?php get_header(); ?>
 
+<?php 	// Check if slider is activated for blog index
+	if ( icefit_get_option('blog_slider') == "On" ):
+		// Prepare arguments for WP_query: query slides
+		$args = array( 'post_type' => 'icf_slides' );
+		// Check slides category selection
+		$slides_cat = icefit_get_option('blog_slides_cat');
+		// If a category is selected, filter the slides 
+		if ($slides_cat != 'All Slides') $args['icf-slides-category'] = $slides_cat;		
+		// Begin slider loop
+		$loop = new WP_Query( $args );
+		if($loop->have_posts()):
+		?>
+	<div id="slider-wrap" class="flexslider-container container">
+		<div class="flexslider">
+			<ul class="slides">
+		
+			<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
+			<?php if ( has_post_thumbnail() ): ?>
+		
+				<li>
+				<?php
+					$slide = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					$caption = get_post_meta($post->ID, 'icf_slides_caption', true);
+					$link = get_post_meta($post->ID, 'icf_slides_link', true);
+					if ($link) {
+						?><a href="<?php echo $link; ?>">
+						<img class="scale-with-grid" src="<?php echo $slide; ?>" alt="" /></a><?php				
+					} else {
+						?><img class="scale-with-grid" src="<?php echo $slide; ?>" alt="" /><?php
+					}
+				?>
+				<?php if($caption): ?>
+				<div class="flex-caption"><?php echo $caption; ?></div>
+				<?php endif; ?>
+				</li>
+
+			<?php endif; ?>
+			<?php endwhile; ?>
+
+			</ul>
+		</div>
+	</div>
+	<!-- End Slider -->
+	
+<?php
+	endif; // End slider loop
+	wp_reset_postdata(); 
+	endif; // End slider code
+?>
+
+
 	<div id="main-content" class="container">
 
 		<?php $blog_sidebar_side = strtolower( icefit_get_option('blog_sidebar_side') );
@@ -56,8 +107,13 @@
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
 					</h3>
 
-					<div class="post-excerpt">
-					<?php the_excerpt() ?>
+					<div class="post-content">
+					<?php $blog_index_content = icefit_get_option('blog_index_content');
+					if ($blog_index_content == "Default Excerpt" || $blog_index_content == "Icefit Improved Excerpt") {
+						the_excerpt();
+						} else {
+						the_content();
+						} ?>
 					</div>
 		
 				</div>
@@ -91,8 +147,8 @@
 		<?php endif; ?>
 
 			<div class="page_nav">
-				<div class="previous"><?php next_posts_link('Previous Posts'); ?></div>
-				<div class="next"><?php previous_posts_link('Next Posts'); ?></div>
+				<div class="previous"><?php next_posts_link( __('Previous Posts', 'icefit') ); ?></div>
+				<div class="next"><?php previous_posts_link( __('Next Posts', 'icefit') ); ?></div>
 			</div>
 
 		</div>

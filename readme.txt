@@ -4,7 +4,7 @@ Contributors: Iceable
 Tags: gray, silver, white, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, editor-style, featured-images, full-width-template, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -30,7 +30,7 @@ Once you activate the theme from your WordPress admin panel, you will be automat
 
 * Footer widgets: The widgetizable footer is disabled by default. To activate it, simply go to Appearance > Widgets and drop some widgets in the "Footer" area, just like you would do for the sidebar. It is recommended to use 4 widgets in the footer, or no widgets at all to disable it.
 
-Additional documentation and free support forums can be found at http://www.iceablethemes.com under "support".
+Additional documentation and free support forums can be found at http://www.iceablethemes.com under "Documentation" and "Forums".
 
 == LICENSE ==
 
@@ -49,6 +49,15 @@ This theme bundles some third party javascript and jQuery plugins, released unde
 All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
+
+= 1.0.2 =
+April 16th, 2013
+* Added: Option to choose what content to display on blog index pages (Full content, WP default excerpt or Icefit improved excerpt)
+* Added: Option to activate the slideshow on blog index pages
+* Added: Support for optional captions for slides
+* Added: /languages folder with default po and mo files and POT file for localization
+* Fixed: Icefit Improved Excerpt processing was breaking the markup in some situations
+* Changed: Updated Theme URI to Silverclean Lite demo site
 
 = 1.0.1 =
 March 14th, 2013

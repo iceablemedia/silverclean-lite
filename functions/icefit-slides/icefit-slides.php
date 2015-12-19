@@ -154,6 +154,12 @@ function icefit_slides_metabox_settings() {
 		'priority' => 'default',
 		'fields' => array(
 			array(
+				'name' => 'Caption',
+				'desc' => '',
+				'id' => $prefix . 'caption',
+				'type' => 'text',
+				'std' => '' ),
+			array(
 				'name' => 'Link',
 				'desc' => '',
 				'id' => $prefix . 'link',

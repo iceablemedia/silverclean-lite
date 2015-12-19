@@ -18,6 +18,16 @@ $icefit_settings_slug = "silverclean_settings";
 
 // Set settings template
 function icefit_settings_template() {
+
+	/* Prepare slider category selector options */
+    $cats = get_terms('icf-slides-category');
+  	$slides_cat[] = 'All Slides';
+  	if ($cats):
+	  	foreach($cats as $cat):
+	  		$slides_cat[] =  $cat->slug;
+		endforeach;
+	endif;
+
 	$settings_options = array();
 
 // START PAGE 0
@@ -72,6 +82,33 @@ function icefit_settings_template() {
 			'type'          => 'select',
 			'default'       => 'Right',
 			'values'		=> array ('Right', 'Left'),
+		);
+
+		$settings_options[] = array(
+			'name'          => 'Blog Index Content',
+			'desc'          => 'Select what content should be displayed on blog index pages.',
+			'id'            => 'blog_index_content',
+			'type'          => 'select',
+			'default'       => 'Full Content',
+			'values'		=> array ('Full Content', 'Default Excerpt', 'Icefit Improved Excerpt'),
+		);
+
+		$settings_options[] = array(
+			'name'          => 'Activate slider on blog page',
+			'desc'          => 'Enable slideshow on blog index page.',
+			'id'            => 'blog_slider',
+			'type'          => 'select',
+			'default'       => 'Off',
+			'values'		=> array ('Off', 'On'),
+		);
+
+		$settings_options[] = array(
+			'name'          => 'Slides category for blog page',
+			'desc'          => 'Select which slides to use for the blog index slideshow.',
+			'id'            => 'blog_slides_cat',
+			'type'          => 'select',
+			'default'       => 'All Slides',
+			'values'		=> $slides_cat,
 		);
 
 		$settings_options[] = array(
