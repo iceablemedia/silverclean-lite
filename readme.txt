@@ -50,6 +50,10 @@ All other files are copyright 2013 Iceable Media.
 
 == CHANGELOG ==
 
+= 1.0.4 =
+April 18th, 2013
+* Fixed: PHP notice upon first activation on a new instalation.
+
 = 1.0.3 =
 April 18th, 2013
 * Fixed: PHP notice upon activation when upgrading from 1.0.1

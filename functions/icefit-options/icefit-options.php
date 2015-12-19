@@ -14,7 +14,9 @@ function icefit_get_option($option) {
 	global $icefit_settings_slug;
 	$icefit_settings = get_option($icefit_settings_slug);
 	$value = "";
-	if (array_key_exists($option, $icefit_settings)) $value = $icefit_settings[$option];
+	if (is_array($icefit_settings)) {
+		if (array_key_exists($option, $icefit_settings)) $value = $icefit_settings[$option];
+	}
 	return $value;
 }
 
