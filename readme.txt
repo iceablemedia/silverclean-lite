@@ -3,8 +3,8 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 4.3.1
-Stable tag: 1.2.3
+Tested up to: 4.4.1
+Stable tag: 1.2.4
 
 == ABOUT SILVERCLEAN LITE ==
 
@@ -50,6 +50,11 @@ If you have translated this theme into your own language and are willing to shar
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.2.4 =
+January 13th, 2016
+* Enhanced support for <!--more--> quicktag
+* Tested with WordPress 4.4.1
 
 = 1.2.3 =
 November 23rd, 2015

@@ -191,6 +191,12 @@ function silverclean_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'silverclean_excerpt_more' );
 
+function silverclean_content_more( $more ) {
+	global $post;
+	return '<div class="read-more"><a href="'. get_permalink() . '#more-' . $post->ID . '">'. __("Read More", 'silverclean-lite') .'</a></div>';
+}
+add_filter( 'the_content_more_link', 'silverclean_content_more' );
+
 /*
  * Rewrite and replace wp_trim_excerpt() so it adds a relevant read more link
  * when the <!--more--> or <!--nextpage--> quicktags are used
