@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Silverclean Lite WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Silverclean Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2013-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -198,7 +198,7 @@ class Silverclean_Customizer {
 
 		// Setting and control for Silverclean upgrade message
 		$wp_customize->add_setting( 'silverclean_upgrade', array(
-			'default'	=> 'http://www.iceablethemes.com/shop/silverclean-pro/',
+			'default'	=> 'https://www.iceablethemes.com/shop/silverclean-pro/',
 			'sanitize_callback' => 'silverclean_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -215,7 +215,7 @@ class Silverclean_Customizer {
 
 		// Setting and control for Silverclean support forums message
 		$wp_customize->add_setting( 'silverclean_support', array(
-			'default'	=> 'http://www.iceablethemes.com/forums/forum/free-support-forum/silverclean-lite/',
+			'default'	=> 'https://www.iceablethemes.com/forums/forum/free-support-forum/silverclean-lite/',
 			'sanitize_callback' => 'silverclean_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -232,7 +232,7 @@ class Silverclean_Customizer {
 
 		// Setting and control for Silverclean feedback message
 		$wp_customize->add_setting( 'silverclean_feedback', array(
-			'default'	=> 'http://wordpress.org/support/view/theme-reviews/silverclean-lite',
+			'default'	=> 'https://wordpress.org/support/view/theme-reviews/silverclean-lite',
 			'sanitize_callback' => 'silverclean_sanitize_button',
 		) );
 		$wp_customize->add_control(
@@ -310,5 +310,3 @@ function silverclean_sanitize_on_off( $input ){
 function silverclean_sanitize_button( $input ){
 	return '';
 }
-
-?>

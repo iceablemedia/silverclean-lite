@@ -3,15 +3,15 @@
 Contributors: Iceable
 Tags: gray, silver, white, light, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.5
-Tested up to: 4.4.1
-Stable tag: 1.2.4
+Tested up to: 4.5.2
+Stable tag: 1.2.5
 
 == ABOUT SILVERCLEAN LITE ==
 
 Silverclean Lite is a clean, elegant and responsive theme for WordPress. Perfect for various uses from personal blogging to small business website.
 It features two widgetizable areas (sidebar and optional footer).
 
-Silverclean Lite is the lite version of Silverclean Pro, which comes with many additional features and access to premium class pro support forum and can be found at http://www.iceablethemes.com
+Silverclean Lite is the lite version of Silverclean Pro, which comes with many additional features and access to premium class pro support forum and can be found at https://www.iceablethemes.com
 
 == GETTING STARTED ==
 
@@ -19,7 +19,7 @@ Once you activate the theme from your WordPress admin panel, you can visit the "
 If you will be using a custom header image, you can also optionally choose to enable or disable it on your homepage, blog index pages, single post pages and individual pages.
 It is highly recommended to set a menu (in appearance > menu) instead of relying on the default fallback menu. Doing so will automatically activate the dropdown version of your menu in responsive mode.
 
-Additional documentation and free support forums can be found at http://www.iceablethemes.com under "support".
+Additional documentation and free support forums can be found at https://www.iceablethemes.com under "support".
 
 == SPECIAL FEATURES INSTRUCTIONS ==
 
@@ -44,12 +44,18 @@ Currently available translation (GNU GPLv2 Licensed):
 * French (fr_FR) translation: by Iceable Media
 
 Translating this theme into you own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
-If you don't have a .po file editor yet, you can download Poedit from http://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
+If you don't have a .po file editor yet, you can download Poedit from https://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
 
-If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at http://www.iceablethemes.com
+If you have translated this theme into your own language and are willing to share your translation with the community, please feel free to do so on the forums at https://www.iceablethemes.com
 Your translation files will be added to the next update. Don't forget to leave your name, email address and/or website link so credits can be given to you!
 
 == CHANGELOG ==
+
+= 1.2.5 =
+June 16th, 2016
+* Tested with WordPress 4.5.2
+* Updated external links to wordpress.org and iceablethemes.com to https
+* Removed php closing tags from end of files to prevent potential issues
 
 = 1.2.4 =
 January 13th, 2016

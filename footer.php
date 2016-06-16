@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Silverclean WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2013-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -22,13 +22,13 @@ endif;
 printf( __('Copyright &copy; %s %s.', 'silverclean-lite'), date('Y'), get_bloginfo('name') );
 echo ' ';
 printf( __('Proudly powered by <a href="%s" title="%s">%s</a>.', 'silverclean-lite'),
-	esc_url( __('http://wordpress.org/', 'silverclean-lite') ),
+	esc_url( __('https://wordpress.org/', 'silverclean-lite') ),
 	esc_attr__( 'Semantic Personal Publishing Platform', 'silverclean-lite' ),
 	__('WordPress', 'silverclean-lite')
 );
 echo ' ';
 printf( __('Silverclean design by <a href="%s" title="%s">Iceable Themes</a>.', 'silverclean-lite'),
-	esc_url( 'http://www.iceablethemes.com' ),
+	esc_url( 'https://www.iceablethemes.com' ),
 	esc_attr( 'Iceablethemes', 'silverclean-lite' )
 );
 

@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Silverclean WordPress Theme by Iceable Themes | http://www.iceablethemes.com
+ * Silverclean WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
  * Copyright 2013-2016 Mathieu Sarrasin - Iceable Media
  *
@@ -57,4 +57,4 @@ endif;
 
 ?></div><?php // End main content
 
-get_footer(); ?>
+get_footer();
