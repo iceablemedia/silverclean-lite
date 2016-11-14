@@ -252,6 +252,7 @@ fieldset {
 }
 
 input[type="text"],
+input[type="search"],
 input[type="password"],
 input[type="email"],
 textarea,
@@ -277,6 +278,7 @@ select {
 }
 
 input[type="text"]:focus,
+input[type="search"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
@@ -762,12 +764,12 @@ or wrap each row of columns in a <div class="row"> */
 	width: 182px;
 }
 
-#nav-search #searchform {
+#nav-search .search-form {
 	margin: 9px 0;
 	position: relative;
 }
 
-#nav-search #s {
+#nav-search .search-field {
 	display: block;
 	background-color: #8e8e8e; /* Old browsers */
 	background-image: url('../img/search-icon.png'); /* Fallback */
@@ -782,20 +784,16 @@ or wrap each row of columns in a <div class="row"> */
 	background-position: 0 center;
 	border: 1px solid #666;
 	box-shadow: 2px 2px 4px rgba(0,0,0,0.4) inset, 1px 1px 0 rgba(0,0,0,0.1);
-	width: 150px;
+	width: 180px;
 	padding: 3px 10px 3px 20px;
-	height: 15px;
+	height: 23px;
 	border-radius: 10px;
 	font-size: 11px;
 	color: white;
 	margin: 0;
 }
 
-#nav-search label {
-	display: none;
-}
-
-#nav-search #searchsubmit {
+#nav-search .search-submit {
 	display: none;
 }
 
@@ -1190,27 +1188,23 @@ p.comment-form-url
 }
 
 /* Search */
-#sidebar #searchform {
+#sidebar .search-form {
 	position: relative;
 }
 
-#sidebar #searchform label {
+#sidebar .search-form .search-submit {
 	display: none;
 }
 
-#sidebar #searchform #searchsubmit {
-	display: none;
-}
-
-#sidebar #searchform #s {
+#sidebar .search-form .search-field {
 	background-image: url('../img/search-icon-dark.png');
 	background-color: white;
 	background-repeat: no-repeat;
 	background-position: 0 center;
 	border: none;
-	width: 145px;
+	width: 175px;
 	padding: 3px 10px 3px 20px;
-	height: 15px;
+	height: 23px;
 	border-radius: 11px;
 	font-size: 11px;
 	color: #666;
@@ -1588,6 +1582,7 @@ label {
 }
 
 input[type="text"],
+input[type="search"],
 input[type="password"],
 input[type="email"],
 textarea {
@@ -1601,9 +1596,10 @@ textarea {
 }
 
 input[type="text"],
+input[type="search"],
 input[type="password"],
 input[type="email"] {
-	height: 15px;
+	height: 23px;
 }
 
 textarea {
@@ -1750,11 +1746,11 @@ h6 a:hover {
 	#nav-search {
 		width: 167px;
 	}
-	#nav-search #s {
-		width: 135px;
+	#nav-search .search-field {
+		width: 165px;
 	}
-	#sidebar #searchform #s {
-		width: 117px;
+	#sidebar .search-form .search-field {
+		width: 147px;
 	}
 	#calendar_wrap td {
 		padding: 1px 3px;
@@ -1842,8 +1838,8 @@ h6 a:hover {
 		width: 100%;
 		margin-bottom: 20px;
 	}
-	#sidebar #searchform #s {
-		width: 245px;
+	#sidebar .search-form .search-field {
+		width: 275px;
 	}
 	#calendar_wrap td {
 		padding: 3px 12px;
@@ -1893,8 +1889,8 @@ h6 a:hover {
 	#navbar > .menu-container {
 		width: 420px;
 	}
-	#sidebar #searchform #s {
-		width: 365px;
+	#sidebar .search-form .search-field {
+		width: 395px;
 	}
 	#calendar_wrap td {
 		padding: 5px 20px;
