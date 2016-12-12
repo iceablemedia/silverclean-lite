@@ -714,10 +714,9 @@ or wrap each row of columns in a <div class="row"> */
 #navbar ul li ul li,
 #navbar ul li ul li:hover {
 	display: block;
-	width: 179px;
+	width: 199px;
 	height: 30px;
 	line-height: 30px;
-	padding: 0 10px;
 	background: white;
 }
 
