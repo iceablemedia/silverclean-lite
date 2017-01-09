@@ -3,14 +3,14 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
- * Copyright 2013-2016 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2017 Mathieu Sarrasin - Iceable Media
  *
  * Comments template
  *
  */
 
 
-if ( post_password_required() ): 
+if ( post_password_required() ):
 		?><p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'silverclean-lite'); ?></p><?php
 		return;
 	endif;

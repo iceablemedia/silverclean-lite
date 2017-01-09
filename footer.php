@@ -3,11 +3,11 @@
  *
  * Silverclean WordPress Theme by Iceable Themes | https://www.iceablethemes.com
  *
- * Copyright 2013-2016 Mathieu Sarrasin - Iceable Media
+ * Copyright 2013-2017 Mathieu Sarrasin - Iceable Media
  *
  * Footer Template
  *
- */ 
+ */
 
 if (is_active_sidebar( 'footer-sidebar' ) ):
 	?><div id="footer"><div class="container"><ul><?php
@@ -36,7 +36,7 @@ printf( __('Silverclean design by <a href="%s" title="%s">Iceable Themes</a>.', 
 
 ?></div></div><?php // End sub footer
 
-?></div><?php // End main wrap 
+?></div><?php // End main wrap
 
 wp_footer();
 
