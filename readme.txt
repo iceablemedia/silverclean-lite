@@ -51,6 +51,11 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.2.10 =
+Mars 8th, 2017
+* Fixed silverclean_remove_rel_cat() to only remove "category" (but not "tag") value from the rel attribute
+* Added php tags in footer.php, making it less confusing for users who want to modify the footer note
+
 = 1.2.9 =
 January 9th, 2017
 * Updated copyright to 2017
