@@ -10,6 +10,16 @@
  */
 
 /*
+ * Theme constants
+ */
+define( "THEME_DIR", get_template_directory() );
+define( "THEME_DIR_URI", get_template_directory_uri() );
+define( "STYLESHEET_DIR", get_stylesheet_directory() );
+define( "STYLESHEET_DIR_URI", get_stylesheet_directory_uri() );
+$the_theme = wp_get_theme();
+define( "THEME_VERSION", $the_theme->get( 'Version' ) );
+
+/*
  * Setup and registration functions
  */
 function silverclean_setup(){
@@ -22,7 +32,7 @@ function silverclean_setup(){
 	 * Translations can be added to the /languages directory.
 	 * A .pot template file is included to get you started
 	 */
-	load_theme_textdomain('silverclean-lite', get_template_directory() . '/languages');
+	load_theme_textdomain('silverclean-lite', THEME_DIR . '/languages');
 
 	/* Feed links support */
 	add_theme_support( 'automatic-feed-links' );
@@ -121,28 +131,24 @@ function silverclean_styles() {
 		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ) );
+		wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ), array(), THEME_VERSION );
 
 		// Enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ) );
+		wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ), array(), THEME_VERSION );
 
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-
-		$template_directory_uri = get_template_directory_uri(); // Parent theme URI
-		$stylesheet_directory = get_stylesheet_directory(); // Current theme directory
-		$stylesheet_directory_uri = get_stylesheet_directory_uri(); // Current theme URI
 
 		/* Child theme support:
 		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		if ( @file_exists( $stylesheet_directory . $stylesheet ) )
-			wp_register_style( 'silverclean', $stylesheet_directory_uri . $stylesheet );
+		if ( @file_exists( STYLESHEET_DIR . $stylesheet ) )
+			wp_register_style( 'silverclean', STYLESHEET_DIR_URI . $stylesheet, array(), THEME_VERSION );
 		else
-			wp_register_style( 'silverclean', $template_directory_uri . $stylesheet );
+			wp_register_style( 'silverclean', THEME_DIR_URI . $stylesheet, array(), THEME_VERSION );
 
 		// Always enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', $stylesheet_directory_uri . '/style.css');
+		wp_register_style( 'silverclean-style', STYLESHEET_DIR_URI . '/style.css', array(), THEME_VERSION );
 
 	endif;
 
@@ -164,9 +170,9 @@ add_action( 'init', 'silverclean_editor_styles' );
  */
 function silverclean_scripts() {
 	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
-		wp_enqueue_script('silverclean', get_theme_file_uri( '/js/silverclean.min.js' ), array('jquery','hoverIntent'));
+		wp_enqueue_script('silverclean', get_theme_file_uri( '/js/silverclean.min.js' ), array('jquery','hoverIntent'), THEME_VERSION );
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-		wp_enqueue_script('silverclean', get_template_directory_uri() . '/js/silverclean.min.js', array('jquery','hoverIntent'));
+		wp_enqueue_script('silverclean', THEME_DIR_URI . '/js/silverclean.min.js', array('jquery','hoverIntent'), THEME_VERSION );
 	endif;
   /* Threaded comments support */
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
@@ -190,7 +196,7 @@ add_filter('post_class','silverclean_remove_hentry');
  */
 function silverclean_remove_rel_cat( $text ) {
 	$text = str_replace(' rel="category"', "", $text);
-  $text = str_replace(' rel="category tag"', ' rel="tag"', $text); 
+  $text = str_replace(' rel="category tag"', ' rel="tag"', $text);
   return $text;
 }
 add_filter( 'the_category', 'silverclean_remove_rel_cat' );
