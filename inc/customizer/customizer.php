@@ -18,17 +18,10 @@ class Silverclean_Customizer {
 		$wp_customize->get_section( 'background_image' )->title = __('Background', 'silverclean-lite');
 
 		// Add new sections
-		if ( ! function_exists('wp_site_icon') ) :
-		$wp_customize->add_section( 'silverclean_logo_favicon' , array(
-			'title'      => __( 'Logo & Favicon', 'silverclean-lite' ),
-			'priority'   => 20,
-		) );
-		else:
-		$wp_customize->add_section( 'silverclean_logo_favicon' , array(
+		$wp_customize->add_section( 'silverclean_logo_settings' , array(
 			'title'      => __( 'Logo', 'silverclean-lite' ),
 			'priority'   => 20,
 		) );
-		endif;
 
 		$wp_customize->add_section( 'silverclean_blog_settings' , array(
 			'title'      => __( 'Blog Settings', 'silverclean-lite' ),
@@ -55,29 +48,11 @@ class Silverclean_Customizer {
 				array(
 					'label'      => __( 'Upload your logo', 'silverclean-lite' ),
 					'description' => __('If no logo is uploaded, the site title will be displayed instead.', 'silverclean-lite'),
-					'section'    => 'silverclean_logo_favicon',
+					'section'    => 'silverclean_logo_settings',
 					'settings'   => 'silverclean_logo',
 				)
 			)
 		);
-
-		// Setting and control for favicon
-		if ( ! function_exists('wp_site_icon') ) :
-			$wp_customize->add_setting( 'silverclean_favicon' , array(
-				'default'     => '',
-				'sanitize_callback' => 'esc_url_raw',
-			) );
-			$wp_customize->add_control(
-				new WP_Customize_Image_Control( $wp_customize, 'silverclean_favicon',
-					array(
-						'label'			=> __( 'Upload a custom favicon', 'silverclean-lite' ),
-						'description'	=> __('Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), GIF, or ICO.', 'silverclean-lite'),
-						'section'		=> 'silverclean_logo_favicon',
-						'settings'		=> 'silverclean_favicon',
-					)
-				)
-			);
-		endif;
 
 		// Setting and control for blog index content switch
 		$wp_customize->add_setting( 'silverclean_blog_index_content' , array(
