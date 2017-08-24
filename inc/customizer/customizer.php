@@ -227,13 +227,13 @@ class Silverclean_Customizer {
 	public static function customize_controls_scripts(){
 		wp_enqueue_style(
 			'silverclean-customizer-controls-style',
-			THEME_DIR_URI . '/inc/customizer/css/customizer-controls.css',
+			SILVERCLEAN_THEME_DIR_URI . '/inc/customizer/css/customizer-controls.css',
 			array( 'customize-controls' )
 		);
 
 		wp_register_script(
 			  'silverclean-customizer-section',
-			  THEME_DIR_URI . '/inc/customizer/js/silverclean-customizer-section.js',
+			  SILVERCLEAN_THEME_DIR_URI . '/inc/customizer/js/silverclean-customizer-section.js',
 			  array( 'jquery','jquery-ui-core','jquery-ui-button','customize-controls' ),
 			  '',
 			  true

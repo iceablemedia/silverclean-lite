@@ -61,6 +61,7 @@ June 21th, 2017
 * Removed function_exists('wp_site_icon') checks and related functions (deprecated since WP 4.3)
 * Wrapped pingback url in appropriate conditionals in header.php
 * HTML5Shiv is now properly enqueued
+* Prefixed theme constants names
 
 = 1.2.11 =
 May 8th, 2017

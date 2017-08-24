@@ -12,12 +12,12 @@
 /*
  * Theme constants
  */
-define( "THEME_DIR", get_template_directory() );
-define( "THEME_DIR_URI", get_template_directory_uri() );
-define( "STYLESHEET_DIR", get_stylesheet_directory() );
-define( "STYLESHEET_DIR_URI", get_stylesheet_directory_uri() );
-$the_theme = wp_get_theme();
-define( "THEME_VERSION", $the_theme->get( 'Version' ) );
+define( "SILVERCLEAN_THEME_DIR", get_template_directory() );
+define( "SILVERCLEAN_THEME_DIR_URI", get_template_directory_uri() );
+define( "SILVERCLEAN_STYLESHEET_DIR", get_stylesheet_directory() );
+define( "SILVERCLEAN_STYLESHEET_DIR_URI", get_stylesheet_directory_uri() );
+$silverclean_the_theme = wp_get_theme();
+define( "SILVERCLEAN_THEME_VERSION", $silverclean_the_theme->get( 'Version' ) );
 
 /*
  * Setup and registration functions
@@ -32,7 +32,7 @@ function silverclean_setup(){
 	 * Translations can be added to the /languages directory.
 	 * A .pot template file is included to get you started
 	 */
-	load_theme_textdomain('silverclean-lite', THEME_DIR . '/languages');
+	load_theme_textdomain('silverclean-lite', SILVERCLEAN_THEME_DIR . '/languages');
 
 	/* Feed links support */
 	add_theme_support( 'automatic-feed-links' );
@@ -131,10 +131,10 @@ function silverclean_styles() {
 		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ), array(), THEME_VERSION );
+		wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ), array(), SILVERCLEAN_THEME_VERSION );
 
 		// Enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ), array(), THEME_VERSION );
+		wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ), array(), SILVERCLEAN_THEME_VERSION );
 
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
 
@@ -142,13 +142,13 @@ function silverclean_styles() {
 		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
 		 * or the parent theme's version otherwise
 		 */
-		if ( @file_exists( STYLESHEET_DIR . $stylesheet ) )
-			wp_register_style( 'silverclean', STYLESHEET_DIR_URI . $stylesheet, array(), THEME_VERSION );
+		if ( @file_exists( SILVERCLEAN_STYLESHEET_DIR . $stylesheet ) )
+			wp_register_style( 'silverclean', SILVERCLEAN_STYLESHEET_DIR_URI . $stylesheet, array(), SILVERCLEAN_THEME_VERSION );
 		else
-			wp_register_style( 'silverclean', THEME_DIR_URI . $stylesheet, array(), THEME_VERSION );
+			wp_register_style( 'silverclean', SILVERCLEAN_THEME_DIR_URI . $stylesheet, array(), SILVERCLEAN_THEME_VERSION );
 
 		// Always enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', STYLESHEET_DIR_URI . '/style.css', array(), THEME_VERSION );
+		wp_register_style( 'silverclean-style', SILVERCLEAN_STYLESHEET_DIR_URI . '/style.css', array(), SILVERCLEAN_THEME_VERSION );
 
 	endif;
 
@@ -170,13 +170,13 @@ add_action( 'init', 'silverclean_editor_styles' );
  */
 function silverclean_scripts() {
 	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
-		wp_enqueue_script('silverclean', get_theme_file_uri( '/js/silverclean.min.js' ), array('jquery','hoverIntent'), THEME_VERSION );
+		wp_enqueue_script('silverclean', get_theme_file_uri( '/js/silverclean.min.js' ), array('jquery','hoverIntent'), SILVERCLEAN_THEME_VERSION );
 		// Loads HTML5 JavaScript file to add support for HTML5 elements for IE < 9.
-    wp_enqueue_script( 'html5shiv', get_theme_file_uri( '/js/html5.js' ), array(), THEME_VERSION );
+    wp_enqueue_script( 'html5shiv', get_theme_file_uri( '/js/html5.js' ), array(), SILVERCLEAN_THEME_VERSION );
 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-		wp_enqueue_script('silverclean', THEME_DIR_URI . '/js/silverclean.min.js', array('jquery','hoverIntent'), THEME_VERSION );
+		wp_enqueue_script('silverclean', SILVERCLEAN_THEME_DIR_URI . '/js/silverclean.min.js', array('jquery','hoverIntent'), SILVERCLEAN_THEME_VERSION );
 		// Loads HTML5 JavaScript file to add support for HTML5 elements for IE < 9.
-    wp_enqueue_script( 'html5shiv', THEME_DIR_URI . '/js/html5.js', array(), THEME_VERSION );
+    wp_enqueue_script( 'html5shiv', SILVERCLEAN_THEME_DIR_URI . '/js/html5.js', array(), SILVERCLEAN_THEME_VERSION );
 	endif;
 
 	// Add conditional for HTML5Shiv to only load for IE < 9
