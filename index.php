@@ -54,27 +54,31 @@ get_header();
 
 				?></div><?php
 
-				?><div class="postmetadata"><?php
-					if ( '' != get_the_post_thumbnail() ):	// As recommended from the WP codex, to avoid potential failure of has_post_thumbnail()
-						?><div class="thumbnail"><?php
-				?><a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a></div><?php
-					endif;
-					?><span class="meta-date published"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span><?php
+				if ( get_post_type() == 'post' ):
 
-					// Echo updated date for hatom-feed - not to be displayed on front end
-					?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
+					?><div class="postmetadata"><?php
+						if ( '' != get_the_post_thumbnail() ):	// As recommended from the WP codex, to avoid potential failure of has_post_thumbnail()
+							?><div class="thumbnail"><?php
+					?><a href="<?php echo get_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array('class' => 'scale-with-grid')); ?></a></div><?php
+						endif;
+						?><span class="meta-date published"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_time(get_option('date_format')); ?></a></span><?php
 
-					?><span class="meta-author vcard author"><?php
-						_e('By ', 'silverclean-lite');
-						?><span class="fn"><?php the_author(); ?></span><?php
-					?></span><?php
-					?><span class="meta-category"><?php _e('In ', 'silverclean-lite'); the_category(', ') ?></span><?php
-					?><span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean-lite' ), __( '1 Comment', 'silverclean-lite' ), __( '% Comments', 'silverclean-lite' ) ); ?></span><?php
-					if (has_tag()):
-						echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>');
-					endif;
-					?><span class="editlink"><?php edit_post_link(__('Edit', 'silverclean-lite'), '', ''); ?></span><?php
-				?></div><?php
+						// Echo updated date for hatom-feed - not to be displayed on front end
+						?><span class="updated"><?php the_modified_date(get_option('date_format')); ?></span><?php
+
+						?><span class="meta-author vcard author"><?php
+							_e('By ', 'silverclean-lite');
+							?><span class="fn"><?php the_author(); ?></span><?php
+						?></span><?php
+						?><span class="meta-category"><?php _e('In ', 'silverclean-lite'); the_category(', ') ?></span><?php
+						?><span class="meta-comments"><?php comments_popup_link( __( 'No Comment', 'silverclean-lite' ), __( '1 Comment', 'silverclean-lite' ), __( '% Comments', 'silverclean-lite' ) ); ?></span><?php
+						if (has_tag()):
+							echo '<span class="tags">'; the_tags('<span class="tag">', '</span><span>', '</span></span>');
+						endif;
+						?><span class="editlink"><?php edit_post_link(__('Edit', 'silverclean-lite'), '', ''); ?></span><?php
+					?></div><?php
+
+				endif;
 
 			?></div><?php // end div post
 
