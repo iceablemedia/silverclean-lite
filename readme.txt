@@ -63,6 +63,7 @@ June 21th, 2017
 * HTML5Shiv is now properly enqueued
 * Prefixed theme constants names
 * Using the_archive_title() for archive page titles
+* Ordered placeholders for printf() in footer.php
 
 = 1.2.11 =
 May 8th, 2017
