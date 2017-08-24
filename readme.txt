@@ -62,6 +62,7 @@ June 21th, 2017
 * Wrapped pingback url in appropriate conditionals in header.php
 * HTML5Shiv is now properly enqueued
 * Prefixed theme constants names
+* Using the_archive_title() for archive page titles
 
 = 1.2.11 =
 May 8th, 2017

@@ -20,15 +20,10 @@ get_header();
 		?><h1 class="page-title"><?php _e('Search Results for ', 'silverclean-lite'); ?>"<?php the_search_query() ?>"</h1><?php
 		endif;
 
-		/* TAG CONDITIONAL TITLE */
-		if ( is_tag() ):
-		?><h1 class="page-title"><?php _e('Tag: ', 'silverclean-lite'); single_tag_title(); ?></h1><?php
-		endif;
-
-		/* CATEGORY CONDITIONAL TITLE */
-		if ( is_category() ):
-		?><h1 class="page-title"><?php _e('Category: ', 'silverclean-lite'); single_cat_title(); ?></h1><?php
-		endif;
+		/* ARCHIVE CONDITIONAL TITLE */
+	  if ( is_archive() ):
+			?><h1 class="page-title"><?php the_archive_title(); ?></h1><?php
+	  endif;
 
 		/* DEFAULT CONDITIONAL TITLE */
 		if (!is_front_page() && !is_search() && !is_tag() && !is_category()):
