@@ -65,6 +65,7 @@ June 21th, 2017
 * Using the_archive_title() for archive page titles
 * Ordered placeholders for printf() in footer.php
 * Removed additional support for child themes for WP<4.7 (was relying on file_exists() which emits a PHP E_WARNING upon failure)
+* Fixed singular placeholder in gettext function in comments.php
 
 = 1.2.11 =
 May 8th, 2017
