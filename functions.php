@@ -126,31 +126,14 @@ function silverclean_styles() {
 		$stylesheet = '/css/silverclean-unresponsive.min.css';
 	endif;
 
-	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
-		/* Child theme support:
-		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
-		 * or the parent theme's version otherwise
-		 */
-		wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ), array(), SILVERCLEAN_THEME_VERSION );
+	/* Child theme support:
+	 * Enqueue child-theme's versions of stylesheets in /css if they exist,
+	 * or the parent theme's version otherwise
+	 */
+	wp_register_style( 'silverclean', get_theme_file_uri( $stylesheet ), array(), SILVERCLEAN_THEME_VERSION );
 
-		// Enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ), array(), SILVERCLEAN_THEME_VERSION );
-
-	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
-
-		/* Child theme support:
-		 * Enqueue child-theme's versions of stylesheets in /css if they exist,
-		 * or the parent theme's version otherwise
-		 */
-		if ( @file_exists( SILVERCLEAN_STYLESHEET_DIR . $stylesheet ) )
-			wp_register_style( 'silverclean', SILVERCLEAN_STYLESHEET_DIR_URI . $stylesheet, array(), SILVERCLEAN_THEME_VERSION );
-		else
-			wp_register_style( 'silverclean', SILVERCLEAN_THEME_DIR_URI . $stylesheet, array(), SILVERCLEAN_THEME_VERSION );
-
-		// Always enqueue style.css from the current theme
-		wp_register_style( 'silverclean-style', SILVERCLEAN_STYLESHEET_DIR_URI . '/style.css', array(), SILVERCLEAN_THEME_VERSION );
-
-	endif;
+	// Enqueue style.css from the current theme
+	wp_register_style( 'silverclean-style', get_theme_file_uri( '/style.css' ), array(), SILVERCLEAN_THEME_VERSION );
 
 	wp_enqueue_style( 'silverclean' );
 	wp_enqueue_style( 'silverclean-style' );
