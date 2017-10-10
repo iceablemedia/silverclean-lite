@@ -1,0 +1,195 @@
+/* #Tablet (Portrait) | Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	#main-wrap {
+		width: 100%;
+		border: none;
+	}
+
+	#page-container > div,
+	#page-container > p,
+	#page-container > a,
+	#page-container > span,
+	#page-container > img,
+	#page-container > h1,
+	#page-container > h2,
+	#page-container > h3,
+	#page-container > h4,
+	#page-container > h5,
+	#page-container > h6,
+	#footer .container > ul > li {
+		margin-left: 15px !important;
+		margin-right: 15px !important;
+		margin-bottom: 20px;
+	}
+
+	#sidebar-container {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	.container      { width: 768px; }
+	#page-container { width: 766px; }
+
+	#footer .container > ul > li	{ width: 161px; }
+
+	#page-container.with-sidebar { width: 576px; }
+	#sidebar-container { width: 172px; }
+
+	#navbar > .menu-container {
+		width: 587px;
+	}
+	#nav-search {
+		width: 167px;
+	}
+	#nav-search .search-field {
+		width: 165px;
+	}
+	#sidebar .search-form .search-field {
+		width: 147px;
+	}
+	#calendar_wrap td {
+		padding: 1px 3px;
+	}
+
+}
+
+/* #Mobile (Portrait) | Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+
+	#main-wrap {
+		width: 100%;
+		border: none;
+	}
+
+	#navbar select {
+		display: block;
+		margin: 20px auto;
+		width: 90%;
+	}
+	#navbar div	div {
+		display: none;
+	}
+
+	#page-container > div,
+	#page-container > p,
+	#page-container > a,
+	#page-container > span,
+	#page-container > img,
+	#page-container > h1,
+	#page-container > h2,
+	#page-container > h3,
+	#page-container > h4,
+	#page-container > h5,
+	#page-container > h6,
+	#footer .container > ul > li {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		margin-bottom: 20px;
+	}
+
+	#sidebar-container {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	.container      { width: 300px; }
+	#page-container { width: 298px; }
+
+	#page-container.with-sidebar { width: 298px; }
+
+	#footer .container > ul > li { width: 280px; }
+
+	#sidebar-container {
+		width: 300px;
+		margin: 0px 0px 20px 0px !important;
+	}
+
+	#sidebar { width: 300px; }
+
+	#logo {
+		text-align: center;
+		float: none;
+	}
+	#tagline {
+		text-align: center;
+		float: none;
+		max-width: 100%;
+		padding-top: 0;
+	}
+	#navbar > .menu-container {
+		width: 300px;
+	}
+	#nav-search {
+		display: none;
+	}
+	.post-contents {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	.postmetadata {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#sidebar .search-form .search-field {
+		width: 275px;
+	}
+	#calendar_wrap td {
+		padding: 3px 12px;
+	}
+}
+
+/* #Mobile (Landscape) | Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	#page-container > div,
+	#page-container > p,
+	#page-container > a,
+	#page-container > span,
+	#page-container > img,
+	#page-container > h1,
+	#page-container > h2,
+	#page-container > h3,
+	#page-container > h4,
+	#page-container > h5,
+	#page-container > h6,
+	#footer .container > ul > li {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		margin-bottom: 20px;
+	}
+
+	#sidebar-container {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
+	.container      { width: 420px; }
+	#page-container { width: 418px; }
+
+	#page-container.with-sidebar { width: 418px; }
+
+	#footer .container > ul > li { width: 400px; }
+
+	#sidebar-container {
+		width: 420px;
+		margin: 0px 0px 20px 0px !important;
+	}
+
+	#sidebar { width: 420px; }
+
+	#navbar > .menu-container {
+		width: 420px;
+	}
+	#sidebar .search-form .search-field {
+		width: 395px;
+	}
+	#calendar_wrap td {
+		padding: 5px 20px;
+	}
+}
