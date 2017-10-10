@@ -11,25 +11,25 @@
 
 get_header();
 
-	?><div class="container" id="main-content"><?php
+?>
+<div class="container" id="main-content">
+	<div id="page-container" class="left with-sidebar">
+		<div <?php post_class(); ?>>
+			<h1 class="page-title"><?php esc_html_e( '404', 'silverclean-lite' ); ?></h1>
+			<h2><?php esc_html_e( 'Page Not Found', 'silverclean-lite' ); ?></h2>
+			<p><?php esc_html_e( 'What you are looking for isn\'t here...', 'silverclean-lite' ); ?></p>
+			<p><?php esc_html_e( 'Maybe a search will help ?', 'silverclean-lite' ); ?></p>
+			<?php get_search_form(); ?>
+		</div>
+	</div>
 
-		?><div id="page-container" class="left with-sidebar"><?php
+	<div id="sidebar-container" class="right">
+		<ul id="sidebar">
+			<?php dynamic_sidebar( 'sidebar' ); ?>
+		</ul>
+	</div>
 
-			?><div <?php post_class(); ?>><?php
-				?><h1 class="page-title"><?php _e('404', 'silverclean-lite'); ?></h1><?php
-				?><h2><?php _e('Page Not Found', 'silverclean-lite'); ?></h2><?php
-				?><p><?php _e('What you are looking for isn\'t here...', 'silverclean-lite'); ?></p><?php
-				?><p><?php _e('Maybe a search will help ?', 'silverclean-lite'); ?></p><?php
-				get_search_form();
-			?></div><?php
-		?></div><?php // End page container
-
-		?><div id="sidebar-container" class="right"><?php
-			?><ul id="sidebar"><?php
-			   dynamic_sidebar( 'sidebar' );
-			?></ul><?php
-		?></div><?php // End sidebar
-
-	?></div><?php // End main content
+</div>
+<?php
 
 get_footer();
