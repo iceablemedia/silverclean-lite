@@ -51,6 +51,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.2.14 =
+October 10th, 2017
+* Refactored all PHP code to conform to the WordPress coding standards
+
 = 1.2.13 =
 August 25th, 2017
 * Removed metadata for pages in search results
