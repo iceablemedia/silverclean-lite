@@ -103,7 +103,7 @@ get_header();
 								<?php
 								printf(
 									// Translators: %s is the author's name
-									wp_kses_post( __( 'By %s' ) ),
+									wp_kses_post( __( 'By %s', 'silverclean-lite' ) ),
 									'<span class="fn">' . get_the_author() . '</span>'
 								);
 								?>
