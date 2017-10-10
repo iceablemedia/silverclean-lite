@@ -1,293 +1,315 @@
+# Copyright (C) 2017 Iceable Media
+# This file is distributed under the GNU General Public License v2 (GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Silverclean Lite 1.2\n"
-"POT-Creation-Date: 2015-07-21 16:44+0100\n"
-"PO-Revision-Date: 2015-07-21 16:44+0100\n"
-"Last-Translator: \n"
-"Language-Team: Iceable Themes\n"
-"Language: en_US\n"
+"Project-Id-Version: Silverclean Lite 1.2.14\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2017-10-10 14:26:16+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
-"X-Poedit-KeywordsList: __;_e;_n;_x\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ..\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: ../404.php:19
+#: 404.php:18
 msgid "404"
 msgstr ""
 
-#: ../404.php:20
+#: 404.php:19
 msgid "Page Not Found"
 msgstr ""
 
-#: ../404.php:21 ../index.php:95 ../page-full-width.php:52 ../page.php:54
-#: ../single.php:78
+#: 404.php:20 index.php:147 page-full-width.php:67 page.php:70 single.php:116
 msgid "What you are looking for isn't here..."
 msgstr ""
 
-#: ../404.php:22 ../index.php:89
+#: 404.php:21 index.php:139
 msgid "Maybe a search will help ?"
 msgstr ""
 
-#: ../comments.php:14
+#: comments.php:15
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: ../comments.php:20
-#, php-format
-msgid "One Response to %2$s"
-msgstr ""
+#: comments.php:26
+#. Translators: %1$s is the number of comments, %2$s is the post title
+msgid "%1$s Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../comments.php:29
+#: comments.php:47
 msgid "Older comments"
 msgstr ""
 
-#: ../comments.php:30
+#: comments.php:48
 msgid "Newer comments"
 msgstr ""
 
-#: ../comments.php:38
+#: comments.php:57
 msgid "Comments are closed."
 msgstr ""
 
-#: ../footer.php:22
-#, php-format
-msgid "Copyright &copy; %s %s."
+#: footer.php:35
+#. Translators: %1$s is the copyright date, %2$s is the site name (e.g.
+#. Copyright © 2017, My Website)
+msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: ../footer.php:24
-#, php-format
-msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+#: footer.php:42
+#. Translators: "Powered by" link to WordPress.org. %1$s is the localized
+#. wordpress.org url (e.g. https:en.wordpress.org), %2$s is title attribute for
+#. the link ("Semantic Personal Publishing Platform"), %3$s is the anchor
+#. ("WordPress")
+msgid "Proudly powered by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>."
 msgstr ""
 
-#: ../footer.php:25
+#: footer.php:43
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: ../footer.php:27
+#: footer.php:44
+msgid "Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:45
 msgid "WordPress"
 msgstr ""
 
-#: ../footer.php:30
-#, php-format
-msgid "Silverclean design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+#: footer.php:50
+#. Translators: %s is a link to the author's website with the name "Iceable
+#. Themes" as anchor
+msgid "Silverclean design by %s."
 msgstr ""
 
-#: ../functions.php:87
+#: functions.php:96
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:99
+#: functions.php:109
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:190
+#: functions.php:211 functions.php:217
 msgid "Read More"
 msgstr ""
 
-#: ../index.php:20
-msgid "Search Results for "
-msgstr ""
-
-#: ../index.php:25
-msgid "Tag: "
-msgstr ""
-
-#: ../index.php:30
-msgid "Category: "
-msgstr ""
-
-#: ../index.php:68 ../single.php:34
-msgid "By "
-msgstr ""
-
-#: ../index.php:71 ../single.php:38
-msgid "In "
-msgstr ""
-
-#: ../index.php:72
-msgid "No Comment"
-msgstr ""
-
-#: ../index.php:72
-msgid "1 Comment"
-msgstr ""
-
-#: ../index.php:72
-msgid "% Comments"
-msgstr ""
-
-#: ../index.php:76 ../page-full-width.php:38 ../page.php:39 ../single.php:43
-msgid "Edit"
-msgstr ""
-
-#: ../index.php:88
-msgid "Nothing Found"
-msgstr ""
-
-#: ../index.php:94 ../page-full-width.php:51 ../page.php:53 ../single.php:77
-msgid "Not Found"
-msgstr ""
-
-#: ../index.php:102
-msgid "Previous Posts"
-msgstr ""
-
-#: ../index.php:103
-msgid "Next Posts"
-msgstr ""
-
-#: ../page-full-width.php:25 ../page.php:25 ../single.php:51
-msgid "Pages:"
-msgstr ""
-
-#: ../page-full-width.php:30 ../page.php:30 ../single.php:56
-msgid "Next page"
-msgstr ""
-
-#: ../page-full-width.php:31 ../page.php:31 ../single.php:57
-msgid "Previous page"
-msgstr ""
-
-#: ../sidebar.php:15
-msgid "Recent Posts"
-msgstr ""
-
-#: ../sidebar.php:19
-msgid "Archives"
-msgstr ""
-
-#: ../sidebar.php:23
-msgid "Meta"
-msgstr ""
-
-#: ../single.php:88
-msgid "Previous Image"
-msgstr ""
-
-#: ../single.php:91
-msgid "Next Image"
-msgstr ""
-
-#: ../single.php:97
-msgid "Next Post"
-msgstr ""
-
-#: ../single.php:100
-msgid "Previous Post"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:18
+#: inc/customizer/customizer.php:18
 msgid "Background"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:22
-msgid "Logo & Favicon"
+#: inc/customizer/customizer.php:24
+msgid "Logo"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:27
+#: inc/customizer/customizer.php:32
 msgid "Blog Settings"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:32
+#: inc/customizer/customizer.php:40
 msgid "Misc"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:37
+#: inc/customizer/customizer.php:48
 msgid "More"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:49
+#: inc/customizer/customizer.php:67
 msgid "Upload your logo"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:50
+#: inc/customizer/customizer.php:68
 msgid "If no logo is uploaded, the site title will be displayed instead."
 msgstr ""
 
-#: ../inc/customizer/customizer.php:65
-msgid "Upload a custom favicon"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:66
-msgid ""
-"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
-"GIF, or ICO."
-msgstr ""
-
-#: ../inc/customizer/customizer.php:81
+#: inc/customizer/customizer.php:89
 msgid "Blog Index Content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:86
+#: inc/customizer/customizer.php:94
 msgid "Excerpt"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:87
+#: inc/customizer/customizer.php:95
 msgid "Full content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:101
+#: inc/customizer/customizer.php:115
 msgid "Responsive Mode"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:106 ../inc/customizer/customizer.php:126
-#: ../inc/customizer/customizer.php:145 ../inc/customizer/customizer.php:164
-#: ../inc/customizer/customizer.php:183
+#: inc/customizer/customizer.php:120 inc/customizer/customizer.php:146
+#: inc/customizer/customizer.php:171 inc/customizer/customizer.php:196
+#: inc/customizer/customizer.php:221
 msgid "On"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:107 ../inc/customizer/customizer.php:127
-#: ../inc/customizer/customizer.php:146 ../inc/customizer/customizer.php:165
-#: ../inc/customizer/customizer.php:184
+#: inc/customizer/customizer.php:121 inc/customizer/customizer.php:147
+#: inc/customizer/customizer.php:172 inc/customizer/customizer.php:197
+#: inc/customizer/customizer.php:222
 msgid "Off"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:121
+#: inc/customizer/customizer.php:141
 msgid "Display header on Homepage"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:140
+#: inc/customizer/customizer.php:166
 msgid "Display header on Blog Index"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:159
+#: inc/customizer/customizer.php:191
 msgid "Display header on Single Posts"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:178
+#: inc/customizer/customizer.php:216
 msgid "Display header on Pages"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:198
+#: inc/customizer/customizer.php:242
 msgid "Get Silverclean Pro"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:199
+#: inc/customizer/customizer.php:243
 msgid ""
 "Unleash the full potential of Silverclean with tons of additional settings, "
 "advanced features and premium support."
 msgstr ""
 
-#: ../inc/customizer/customizer.php:215
+#: inc/customizer/customizer.php:265
 msgid "Silverclean Lite support forums"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:216
+#: inc/customizer/customizer.php:266
 msgid "Have a question? Need help?"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:232
+#: inc/customizer/customizer.php:288
 msgid "Rate Silverclean Lite"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:233
+#: inc/customizer/customizer.php:289
 msgid "Like this theme? We'd love to hear your feedback!"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:258
+#: inc/customizer/customizer.php:315
 msgid "Upgrade to Silverclean Pro!"
+msgstr ""
+
+#: index.php:22
+msgid "Search Results for "
+msgstr ""
+
+#: index.php:106 single.php:54
+#. Translators: %s is the author's name
+#. Translators: %s is the author's name.
+msgid "By %s"
+msgstr ""
+
+#: index.php:111 single.php:63
+msgid "In "
+msgstr ""
+
+#: index.php:112
+msgid "No Comment"
+msgstr ""
+
+#: index.php:112
+msgid "1 Comment"
+msgstr ""
+
+#: index.php:112
+msgid "% Comments"
+msgstr ""
+
+#: index.php:120 page-full-width.php:45 page.php:47 single.php:72
+msgid "Edit"
+msgstr ""
+
+#: index.php:138
+msgid "Nothing Found"
+msgstr ""
+
+#: index.php:146 page-full-width.php:66 page.php:69 single.php:115
+msgid "Not Found"
+msgstr ""
+
+#: index.php:156
+msgid "Previous Posts"
+msgstr ""
+
+#: index.php:157
+msgid "Next Posts"
+msgstr ""
+
+#: page-full-width.php:31 page.php:31 single.php:86
+msgid "Pages:"
+msgstr ""
+
+#: page-full-width.php:36 page.php:36 single.php:91
+msgid "Next page"
+msgstr ""
+
+#: page-full-width.php:37 page.php:37 single.php:92
+msgid "Previous page"
+msgstr ""
+
+#: sidebar.php:18
+msgid "Recent Posts"
+msgstr ""
+
+#: sidebar.php:23
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:28
+msgid "Meta"
+msgstr ""
+
+#: single.php:130
+msgid "Previous Image"
+msgstr ""
+
+#: single.php:136
+msgid "Next Image"
+msgstr ""
+
+#: single.php:144
+msgid "Next Post"
+msgstr ""
+
+#: single.php:150
+msgid "Previous Post"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Silverclean Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.iceablethemes.com/shop/silverclean-lite/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Silverclean Lite is a clean, elegant and responsive theme for WordPress. "
+"Perfect for various uses from personal blogging to small business website. "
+"It features two widgetizable areas (Sidebar and optional Footer), a custom "
+"menu location (Navbar), custom Logo and Favicon, Custom Header Image and "
+"Custom Background. Silverclean Lite is Translation Ready (.pot file "
+"included)."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Iceable Media"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.iceablethemes.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width Page Template, No Sidebar"
 msgstr ""
