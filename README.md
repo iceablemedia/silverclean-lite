@@ -84,6 +84,8 @@ November 18th, 2017
 * Fixed missing text-domain in index.php
 * Updated Readme.txt file to the new format for WordPress.org
 * Updated Tags list
+* Tested with WordPress 4.9
+* Removed support for WordPress lesser than 4.7
 
 ### 1.2.14
 October 10th, 2017
