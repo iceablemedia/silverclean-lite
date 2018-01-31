@@ -1,14 +1,14 @@
-# Copyright (C) 2017 Iceable Media
+# Copyright (C) 2018 Iceable Media
 # This file is distributed under the GNU General Public License v2 (GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Silverclean Lite 1.2.14\n"
+"Project-Id-Version: Silverclean Lite 1.2.16\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-10-10 14:26:16+00:00\n"
+"POT-Creation-Date: 2018-01-31 13:51:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: footer.php:35
 #. Translators: %1$s is the copyright date, %2$s is the site name (e.g.
-#. Copyright © 2017, My Website)
+#. Copyright © 2018, My Website)
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:211 functions.php:217
+#: functions.php:205 functions.php:211
 msgid "Read More"
 msgstr ""
 
