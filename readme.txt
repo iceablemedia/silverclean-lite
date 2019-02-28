@@ -2,9 +2,9 @@
 
 **Contributors:** iceable
 **Requires at least:** WordPress 4.7
-**Tested up to:** WordPress 4.9.2
-**Stable tag:** 1.2.16
-**Version:** 1.2.16
+**Tested up to:** WordPress 5.1
+**Stable tag:** 1.2.17
+**Version:** 1.2.17
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 **Tags:** one-column, two-columns, right-sidebar, custom-header, custom-menu, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, news
@@ -59,7 +59,7 @@ Source: https://github.com/aFarkas/html5shiv
 ## Changelog
 
 ### 1.2.17
-
+February 28th, 2019
 * Updated copyright
 
 ### 1.2.16
