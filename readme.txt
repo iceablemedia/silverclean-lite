@@ -2,9 +2,8 @@
 
 **Contributors:** iceable
 **Requires at least:** WordPress 4.7
-**Tested up to:** WordPress 5.1
-**Stable tag:** 1.2.17
-**Version:** 1.2.17
+**Stable tag:** 1.2.18
+**Version:** 1.2.18
 **Tested up to:** 5.5
 **Requires PHP:** 5.6
 **License:** GPLv2 or later
@@ -59,6 +58,12 @@ Source: https://github.com/aFarkas/html5shiv
 
 
 ## Changelog
+
+### 1.2.18
+August 29th, 2020
+* Added "Tested up to" and "Requires PHP" headers in style.css
+* Added wp_body_open()
+* Updated copyright
 
 ### 1.2.17
 February 28th, 2019
