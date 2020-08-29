@@ -31,7 +31,7 @@ Silverclean Lite is the lite version of Silverclean Pro, which comes with many a
 ### Translation
 
 Bundled translations (GPL Licensed):
-* French (fr_FR) translation: Copyright 2013-2019, Mathieu Sarrasin - Iceable Media (https://www.iceablethemes.com)
+* French (fr_FR) translation: Copyright 2013-2020, Iceable Themes - https://www.iceablethemes.com
 
 Translating this theme into your own language is quick and easy, you will find a .POT file in the /languages folder to get you started. It contains about 80 strings only.
 If you don't have a .po file editor yet, you can download Poedit from https://www.poedit.net/download.php - Poedit is free and available for Windows, Mac OS and Linux.
@@ -42,7 +42,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 ## Copyright
 
-Silverclean Lite WordPress Theme, Copyright 2013-2019 Mathieu Sarrasin - Iceable Media (https://www.iceablethemes.com)
+Silverclean Lite WordPress Theme, Copyright 2013-2020 Iceable Themes - https://www.iceablethemes.com
 Silverclean Lite is distributed under the terms of the GNU GPL
 
 Silverclean Lite bundles the following third-party resources:
